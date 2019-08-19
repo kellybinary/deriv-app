@@ -2,13 +2,13 @@ const StyleLintPlugin      = require('stylelint-webpack-plugin');
 const SpriteLoaderPlugin   = require('svg-sprite-loader/plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const path                 = require('path');
-
 const is_serve = process.env.BUILD_MODE === 'serve';
 
 module.exports = {
     // entry: path.join(__dirname, 'src', 'index.js'),
     entry: {
         // index: path.join(__dirname, 'src', 'index.js'),
+        icon: path.resolve(__dirname, 'src', 'components/icon/index.js'),
         button: path.resolve(__dirname, 'src', 'components/button/index.js'),
         label: path.resolve(__dirname, 'src', 'components/label/index.js'),
     },
@@ -53,23 +53,52 @@ module.exports = {
                     }
                 ]
             },
+            // {
+            //     test: /\.svg$/,
+            //     use: [
+            //         {
+            //             loader: 'svg-sprite-loader',
+            //             options: {
+            //                 extract: true,
+            //                 spriteFilename: 'bot-sprite.svg',
+            //             },
+            //         },
+            //         {
+            //             loader: 'svgo-loader',
+            //             options: {
+            //                 plugins: [
+            //                     { removeUselessStrokeAndFill: false },
+            //                     { removeUnknownsAndDefaults: false },
+            //                 ],
+            //             },
+            //         },
+            //     ],
+            // },
             {
                 test: /\.svg$/,
                 use: [
                     {
-                        loader: 'svg-sprite-loader',
+                        loader: '@svgr/webpack',
                         options: {
-                            extract: true,
-                            spriteFilename: 'bot-sprite.svg',
-                        },
-                    },
-                    {
-                        loader: 'svgo-loader',
-                        options: {
-                            plugins: [
-                                { removeUselessStrokeAndFill: false },
-                                { removeUnknownsAndDefaults: false },
-                            ],
+                          template: (
+                            { template },
+                            opts,
+                            { imports, componentName, props, jsx, exports }
+                          ) => template.ast`
+                            ${imports}
+                            import IconBase from '../icon-base.jsx';
+
+                            const ${componentName} = (${props}) => {
+                            
+                                const Icon = IconBase(${jsx});
+                                props = { ...props };
+
+                                return Icon;
+                            
+                            };
+
+                            export default ${componentName};
+                          `,
                         },
                     },
                 ],
@@ -94,6 +123,7 @@ module.exports = {
         new MiniCssExtractPlugin({ filename: '[name].css' }),
         new StyleLintPlugin({ fix: true }),
         new SpriteLoaderPlugin(),
+
     ],
     externals: {
         mobx: 'mobx',
