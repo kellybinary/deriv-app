@@ -1,5 +1,5 @@
 /* Using this loader you can import components from deriv-components without having to manually
-import the corresponding stylesheet. The deriv-components-loader will automatically import 
+import the corresponding stylesheet. The deriv-components-loader will automatically import
 stylesheets.
 
     import { Button } from 'deriv-components';
