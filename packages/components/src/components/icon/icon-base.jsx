@@ -4,9 +4,9 @@ function getChildrenWithProps(Svg, key) {
     const { children, ...props } = Svg.props;
 
     if (!children) {
-        if (props.fill === '#5C5C5C') {
+        if (props.fill !== 'none') {
             return React.cloneElement(Svg, { key, className: 'color1-fill' });
-        } else if (props.stroke === '#5C5C5C') {
+        } else if (props.stroke !== 'none') {
             return React.cloneElement(Svg, { key, className: 'color1-stroke' });
         }
         return React.cloneElement(Svg, { key });
