@@ -170,7 +170,7 @@ class Dropdown extends React.PureComponent {
                 </div>
                 {
                     !is_single_option && <Icon
-                        icon='IconArrow'
+                        icon='IconChevronLeft'
                         className={classNames('dropdown__select-arrow', {
                             'dropdown__select-arrow--left': this.props.is_alignment_left,
                         })}

@@ -173,7 +173,7 @@ class ContractTypeWidget extends React.PureComponent {
                         {this.getDisplayText()}
                     </span>
                     <Icon
-                        icon='IconArrow'
+                        icon='IconChevronLeft'
                         className={classNames(
                           'contract-type-widget__select-arrow',
                           'contract-type-widget__select-arrow--left')}
