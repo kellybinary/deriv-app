@@ -4,6 +4,7 @@ import React               from 'react';
 import Icon                from 'deriv-components/lib/icon';
 import ContractTypeDialog  from './contract-type-dialog.jsx';
 import ContractTypeList    from './contract-type-list.jsx';
+import IconTradeCategory   from './icon-trade-categories.jsx';
 import TradeTypeInfoDialog from '../TradeTypeInfo/trade-type-info-dialog.jsx';
 import TradeTypeInfoItem   from '../TradeTypeInfo/trade-type-info-item.jsx';
 
@@ -132,9 +133,25 @@ class ContractTypeWidget extends React.PureComponent {
     };
 
     render() {
-        const { is_dark_theme, is_equal, is_mobile, list, name, value } = this.props;
-        const { is_dialog_open, is_info_dialog_open, item }             = this.state;
-        const item_index = this.getItemIndex(item, this.getItemList());
+        const {
+            is_dark_theme,
+            is_equal,
+            is_mobile,
+            list,
+            name,
+            value,
+        } = this.props;
+
+        const {
+            is_dialog_open,
+            is_info_dialog_open,
+            item,
+        } = this.state;
+
+        const item_list   = this.getItemList();
+        const item_index  = this.getItemIndex(item, item_list);
+        const trade_types = item_list.filter(item => item.value === value)[0].trade_types;
+
         return (
             <div
                 id='dt_contract_dropdown'
@@ -148,10 +165,9 @@ class ContractTypeWidget extends React.PureComponent {
                     })}
                     onClick={this.onWidgetClick}
                 >
-                    {/* <Icon
-                        icon='IconTradeCategory'
-                        category={value}
-                        className='contract-type-widget__icon-wrapper' */}
+                    <IconTradeCategory
+                        className='contract-type-widget__icon-wrapper'
+                        trade_types={trade_types}
                     />
                     <span name={name} value={value}>
                         {this.getDisplayText()}

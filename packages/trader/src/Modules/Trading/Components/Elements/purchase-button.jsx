@@ -5,6 +5,7 @@ import { Button }                 from 'deriv-components';
 import Icon                       from 'deriv-components/lib/icon';
 import { localize }               from 'App/i18n';
 import { getContractTypeDisplay } from 'Constants/contract';
+import { IconTradeTypesMap }      from '../../Helpers/trade-types';
 
 const PurchaseButton = ({
     buy_info,
@@ -21,9 +22,9 @@ const PurchaseButton = ({
     onClickPurchase,
     type,
 }) => {
-    const getIconType = () => {
+    const getIconName = () => {
         if (!should_fade && is_loading) return '';
-        return (is_high_low) ? `${type.toLowerCase()}_barrier` : type.toLowerCase();
+        return IconTradeTypesMap[type.toLowerCase()];
     };
     const is_button_disabled = ((is_contract_mode || is_disabled) && !is_loading) || is_proposal_empty;
 
@@ -48,11 +49,10 @@ const PurchaseButton = ({
                 <div className='btn-purchase__info btn-purchase__info--left'>
                     <div className='btn-purchase__type-wrapper'>
                         <div className='btn-purchase__icon_wrapper'>
-                            {/* <Icon
-                                icon='IconTradeType'
+                            <Icon
+                                icon={getIconName()}
                                 className='btn-purchase__icon'
-                                type={getIconType()}
-                            /> */}
+                            />
                         </div>
                         <div className='btn-purchase__text_wrapper'>
                             <span className='btn-purchase__text'>

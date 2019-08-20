@@ -8,9 +8,15 @@ import {
     getTradeTypeName }    from '../Helpers/market-underlying';
 import Shortcode          from '../Helpers/shortcode';
 
+import { IconTradeTypesMap } from '../../Trading/Helpers/trade-types';
+
 const MarketSymbolIconRow = ({ payload, show_description }) => {
     const should_show_category_icon = typeof payload.shortcode === 'string';
     const info_from_shortcode = Shortcode.extractInfoFromShortcode(payload.shortcode);
+
+    const type = (Shortcode.isHighLow({ shortcode_info: info_from_shortcode }))
+        ? `${info_from_shortcode.category.toLowerCase()}_barrier`
+        : info_from_shortcode.category.toLowerCase();
 
     if (should_show_category_icon && info_from_shortcode) {
         return (
@@ -36,12 +42,7 @@ const MarketSymbolIconRow = ({ payload, show_description }) => {
                         message={getTradeTypeName(info_from_shortcode.category)}
                         disable_target_icon
                     >
-                        {/* <Icon
-                            icon='IconTradeType'
-                            type={(Shortcode.isHighLow({ shortcode_info: info_from_shortcode }))
-                                ? `${info_from_shortcode.category.toLowerCase()}_barrier`
-                                : info_from_shortcode.category.toLowerCase()}
-                        /> */}
+                        <Icon icon={IconTradeTypesMap[type]} />
                     </Popover>
                     {show_description && info_from_shortcode.category}
                 </div>
