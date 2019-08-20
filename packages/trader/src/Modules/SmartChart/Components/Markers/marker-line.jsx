@@ -25,7 +25,7 @@ const MarkerLine = ({
             }
             { label === marker_config.LINE_START.content_config.label &&
                 <Icon
-                    icon='IconStartTime'
+                    icon='IconStartTimeCircle'
                     className={classNames(
                         'chart-marker-line__icon',
                         'chart-marker-line__icon--time',
