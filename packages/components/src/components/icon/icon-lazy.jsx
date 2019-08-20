@@ -15,8 +15,9 @@ class Icon extends React.PureComponent {
 
     render() {
         const options = {
-            className  : this.props.className,
-            is_disabled: this.props.is_disabled,
+            className   : this.props.className,
+            is_disabled : this.props.is_disabled,
+            disableTheme: this.props.disableTheme,
             // type       : this.props.type,
         };
 
@@ -32,10 +33,10 @@ class Icon extends React.PureComponent {
 }
 
 Icon.propTypes = {
-    className  : PropTypes.string,
-    icon       : PropTypes.string,
-    is_disabled: PropTypes.oneOfType([PropTypes.number, PropTypes.bool]),
-    type       : PropTypes.string,
+    className   : PropTypes.string,
+    icon        : PropTypes.string,
+    is_disabled : PropTypes.oneOfType([PropTypes.number, PropTypes.bool]),
+    type        : PropTypes.string,
 };
 
 export default Icon;

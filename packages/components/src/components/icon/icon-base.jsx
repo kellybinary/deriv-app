@@ -23,9 +23,14 @@ function getChildrenWithProps(Svg, key) {
 const IconBase = Svg => {
     if (!Svg || !Svg.props) return <div />;
 
-    const { children, className, height, width } = Svg.props;
+    const { children, className, disableTheme, height, width } = Svg.props;
 
-    const childrenWithProps = getChildrenWithProps(children);
+    let childrenWithProps;
+    if (disableTheme) {
+        childrenWithProps = children;
+    } else {
+        childrenWithProps = getChildrenWithProps(children);
+    }
 
     return (
         <svg

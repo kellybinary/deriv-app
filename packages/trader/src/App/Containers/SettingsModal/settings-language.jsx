@@ -29,6 +29,7 @@ const LanguageLink = ({ lang }) => {
             <Icon
                 icon={`IconFlag${icon}`}
                 className={'settings-language__language-link-flag settings-language__language-flag'}
+                disableTheme
             />
             <span
                 className={classNames('settings-language__language-name', {

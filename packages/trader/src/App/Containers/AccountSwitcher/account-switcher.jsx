@@ -93,6 +93,7 @@ class AccountSwitcher extends React.Component {
                                             <Icon
                                                 icon={`IconCurrency${account.icon}`}
                                                 className={`acc-switcher__id-icon acc-switcher__id-icon--${account.icon}`}
+                                                disableTheme
                                             />
                                             {account.loginid}
                                         </span>
