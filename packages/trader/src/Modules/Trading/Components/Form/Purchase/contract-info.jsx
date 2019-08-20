@@ -18,6 +18,7 @@ const ContractInfo = ({
     type,
 }) => {
     const localized_basis = getLocalizedBasis();
+
     const stakeOrPayout = () => {
         switch (basis) {
             case 'stake':
@@ -30,6 +31,9 @@ const ContractInfo = ({
     };
 
     const has_error_or_not_loaded = proposal_info.has_error || !proposal_info.id;
+
+    const IconProfitLoss = has_increased ? <Icon icon='IconProfit' /> : <Icon icon='IconLoss' />;
+
     return (
         <div className='trade-container__price'>
             <div
@@ -55,9 +59,7 @@ const ContractInfo = ({
                 </div>
                 {is_visible &&
                 <div className='trade-container__price-info-movement'>
-                    {/* {(!has_error_or_not_loaded && has_increased !== null) &&
-                        <Icon icon='IconPriceMove' type={has_increased ? 'profit' : 'loss'} />
-                    } */}
+                    {(!has_error_or_not_loaded && has_increased !== null) && IconProfitLoss}
                 </div>
                 }
             </div>

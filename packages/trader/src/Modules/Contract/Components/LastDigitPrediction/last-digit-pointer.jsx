@@ -12,15 +12,13 @@ const LastDigitPointer = ({
         className='digits__pointer'
         style={{ marginLeft: position }}
     >
-        {/* <Icon
-            icon='IconPriceMove'
+        <Icon
+            icon='IconProfit'
             className={classNames('digits__icon', {
                 'digits__icon--win' : is_won,
                 'digits__icon--loss': is_lost,
             })}
-            classNamePath='digits__icon-color'
-            type='profit'
-        /> */}
+        />
     </span>
 );
 
