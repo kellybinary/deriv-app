@@ -3,8 +3,8 @@ import { expect }             from 'chai';
 import { fake }               from 'sinon';
 import { configure, shallow } from 'enzyme';
 import Adapter                from 'enzyme-adapter-react-16';
+import Icon                   from 'deriv-components/lib/icon';
 import { TogglePositions }    from '../toggle-positions.jsx';
-import Icon                   from 'Assets/icon.jsx';
 
 configure({ adapter: new Adapter() });
 

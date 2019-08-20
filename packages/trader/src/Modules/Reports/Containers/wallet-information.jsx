@@ -1,6 +1,6 @@
 import PropTypes         from 'prop-types';
 import React             from 'react';
-import Icon              from 'Assets/icon.jsx';
+import Icon              from 'deriv-components/lib/icon';
 import Label             from 'App/Components/Elements/Label/label.jsx';
 import Localize          from 'App/Components/Elements/localize.jsx';
 import Money             from 'App/Components/Elements/money.jsx';

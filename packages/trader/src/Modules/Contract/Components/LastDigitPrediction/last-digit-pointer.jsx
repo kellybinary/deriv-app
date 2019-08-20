@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import PropTypes  from 'prop-types';
 import React      from 'react';
-import Icon       from 'Assets/icon.jsx';
+import Icon       from 'deriv-components/lib/icon';
 
 const LastDigitPointer = ({
     is_lost,
@@ -12,7 +12,7 @@ const LastDigitPointer = ({
         className='digits__pointer'
         style={{ marginLeft: position }}
     >
-        <Icon
+        {/* <Icon
             icon='IconPriceMove'
             className={classNames('digits__icon', {
                 'digits__icon--win' : is_won,
@@ -20,7 +20,7 @@ const LastDigitPointer = ({
             })}
             classNamePath='digits__icon-color'
             type='profit'
-        />
+        /> */}
     </span>
 );
 

@@ -3,7 +3,7 @@ import { observer }         from 'mobx-react';
 import PropTypes            from 'prop-types';
 import React                from 'react';
 import { CSSTransition }    from 'react-transition-group';
-import Icon                 from 'Assets/icon.jsx';
+import Icon                 from 'deriv-components/lib/icon';
 import InputField           from 'App/Components/Form/InputField';
 import {
     addDays,

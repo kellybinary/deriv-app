@@ -1,5 +1,5 @@
 import React             from 'react';
-import Icon              from 'Assets/icon.jsx';
+import Icon              from 'deriv-components/lib/icon';
 import { ToggleDrawer }  from '../../Elements/Drawer';
 import MenuDrawer        from '../../../Containers/Drawer/menu-drawer.jsx';
 

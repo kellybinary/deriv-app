@@ -3,7 +3,7 @@ import PropTypes         from 'prop-types';
 import React             from 'react';
 import ReactDOM          from 'react-dom';
 import { CSSTransition } from 'react-transition-group';
-import Icon              from 'Assets/icon.jsx';
+import Icon              from 'deriv-components/lib/icon';
 import VerticalTab       from 'App/Components/Elements/VerticalTabs';
 
 class ModalElement extends React.PureComponent {
@@ -44,7 +44,7 @@ class ModalElement extends React.PureComponent {
                             </div>
                         }
                         <div id='dt_modal_close_icon' className='modal-header__close' onClick={this.props.toggleModal}>
-                            <Icon icon='ModalIconClose' />
+                            <Icon icon='IconClose' />
                         </div>
                     </div>
                 </div>

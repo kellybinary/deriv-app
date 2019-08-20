@@ -1,7 +1,7 @@
 import React                      from 'react';
 import PropTypes                  from 'prop-types';
 import { getContractTypeDisplay } from 'Constants/contract';
-import Icon                       from 'Assets/icon.jsx';
+import Icon                       from 'deriv-components/lib/icon';
 
 const ContractTypeCell = ({ type, is_high_low }) => (
     <div className='contract-type'>

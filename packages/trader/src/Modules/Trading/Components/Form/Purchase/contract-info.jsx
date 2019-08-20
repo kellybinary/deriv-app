@@ -2,10 +2,10 @@ import classNames            from 'classnames';
 import PropTypes             from 'prop-types';
 import React                 from 'react';
 import { getLocalizedBasis } from 'Stores/Modules/Trading/Constants/contract';
+import Icon                  from 'deriv-components/lib/icon';
 import { localize }          from 'App/i18n';
 import Money                 from 'App/Components/Elements/money.jsx';
 import { Popover }           from 'App/Components/Elements/Popover';
-import Icon                  from 'Assets/icon.jsx';
 
 const ContractInfo = ({
     basis,
@@ -55,9 +55,9 @@ const ContractInfo = ({
                 </div>
                 {is_visible &&
                 <div className='trade-container__price-info-movement'>
-                    {(!has_error_or_not_loaded && has_increased !== null) &&
+                    {/* {(!has_error_or_not_loaded && has_increased !== null) &&
                         <Icon icon='IconPriceMove' type={has_increased ? 'profit' : 'loss'} />
-                    }
+                    } */}
                 </div>
                 }
             </div>

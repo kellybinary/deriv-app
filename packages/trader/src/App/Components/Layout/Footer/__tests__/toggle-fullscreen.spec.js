@@ -3,8 +3,8 @@ import { expect }                    from 'chai';
 import { spy, stub }                 from 'sinon';
 import { configure, shallow, mount } from 'enzyme';
 import Adapter                       from 'enzyme-adapter-react-16';
+import Icon                          from 'deriv-components/lib/icon';
 import { ToggleFullScreen }          from '../toggle-fullscreen.jsx';
-import Icon                          from 'Assets/icon.jsx';
 
 configure({ adapter: new Adapter() });
 spy(ToggleFullScreen.prototype, 'componentDidMount');

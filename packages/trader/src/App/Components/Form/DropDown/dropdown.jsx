@@ -4,7 +4,7 @@ import PropTypes         from 'prop-types';
 import React             from 'react';
 import { CSSTransition } from 'react-transition-group';
 import { Scrollbars }    from 'tt-react-custom-scrollbars';
-import Icon              from 'Assets/icon.jsx';
+import Icon              from 'deriv-components/lib/icon';
 import Items             from './items.jsx';
 import NativeSelect      from './native-select.jsx';
 import {

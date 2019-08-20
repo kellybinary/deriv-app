@@ -5,7 +5,7 @@ import { Modal }    from 'App/Components/Elements/modal.jsx';
 import UILoader     from 'App/Components/Elements/ui-loader.jsx';
 import Lazy         from 'App/Containers/Lazy';
 import { localize } from 'App/i18n';
-import Icon         from 'Assets/icon.jsx';
+import Icon         from 'deriv-components/lib/icon';
 import 'Sass/app/modules/settings.scss';
 
 const ThemeSetting = () => (
@@ -71,7 +71,7 @@ const ToggleSettings = ({
                 onClick={toggleSettings}
                 className={toggle_settings_class}
             >
-                <Icon icon='IconSettings' className='footer__icon ic-settings__icon' />
+                <Icon icon='IconGear' className='footer__icon ic-settings__icon' />
             </a>
             <React.Suspense fallback={<UILoader />}>
                 <Modal

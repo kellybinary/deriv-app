@@ -3,7 +3,7 @@ import PropTypes            from 'prop-types';
 import React                from 'react';
 import ReactDOM             from 'react-dom';
 import posed, { PoseGroup } from 'react-pose';
-import Icon                 from 'Assets/icon.jsx';
+import Icon                 from 'deriv-components/lib/icon';
 
 const FadeIn = posed.span({
     enter: {

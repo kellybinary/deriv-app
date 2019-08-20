@@ -1,6 +1,6 @@
 import React        from 'react';
 import { localize } from 'App/i18n';
-import Icon         from 'Assets/icon.jsx';
+import Icon         from 'deriv-components/lib/icon';
 
 export const getHeaderConfig = () => ({
     purchased: { title: localize('Contract Purchased'), icon: <Icon icon='IconTick' /> },

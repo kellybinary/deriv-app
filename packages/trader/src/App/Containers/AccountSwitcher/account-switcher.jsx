@@ -1,10 +1,10 @@
 import classNames        from 'classnames';
 import PropTypes         from 'prop-types';
 import React             from 'react';
+import Icon              from 'deriv-components/lib/icon';
 import { localize }      from 'App/i18n';
 import { urlFor }        from '_common/url';
 import { isEmptyObject } from '_common/utility';
-import Icon              from 'Assets/icon.jsx';
 import { requestLogout } from 'Services/index';
 import { connect }       from 'Stores/connect';
 
@@ -90,11 +90,11 @@ class AccountSwitcher extends React.Component {
                                         onClick={this.doSwitch.bind(this, account.loginid)}
                                     >
                                         <span className={'acc-switcher__id'}>
-                                            <Icon
+                                            {/* <Icon
                                                 icon='IconAccountsCurrency'
                                                 className={`acc-switcher__id-icon acc-switcher__id-icon--${account.icon}`}
                                                 type={account.icon}
-                                            />
+                                            /> */}
                                             {account.loginid}
                                         </span>
                                     </div>

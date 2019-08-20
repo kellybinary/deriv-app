@@ -3,7 +3,7 @@ import PropTypes          from 'prop-types';
 import React              from 'react';
 import { Scrollbars }     from 'tt-react-custom-scrollbars';
 import { Button }         from 'deriv-components';
-import Icon               from 'Assets/icon.jsx';
+import Icon               from 'deriv-components/lib/icon';
 import { localize }       from 'App/i18n';
 
 const TradeTypeInfoItem = ({

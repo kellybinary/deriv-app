@@ -3,7 +3,7 @@ import PropTypes           from 'prop-types';
 import React               from 'react';
 import { CSSTransition }   from 'react-transition-group';
 import { AccountSwitcher } from 'App/Containers/AccountSwitcher';
-import Icon                from 'Assets/icon.jsx';
+import Icon                from 'deriv-components/lib/icon';
 
 // todo fix absolute path
 

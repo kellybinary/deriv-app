@@ -1,6 +1,6 @@
 import classNames           from 'classnames';
 import React                from 'react';
-import Icon                 from 'Assets/icon.jsx';
+import Icon                 from 'deriv-components/lib/icon';
 import { localize }         from 'App/i18n';
 import Label                from 'App/Components/Elements/Label/label.jsx';
 import Money                from 'App/Components/Elements/money.jsx';
@@ -165,7 +165,7 @@ export const getOpenPositionsColumnsTemplate = (currency) => [
                 >
                     <Money amount={Math.abs(profit)} currency={currency} />
                     <div className='open-positions__profit-loss--movement'>
-                        <Icon icon='IconPriceMove' type={profit > 0 ? 'profit' : 'loss'} />
+                        {/* <Icon icon='IconPriceMove' type={profit > 0 ? 'profit' : 'loss'} /> */}
                     </div>
                 </div>
             );

@@ -51,7 +51,7 @@ class Icon extends React.PureComponent {
             IconEmailSent              : React.lazy(() => import('./Cashier/icon-email-sent.jsx')),
 
             // Modal
-            ModalIconClose: React.lazy(() => import('./Modal/icon-close.jsx')),
+            IconClose: React.lazy(() => import('./Modal/icon-close.jsx')),
 
             // Footer
             IconMaximize : React.lazy(() => import('./Footer/icon-maximize.jsx')),

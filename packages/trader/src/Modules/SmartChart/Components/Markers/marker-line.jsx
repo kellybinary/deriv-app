@@ -1,8 +1,8 @@
-import classNames           from 'classnames';
+import classNames   from 'classnames';
 import { observer } from 'mobx-react';
 import PropTypes    from 'prop-types';
 import React        from 'react';
-import Icon         from 'Assets/icon.jsx';
+import Icon         from 'deriv-components/lib/icon';
 
 const MarkerLine = ({
     label,

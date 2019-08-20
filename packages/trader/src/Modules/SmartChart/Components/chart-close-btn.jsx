@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React     from 'react';
-import Icon      from 'Assets/icon.jsx';
+import Icon      from 'deriv-components/lib/icon';
 
 const ChartCloseBtn = ({
     is_contract_mode,
@@ -13,7 +13,7 @@ const ChartCloseBtn = ({
             onClick={onClose}
         >
             <Icon
-                icon='ContractIconClose'
+                icon='IconClose'
                 className='ic-chart-close'
             />
         </div>

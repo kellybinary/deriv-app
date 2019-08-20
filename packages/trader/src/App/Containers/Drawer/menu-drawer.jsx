@@ -1,10 +1,10 @@
 import PropTypes         from 'prop-types';
 import React             from 'react';
+import Icon              from 'deriv-components/lib/icon';
 import { localize }      from 'App/i18n';
 import {
     DrawerItem,
     DrawerToggle }       from 'App/Components/Elements/Drawer';
-import Icon              from 'Assets/icon.jsx';
 import routes            from 'Constants/routes';
 import { requestLogout } from 'Services';
 import { connect }       from 'Stores/connect';
