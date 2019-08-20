@@ -90,11 +90,10 @@ class AccountSwitcher extends React.Component {
                                         onClick={this.doSwitch.bind(this, account.loginid)}
                                     >
                                         <span className={'acc-switcher__id'}>
-                                            {/* <Icon
-                                                icon='IconAccountsCurrency'
+                                            <Icon
+                                                icon={`IconCurrency${account.icon}`}
                                                 className={`acc-switcher__id-icon acc-switcher__id-icon--${account.icon}`}
-                                                type={account.icon}
-                                            /> */}
+                                            />
                                             {account.loginid}
                                         </span>
                                     </div>
