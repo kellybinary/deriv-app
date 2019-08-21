@@ -27,6 +27,7 @@ const ContractTypeItem = ({
         >
             <IconTradeCategory
                 className='contract-type-item__icon-wrapper'
+                is_high_low={/high_low/.test(contract.value) || undefined}
                 trade_types={contract.trade_types}
             />
             <span className='contract-type-item__title'>

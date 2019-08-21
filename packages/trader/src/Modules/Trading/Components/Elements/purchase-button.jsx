@@ -22,10 +22,7 @@ const PurchaseButton = ({
     onClickPurchase,
     type,
 }) => {
-    const getIconName = () => {
-        if (!should_fade && is_loading) return '';
-        return IconTradeTypesMap[type.toLowerCase()];
-    };
+    const getIconName = () => IconTradeTypesMap[(is_high_low) ? `${type.toLowerCase()}_barrier` : type.toLowerCase()];
     const is_button_disabled = ((is_contract_mode || is_disabled) && !is_loading) || is_proposal_empty;
 
     return (
@@ -49,10 +46,13 @@ const PurchaseButton = ({
                 <div className='btn-purchase__info btn-purchase__info--left'>
                     <div className='btn-purchase__type-wrapper'>
                         <div className='btn-purchase__icon_wrapper'>
-                            <Icon
-                                icon={getIconName()}
-                                className='btn-purchase__icon'
-                            />
+                            { !(!should_fade && is_loading)
+                                &&
+                                <Icon
+                                    icon={getIconName()}
+                                    className='btn-purchase__icon'
+                                />
+                            }
                         </div>
                         <div className='btn-purchase__text_wrapper'>
                             <span className='btn-purchase__text'>

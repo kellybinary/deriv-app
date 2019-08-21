@@ -1,16 +1,19 @@
-import classNames         from 'classnames';
-import PropTypes          from 'prop-types';
-import React              from 'react';
-import { Scrollbars }     from 'tt-react-custom-scrollbars';
-import { Button }         from 'deriv-components';
-import Icon               from 'deriv-components/lib/icon';
-import { localize }       from 'App/i18n';
+import classNames            from 'classnames';
+import PropTypes             from 'prop-types';
+import React                 from 'react';
+import { Scrollbars }        from 'tt-react-custom-scrollbars';
+import { Button }            from 'deriv-components';
+import Icon                  from 'deriv-components/lib/icon';
+import { localize }          from 'App/i18n';
+import TradeTypeInfoTemplate from './trade-type-info-template.jsx';
+
+const snakeCaseToKebabCase = (str) => str.charAt(0).toUpperCase() + str.substr(1).replace(/(_\w)/g, (m) => m[1].toUpperCase());
 
 const TradeTypeInfoItem = ({
     handleNavigationClick,
     handleNextClick,
     handlePrevClick,
-    is_dark_theme,
+    // is_dark_theme,
     is_mobile,
     item,
     item_index,
@@ -38,10 +41,12 @@ const TradeTypeInfoItem = ({
                         <div className='trade-type-info-dialog__card' key={idx}>
                             <div className='trade-type-info-dialog__gif'>
                                 <Icon
-                                    icon='TradeCategoriesGIF'
-                                    category={type.value}
+                                    icon={`ImgTradetypes${snakeCaseToKebabCase(type.value)}`}
                                     className='trade-type-info-dialog__gif-image'
-                                    is_dark_theme={is_dark_theme}
+                                    customThemeColors={{
+                                        'fill=#191C31': 'bg-fill',
+                                        'fill=#FFF'   : 'arrow-fill',
+                                    }}
                                 />
                             </div>
                             <div className='trade-type-info-dialog__content'>
@@ -49,7 +54,7 @@ const TradeTypeInfoItem = ({
                                     autoHide
                                     style={{ height: '100%' }}
                                 >
-                                    <Icon icon='TradeCategories' category={type.value} />
+                                    <TradeTypeInfoTemplate category={type.value} />
                                 </Scrollbars>
                             </div>
                             <div>

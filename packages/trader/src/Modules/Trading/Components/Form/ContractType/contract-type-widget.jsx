@@ -167,6 +167,7 @@ class ContractTypeWidget extends React.PureComponent {
                 >
                     <IconTradeCategory
                         className='contract-type-widget__icon-wrapper'
+                        is_high_low={/high_low/.test(value) || undefined}
                         trade_types={trade_types}
                     />
                     <span name={name} value={value}>

@@ -13,6 +13,6 @@
             <path stroke="#A41517" d="M6.08 10.95l.252 3.01c.07.85.82 1.54 1.668 1.54.85 0 1.598-.692 1.668-1.54l.251-3.01a.406.406 0 0 0-.419-.45h-3c-.263 0-.44.193-.42.45z"/>
             <path fill="#A41517" d="M6 12h4v1H9l-1 2-1-2H6zM3 9h2v7H3zM11 9h2v7h-2zM6 8a1 1 0 0 1 1.01-1h1.98C9.549 7 10 7.444 10 8v.495A.495.495 0 0 1 9.51 9H6.49A.49.49 0 0 1 6 8.495V8z"/>
         </g>
-        <rect width="34.5" height="22.5" x=".75" y=".75" stroke="#000" stroke-opacity=".04" stroke-width="1.5" mask="url(#b)" rx="3"/>
+        <rect width="34.5" height="22.5" x=".75" y=".75" stroke="darkgrey" stroke-opacity=".04" stroke-width="1.5" mask="url(#b)" rx="3"/>
     </g>
 </svg>

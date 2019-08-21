@@ -4,8 +4,13 @@ import React                 from 'react';
 import Icon                  from 'deriv-components/lib/icon';
 import { IconTradeTypesMap } from '../../../Helpers/trade-types';
 
-const IconTradeCategory = ({ className, trade_types }) => {
-    const [type1, type2] = Object.values(trade_types).map(type => type.toLowerCase());
+const IconTradeCategory = ({ className, is_high_low, trade_types }) => {
+    let [type1, type2] = Object.values(trade_types).map(type => type.toLowerCase());
+
+    if (is_high_low) {
+        type1 = `${type1}_barrier`
+        type2 = `${type2}_barrier`
+    }
 
     return (
         <div className={classNames('categories-container', className)}>
@@ -30,8 +35,9 @@ const IconTradeCategory = ({ className, trade_types }) => {
 };
 
 IconTradeCategory.propTypes = {
-    category : PropTypes.string,
-    className: PropTypes.string,
+    className  : PropTypes.string,
+    is_high_low: PropTypes.bool,
+    trade_types: PropTypes.array,
 };
 
 export default IconTradeCategory;

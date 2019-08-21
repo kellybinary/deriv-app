@@ -1,14 +1,13 @@
 import React        from 'react';
 import Icon         from 'deriv-components/lib/icon';
 import { localize } from 'App/i18n';
-import IconDeriv    from 'Assets/Header/NavBar/icon-deriv.jsx';
 import { routes }   from 'Constants/index';
 
 const header_links = [
     {
         id     : 'dt_deriv_logo',
         logo   : <div className='header__logo'>{localize('BETA')}</div>,
-        image  : <IconDeriv className='header__icon' />,
+        image  : <Icon icon='IconDerivWithTagline' className='header__icon' customThemeColors={{ 'fill=#a9a9a9': 'color3-fill' }} />,
         link_to: routes.trade,
     },
     {
