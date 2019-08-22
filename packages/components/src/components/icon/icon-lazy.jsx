@@ -4,16 +4,12 @@ import PropTypes       from 'prop-types';
 
 const PascalCaseToKebabCase = (string) => {
     return string.split(/(?=[A-Z])/).join('-').toLowerCase().replace('icon', 'ic');
-}
+};
 
 const loadLazyIcon = (icon) => (
     lazy(() => import(/* webpackMode: "eager" */ `./svg/${PascalCaseToKebabCase(icon)}.svg`)));
 
 class Icon extends React.PureComponent {
-    constructor(props) {
-        super(props);
-    }
-
     render() {
         const options = {
             className        : this.props.className,

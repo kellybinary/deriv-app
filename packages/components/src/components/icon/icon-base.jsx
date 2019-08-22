@@ -1,19 +1,23 @@
+import classnames from 'classnames';
 import React from 'react';
 
 function getThemifiedProps(Svg, theme, key) {
+    if (!Svg || !Svg.props) return <div />;
+
     const { children, ...props } = Svg.props;
 
     if (!children) {
-       const themifiedChildren = Object.keys(theme).map(rule => {
+        const themifiedChildren = Object.keys(theme).map(rule => {
             const [attribute, value] = rule.split('=');
             if (props[attribute] === value) {
                 return React.cloneElement(Svg, { key, className: theme[rule] });
             }
+            return undefined;
         }).filter(c => c !== undefined)[0];
 
         if (themifiedChildren) {
             return themifiedChildren;
-        };
+        }
         return React.cloneElement(Svg, { key });
     }
 
@@ -52,7 +56,7 @@ const IconBase = Svg => {
 
     return (
         <svg
-            className={className}
+            className={classnames('inline-icon', className)}
             height={height}
             width={width}
             viewBox={`0 0 ${width} ${height}`}

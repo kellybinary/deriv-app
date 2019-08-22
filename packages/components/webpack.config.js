@@ -1,16 +1,17 @@
-const StyleLintPlugin           = require('stylelint-webpack-plugin');
-const SpriteLoaderPlugin        = require('svg-sprite-loader/plugin');
-const MiniCssExtractPlugin      = require("mini-css-extract-plugin");
-const path                      = require('path');
+const StyleLintPlugin      = require('stylelint-webpack-plugin');
+const SpriteLoaderPlugin   = require('svg-sprite-loader/plugin');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const path                 = require('path');
 const is_serve = process.env.BUILD_MODE === 'serve';
 
 module.exports = {
     // entry: path.join(__dirname, 'src', 'index.js'),
     entry: {
         // index: path.join(__dirname, 'src', 'index.js'),
-        icon: path.resolve(__dirname, 'src', 'components/icon/index.js'),
-        button: path.resolve(__dirname, 'src' ,'components/button/index.js'),
-        label: path.resolve(__dirname, 'src' , 'components/label/index.js'),
+        icon  : path.resolve(__dirname, 'src', 'components/icon/index.js'),
+        svg   : path.resolve(__dirname, 'src', 'components/icon/svg/index.js'),
+        button: path.resolve(__dirname, 'src', 'components/button/index.js'),
+        label : path.resolve(__dirname, 'src', 'components/label/index.js'),
     },
     output: {
         path: path.resolve(__dirname, 'lib'),
@@ -52,28 +53,21 @@ module.exports = {
                         }
                     }
                 ]
-            },  
-            // {  
-            //     test: /\.svg$/,
-            //     use: [
-            //         {
-            //             loader: 'svg-sprite-loader',
-            //             options: {
-            //                 extract: true,
-            //                 spriteFilename: 'bot-sprite.svg',
-            //             },
-            //         },
-            //         {
-            //             loader: 'svgo-loader',
-            //             options: {
-            //                 plugins: [
-            //                     { removeUselessStrokeAndFill: false },
-            //                     { removeUnknownsAndDefaults: false },
-            //                 ],
-            //             },
-            //         },
-            //     ],
-            // },
+            },
+            (!is_serve ? {
+                enforce: 'pre',
+                test: /\.(js|jsx)$/,
+                exclude: [/node_modules/],
+                loader: 'eslint-loader',
+                options: {
+                    fix: true
+                },
+            } : {}),
+            {
+                test: /\.(js|jsx)$/,
+                exclude: /node_modules/,
+                loader: 'babel-loader',
+            },
             {  
                 test: /\.svg$/,
                 use: [
@@ -103,27 +97,12 @@ module.exports = {
                     },
                 ],
             },
-            (!is_serve ? {
-                enforce: 'pre',
-                test: /\.(js|jsx)$/,
-                exclude: [/node_modules/],
-                loader: 'eslint-loader',
-                options: {
-                    fix: true
-                },
-            } : {}),
-            {
-                test: /\.(js|jsx)$/,
-                exclude: /node_modules/,
-                loader: 'babel-loader',
-            },
         ],
     },
     plugins: [
         new MiniCssExtractPlugin({ filename: '[name].css' }),
         new StyleLintPlugin({ fix: true }),
         new SpriteLoaderPlugin(),
-
     ],
     externals: {
         mobx: 'mobx',
@@ -143,6 +122,5 @@ module.exports = {
             root: 'mobxReact',
         },
         'babel-polyfill': 'babel-polyfill',
-
     },
 }
