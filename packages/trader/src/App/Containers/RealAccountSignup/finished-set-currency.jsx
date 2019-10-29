@@ -1,8 +1,8 @@
 import React         from 'react';
+import { Button }    from 'deriv-components';
 import Localize      from 'App/Components/Elements/localize.jsx';
 import { localize }  from 'App/i18n';
 import Icon          from 'Assets/icon.jsx';
-import Button        from 'deriv-components/src/components/button';
 
 const FinishedSetCurrency = ({
     current,

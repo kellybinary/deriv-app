@@ -20,10 +20,17 @@ module.exports = function(source, map) {
             return line; // do nothing;
         }
         const components = matches[1].replace(/\s+/g, '').split(',');
-        const replace = components.map(c => `
+        const replace = components.map(c => {
+            if (c.startsWith('Ic')) {
+                return `
+import ${c} from 'deriv-components/lib/icon';
+                `;
+            }
+            return `
 import ${c} from 'deriv-components/lib/${getKebabCase(c)}';
 import 'deriv-components/lib/${getKebabCase(c)}.css';
-        `).join('\n');
+        `;
+        }).join('\n');
 
         return replace;
     });

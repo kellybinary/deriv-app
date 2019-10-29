@@ -1,6 +1,6 @@
 import React   from 'react';
 import Loading from '../loading/loading.jsx';
-import '../loading/loading.scss';
+import              '../loading/loading.scss';
 
 const ButtonLoading = (props) => {
     return (

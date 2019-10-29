@@ -19,6 +19,7 @@ module.exports = {
         dropdown           : path.resolve(__dirname, 'src', 'components/dropdown/index.js'),
         'field-error'      : path.resolve(__dirname, 'src', 'components/field-error/index.js'),
         'file-dropzone'    : path.resolve(__dirname, 'src', 'components/file-dropzone/index.js'),
+        icon               : path.resolve(__dirname, 'src', 'components/icon/index.js'),
         input              : path.resolve(__dirname, 'src', 'components/input/index.js'),
         label              : path.resolve(__dirname, 'src', 'components/label/index.js'),
         loading            : path.resolve(__dirname, 'src', 'components/loading/index.js'),
@@ -85,7 +86,8 @@ module.exports = {
                         loader : 'svg-sprite-loader',
                         options: {
                             extract       : true,
-                            spriteFilename: 'bot-sprite.svg',
+                            spriteFilename: 'sprite.svg',
+                            publicPath    : '/icon/',
                         },
                     },
                     {

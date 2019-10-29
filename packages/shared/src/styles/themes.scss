@@ -16,6 +16,10 @@
     // Brand secondary colors
     --brand-secondary: #{$color-green};
 
+    // Tradetypes icon colors
+    --fill-arrowhead: var(--brand-red-coral);
+    --fill-arrowtail: var(--brand-secondary);
+
     .theme--light {
         // General
         --general-main-1: #{$color-white};
@@ -67,6 +71,8 @@
         --fill-hover: #{$color-grey-1};
         --fill-active: var(--brand-secondary);
         --fill-disabled: #{$color-grey-3};
+        --fill-color1: var(--text-general);
+        --stroke-color1: var(--fill-color1);
         // Status
         --status-default: #{$color-grey-3};
         --status-danger: #{$color-red-1};
@@ -131,6 +137,8 @@
         --fill-hover: #{$color-grey-7};
         --fill-active: var(--brand-secondary);
         --fill-disabled: #{$color-black-4};
+        --fill-color1: var(--text-general);
+        --stroke-color1: var(--fill-color1);
         // Status
         --status-default: #{$color-grey-3};
         --status-danger: #{$color-red-2};

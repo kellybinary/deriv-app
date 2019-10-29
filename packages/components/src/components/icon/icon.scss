@@ -1,0 +1,10 @@
+.dc-icon {
+    @extend %inline-icon;
+
+    &--disabled {
+        @extend %inline-icon.disabled;
+    }
+    &--white {
+        @extend %inline-icon.white;
+    }
+}

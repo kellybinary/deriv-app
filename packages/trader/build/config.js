@@ -13,6 +13,7 @@ const copyConfig = (base) => ([
     { from: path.resolve(__dirname, '../src/public/images/favicons/favicon.ico'), to: 'favicon.ico', toType: 'file' },
     { from: path.resolve(__dirname, '../src/public/images/favicons/**') },
     { from: path.resolve(__dirname, '../src/public/images/common/logos/platform_logos/**') },
+    { from: path.resolve(__dirname, '../node_modules/deriv-components/lib/icon/sprite.svg'), to: 'sprite.svg', toType: 'file' },
     // { from: path.resolve(__dirname, '../src/_common/lib/pushwooshSDK/**'), flatten: true },
     {
         from: path.resolve(__dirname, '../src/templates/app/manifest.json'),
