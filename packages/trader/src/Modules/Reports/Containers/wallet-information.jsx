@@ -1,10 +1,12 @@
-import { Label, Money }  from 'deriv-components';
-import PropTypes         from 'prop-types';
-import React             from 'react';
-import Icon              from 'Assets/icon.jsx';
-import Localize          from 'App/Components/Elements/localize.jsx';
-import { localize }      from 'App/i18n';
-import { connect }       from 'Stores/connect';
+import {
+    Icon,
+    Label,
+    Money }         from 'deriv-components';
+import PropTypes    from 'prop-types';
+import React        from 'react';
+import Localize     from 'App/Components/Elements/localize.jsx';
+import { localize } from 'App/i18n';
+import { connect }  from 'Stores/connect';
 
 const Description = ({ currency, is_virtual }) => (
     is_virtual ?
@@ -25,7 +27,7 @@ const WalletInformation = ({
 }) => {
     return (
         <div className='account-wallet'>
-            <Icon icon='IconAccountsCurrency' type={is_virtual ? 'virtual' : currency.toLowerCase()} />
+            <Icon icon={`IconCurrency-${is_virtual ? 'virtual' : currency.toLowerCase()}`} medium className='inline-icon' />
             <span className='description'>
                 { has_description ?
                     <Description currency={currency} is_virtual={is_virtual} />

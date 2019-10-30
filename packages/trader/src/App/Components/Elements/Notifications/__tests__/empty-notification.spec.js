@@ -3,7 +3,7 @@ import { expect }             from 'chai';
 import { configure, shallow } from 'enzyme';
 import Adapter                from 'enzyme-adapter-react-16';
 import { EmptyNotification }  from '../empty-notification';
-import Icon                   from 'Assets/icon.jsx';
+import Icon                   from 'Assets/icon.jsx'; // TODO: replace this once Notification card is merged
 
 configure({ adapter: new Adapter() });
 

@@ -1,25 +1,25 @@
-import classNames             from 'classnames';
-import PropTypes              from 'prop-types';
-import React                  from 'react';
+import classNames       from 'classnames';
+import PropTypes        from 'prop-types';
+import React            from 'react';
 import {
     Button,
     Dropdown,
+    Icon,
     Input,
-    Money }                   from 'deriv-components';
+    Money }             from 'deriv-components';
 import {
     Field,
     Formik,
-    Form }                    from 'formik';
-import CurrencyUtils          from 'deriv-shared/utils/currency';
-import Localize               from 'App/Components/Elements/localize.jsx';
-import { website_name }       from 'App/Constants/app-config';
-import { localize }           from 'App/i18n';
-import Icon                   from 'Assets/icon.jsx';
-import { connect }            from 'Stores/connect';
+    Form }              from 'formik';
+import CurrencyUtils    from 'deriv-shared/utils/currency';
+import Localize         from 'App/Components/Elements/localize.jsx';
+import { website_name } from 'App/Constants/app-config';
+import { localize }     from 'App/i18n';
+import { connect }      from 'Stores/connect';
 import {
     getPreBuildDVRs,
-    validNumber }             from 'Utils/Validator/declarative-validation-rules';
-import Loading                from '../../../../templates/_common/components/loading.jsx';
+    validNumber }       from 'Utils/Validator/declarative-validation-rules';
+import Loading          from '../../../../templates/_common/components/loading.jsx';
 
 const validateTransfer = (values, { balance, currency, transfer_limit }) => {
     const errors = {};
@@ -39,9 +39,8 @@ const AccountOption = ({ account, idx }) => (
     <React.Fragment key={idx}>
         {(account.currency || account.mt_icon) &&
             <Icon
-                icon='IconAccountsCurrency'
+                icon={`IconCurrency-${account.mt_icon || account.currency.toLowerCase()}`}
                 className='account-transfer__currency-icon'
-                type={account.mt_icon || account.currency.toLowerCase()}
                 height={16}
                 width={16}
             />
@@ -138,7 +137,7 @@ class AccountTransferForm extends React.Component {
                                                 value={this.props.selected_from.value}
                                                 onChange={this.props.onChangeTransferFrom}
                                             />
-                                            <Icon className='cashier__transferred-icon account-transfer__transfer-icon' icon='IconBack' />
+                                            <Icon className='cashier__transferred-icon account-transfer__transfer-icon' icon='IconArrowLeft' />
                                             <Dropdown
                                                 id='transfer_to'
                                                 className='cashier__drop-down account-transfer__drop-down'

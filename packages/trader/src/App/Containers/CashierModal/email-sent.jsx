@@ -1,11 +1,10 @@
-import PropTypes      from 'prop-types';
-import React          from 'react';
-import { Button }     from 'deriv-components';
-import Localize       from 'App/Components/Elements/localize.jsx';
-import { BinaryLink } from 'App/Components/Routes';
-import { localize }   from 'App/i18n';
-import Icon           from 'Assets/icon.jsx';
-import { connect }    from 'Stores/connect';
+import PropTypes        from 'prop-types';
+import React            from 'react';
+import { Button, Icon } from 'deriv-components';
+import Localize         from 'App/Components/Elements/localize.jsx';
+import { BinaryLink }   from 'App/Components/Routes';
+import { localize }     from 'App/i18n';
+import { connect }      from 'Stores/connect';
 
 class EmailSent extends React.Component {
     onClickVerification = () => { this.props.setVerificationResendClicked(true); };
@@ -13,7 +12,7 @@ class EmailSent extends React.Component {
     render() {
         return (
             <div className='withdraw__email-sent'>
-                <Icon icon='IconEmailSent' className='withdraw__icon' />
+                <Icon icon='IconEmailSent' className='withdraw__icon' height={128} width={128} />
                 <p className='withdraw__email-sent-title'><Localize i18n_default_text={'We\'ve sent you an email.'} /></p>
                 <p className='withdraw__email-sent-text'><Localize i18n_default_text='Please click on the link in the email to access withdrawal.' /></p>
                 <div className='withdraw__email-resend'>

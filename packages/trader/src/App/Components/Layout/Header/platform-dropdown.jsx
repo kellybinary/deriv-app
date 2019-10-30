@@ -2,8 +2,8 @@ import classNames     from 'classnames';
 import PropTypes      from 'prop-types';
 import React          from 'react';
 import ReactDOM       from 'react-dom';
+import { Icon }       from 'deriv-components';
 import { BinaryLink } from 'App/Components/Routes';
-import Icon           from 'Assets/icon.jsx';
 import { isBot }      from 'Utils/PlatformSwitcher';
 import 'Sass/app/_common/components/platform-dropdown.scss';
 

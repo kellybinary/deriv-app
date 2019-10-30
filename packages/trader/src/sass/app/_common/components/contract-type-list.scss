@@ -47,19 +47,6 @@
         height: 16px;
         width: 16px;
         margin-left: auto;
-
-        /* postcss-bem-linter: ignore */
-        svg {
-            pointer-events: none;
-            @extend %inline-icon.secondary;
-        }
-        &:hover {
-            /* postcss-bem-linter: ignore */
-            svg {
-                pointer-events: none;
-                @extend %inline-icon.white;
-            }
-        }
     }
     &--invisible {
         display: none;
@@ -78,22 +65,9 @@
         }
         .contract-type-item__icon {
             /* postcss-bem-linter: ignore */
-            svg {
-                pointer-events: none;
-                //stylelint-disable-next-line
-                .color1-fill {
-                    fill: var(--text-prominent);
-                }
-            }
-            &:hover {
+            .dc-icon {
                 /* postcss-bem-linter: ignore */
-                svg {
-                    pointer-events: none;
-
-                    .color1-fill {
-                        fill: var(--text-prominent) !important;
-                    }
-                }
+                --fill-color1: var(--text-prominent);
             }
         }
     }

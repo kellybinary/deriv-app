@@ -3,7 +3,7 @@ import { observer }         from 'mobx-react';
 import PropTypes            from 'prop-types';
 import React                from 'react';
 import { CSSTransition }    from 'react-transition-group';
-import Icon                 from 'Assets/icon.jsx';
+import { Icon }             from 'deriv-components';
 import InputField           from 'App/Components/Form/InputField';
 import {
     addDays,
@@ -220,7 +220,7 @@ class DatePicker extends React.Component {
                     />
                     <label className='datepicker__native-overlay' htmlFor={this.props.name}>
                         {this.state.value || this.props.placeholder}
-                        <Icon icon='IconArrow' className='datepicker__arrowhead' />
+                        <Icon icon='IconChevronDown' className='datepicker__arrowhead' />
                     </label>
                 </div>
             );

@@ -3,6 +3,7 @@ import PropTypes              from 'prop-types';
 import React                  from 'react';
 import {
     Button,
+    Icon,
     Input }                   from 'deriv-components';
 import {
     Field,
@@ -11,7 +12,6 @@ import {
 import CurrencyUtils          from 'deriv-shared/utils/currency';
 import Localize               from 'App/Components/Elements/localize.jsx';
 import { localize }           from 'App/i18n';
-import Icon                   from 'Assets/icon.jsx';
 import { connect }            from 'Stores/connect';
 import {
     getPreBuildDVRs,

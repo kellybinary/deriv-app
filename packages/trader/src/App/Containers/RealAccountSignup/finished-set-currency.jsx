@@ -1,8 +1,7 @@
-import React         from 'react';
-import { Button }    from 'deriv-components';
-import Localize      from 'App/Components/Elements/localize.jsx';
-import { localize }  from 'App/i18n';
-import Icon          from 'Assets/icon.jsx';
+import React            from 'react';
+import { Button, Icon } from 'deriv-components';
+import Localize         from 'App/Components/Elements/localize.jsx';
+import { localize }     from 'App/i18n';
 
 const FinishedSetCurrency = ({
     current,
@@ -10,22 +9,10 @@ const FinishedSetCurrency = ({
     onSubmit,
     prev,
 }) => {
-    const IconPrevCurrency = () => <Icon
-        icon='IconAccountsCurrency'
-        type={prev.toLowerCase()}
-    />;
-    const IconNextCurrency = () => <Icon
-        icon='IconAccountsCurrency'
-        type={current.toLowerCase()}
-    />;
-    const IconArrow        = () => <Icon
-        icon='IconRedArrow'
-    />;
-
-    const IconWon          = ({ className }) => <Icon
-        className={className}
-        icon='IconWon'
-    />;
+    const IconPrevCurrency = () => <Icon icon={`IconCurrency-${prev.toLowerCase()}`} />;
+    const IconNextCurrency = () => <Icon icon={`IconCurrency-${current.toLowerCase()}`} />;
+    const IconArrow        = () => <Icon icon='IconRedArrow' />;
+    const IconWon          = ({ className }) => <Icon className={className} icon='IconWon' />;
 
     return (
         <div className='success-change'>

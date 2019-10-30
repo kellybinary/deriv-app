@@ -1,6 +1,6 @@
 import PropTypes    from 'prop-types';
 import React        from 'react';
-import Icon         from 'Assets/icon.jsx';
+import { Icon }     from 'deriv-components';
 import Localize     from 'App/Components/Elements/localize.jsx';
 import { localize } from 'App/i18n';
 
@@ -27,8 +27,7 @@ const AccountLimitsInfo = ({
             <>
                 <Icon
                     className='account__inset_header-icon'
-                    icon='IconAccountsCurrency'
-                    type={currency.toLowerCase()}
+                    icon={`IconCurrency-${currency.toLowerCase()}`}
                 />
                 <p className='account__inset_header-subheading'>
                     <Localize

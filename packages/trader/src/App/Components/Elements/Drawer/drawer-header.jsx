@@ -1,8 +1,8 @@
 import classNames    from 'classnames';
 import PropTypes     from 'prop-types';
 import React         from 'react';
+import { Icon }      from 'deriv-components';
 import { localize }  from 'App/i18n';
-import Icon          from 'Assets/icon.jsx';
 
 export const DrawerHeader = ({
     alignment,

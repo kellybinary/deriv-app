@@ -1,8 +1,7 @@
-import PropTypes      from 'prop-types';
-import React          from 'react';
-import { Button }     from 'deriv-components';
-import { localize }   from 'App/i18n';
-import Icon           from 'Assets/icon.jsx';
+import PropTypes        from 'prop-types';
+import React            from 'react';
+import { Button, Icon } from 'deriv-components';
+import { localize }     from 'App/i18n';
 
 class SendEmailTemplate extends React.Component {
     resend_interval = null;

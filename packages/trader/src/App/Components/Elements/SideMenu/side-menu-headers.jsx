@@ -1,10 +1,10 @@
-import classNames         from 'classnames';
-import React              from 'react';
-import { withRouter }     from 'react-router-dom';
-import Icon               from 'Assets/icon.jsx';
+import classNames       from 'classnames';
+import React            from 'react';
+import { withRouter }   from 'react-router-dom';
+import { Icon }         from 'deriv-components';
 import {
     VerticalTabHeaders,
-    VerticalTabHeader }   from '../VerticalTabs';
+    VerticalTabHeader } from '../VerticalTabs';
 
 const MainHeaderLayout = ({ children }) => <div className='side-menu__main-header-layout'>{children}</div>;
 

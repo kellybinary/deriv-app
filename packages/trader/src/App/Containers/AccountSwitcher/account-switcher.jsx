@@ -3,6 +3,7 @@ import PropTypes          from 'prop-types';
 import React              from 'react';
 import { withRouter }     from 'react-router';
 import {
+    Icon,
     Money,
     Popover,
     ThemedScrollbars }    from 'deriv-components';
@@ -10,7 +11,6 @@ import CurrencyUtils      from 'deriv-shared/utils/currency';
 import { localize }       from 'App/i18n';
 import { urlFor }         from '_common/url';
 import UpgradeButton      from 'App/Containers/RealAccountSignup/upgrade-button.jsx';
-import Icon               from 'Assets/icon.jsx';
 import { requestLogout }  from 'Services/index';
 import { connect }        from 'Stores/connect';
 import Localize           from 'App/Components/Elements/localize.jsx';
@@ -34,7 +34,7 @@ const AccountWrapper = ({
             <span className='acc-switcher__list-title'>
                 {header}
             </span>
-            <Icon icon='IconArrow' className='acc-info__select-arrow' />
+            <Icon icon='IconChevronDown' className='acc-info__select-arrow' />
         </div>
         {is_visible &&
             <React.Fragment>
@@ -70,9 +70,9 @@ const AccountList = ({
         >
             <span className={'acc-switcher__id'}>
                 <Icon
-                    icon='IconAccountsCurrency'
+                    icon={`IconCurrency-${currency_icon}`}
                     className={`acc-switcher__id-icon acc-switcher__id-icon--${currency_icon}`}
-                    type={currency_icon}
+                    medium
                 />
                 <span>
                     {display_type === 'currency'

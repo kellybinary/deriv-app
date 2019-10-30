@@ -1,10 +1,24 @@
 .dc-icon {
-    @extend %inline-icon;
+    --fill-color1: var(--text-general);
 
     &--disabled {
-        @extend %inline-icon.disabled;
+        --fill-color1: var(--text-disabled);
     }
-    &--white {
-        @extend %inline-icon.white;
+    &--active {
+        --fill-color1: #{$color-white};
+        --fill-arrowhead: #{$color-white};
+        --fill-arrowtail: #{$color-white};
+    }
+    &--green {
+        --fill-color1: var(--text-profit-success);
+    }
+    &--red {
+        --fill-color1: var(--text-loss-danger);
+    }
+    &--secondary {
+        --fill-color1: var(--text-less-prominent);
+    }
+    &:hover:not(&--active):not(&--disabled) {
+        --fill-color1: var(--text-prominent);
     }
 }

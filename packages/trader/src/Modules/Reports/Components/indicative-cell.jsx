@@ -1,8 +1,7 @@
-import { Money }    from 'deriv-components';
-import PropTypes    from 'prop-types';
-import React        from 'react';
-import { localize } from 'App/i18n';
-import Icon         from 'Assets/icon.jsx';
+import { Icon, Money } from 'deriv-components';
+import PropTypes       from 'prop-types';
+import React           from 'react';
+import { localize }    from 'App/i18n';
 
 class IndicativeCell extends React.PureComponent {
     constructor(props) {

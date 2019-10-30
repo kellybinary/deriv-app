@@ -1,6 +1,7 @@
 import PropTypes         from 'prop-types';
 import React             from 'react';
 import { withRouter }    from 'react-router';
+import { Icon }          from 'deriv-components';
 import ObjectUtils       from 'deriv-shared/utils/object';
 import ChartLoader       from 'App/Components/Elements/chart-loader.jsx';
 import ContractDrawer    from 'App/Components/Elements/ContractDrawer';
@@ -8,7 +9,6 @@ import Digits            from 'Modules/Contract/Components/Digits';
 import InfoBox           from 'Modules/Contract/Components/InfoBox';
 import Lazy              from 'App/Containers/Lazy';
 import { localize }      from 'App/i18n';
-import Icon              from 'Assets/icon.jsx';
 import AppRoutes         from 'Constants/routes';
 import { SmartChart }    from 'Modules/SmartChart';
 import { connect }       from 'Stores/connect';
@@ -88,7 +88,7 @@ class ContractReplay extends React.Component {
                             >
                                 <Icon
                                     className='vertical-tab__action-bar--icon'
-                                    icon='ModalIconClose'
+                                    icon='IconClose'
                                 />
                             </div>
                         </div>

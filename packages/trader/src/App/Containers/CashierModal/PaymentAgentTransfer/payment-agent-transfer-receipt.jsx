@@ -1,14 +1,13 @@
-import classNames     from 'classnames';
-import PropTypes      from 'prop-types';
-import React          from 'react';
-import { withRouter } from 'react-router';
-import { Button }     from 'deriv-components';
-import CurrencyUtils  from 'deriv-shared/utils/currency';
-import Localize       from 'App/Components/Elements/localize.jsx';
-import { localize }   from 'App/i18n';
-import Icon           from 'Assets/icon.jsx';
-import routes         from 'Constants/routes';
-import { connect }    from 'Stores/connect';
+import classNames       from 'classnames';
+import PropTypes        from 'prop-types';
+import React            from 'react';
+import { withRouter }   from 'react-router';
+import { Button, Icon } from 'deriv-components';
+import CurrencyUtils    from 'deriv-shared/utils/currency';
+import Localize         from 'App/Components/Elements/localize.jsx';
+import { localize }     from 'App/i18n';
+import routes           from 'Constants/routes';
+import { connect }      from 'Stores/connect';
 
 class PaymentAgentTransferReceipt extends React.Component {
     openStatement = () => {
@@ -32,17 +31,12 @@ class PaymentAgentTransferReceipt extends React.Component {
                     </div>
                     <div className='cashier__transferred-details-wrapper'>
                         <span className='account-transfer__transfer-details-from'>
-                            <Icon
-                                icon='IconAccountsCurrency'
-                                type={this.props.currency.toLowerCase()}
-                                height={16}
-                                width={16}
-                            />
+                            <Icon icon={`IconCurrency-${this.props.currency.toLowerCase()}`} />
                             <span className='cashier__transferred-details'>
                                 <span className='cashier__text--bold'>{this.props.currency.toUpperCase()}</span>&nbsp;({this.props.loginid})
                             </span>
                         </span>
-                        <Icon className='cashier__transferred-icon' icon='IconBack' />
+                        <Icon className='cashier__transferred-icon' icon='IconArrowLeft' />
                         <span className='account-transfer__transfer-details-to'>
                             <Icon icon='IconUser' />
                             <span className='cashier__transferred-details'>

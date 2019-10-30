@@ -1,6 +1,7 @@
 import classNames        from 'classnames';
 import PropTypes         from 'prop-types';
 import React             from 'react';
+import { Icon }          from 'deriv-components';
 import {
     AccountActions,
     MenuLinks,
@@ -9,7 +10,6 @@ import platform_config   from 'App/Constants/platform-config';
 import Lazy              from 'App/Containers/Lazy';
 import RealAccountSignup from 'App/Containers/RealAccountSignup';
 import { localize }      from 'App/i18n';
-import Icon              from 'Assets/icon.jsx';
 import { connect }       from 'Stores/connect';
 
 const Header = ({

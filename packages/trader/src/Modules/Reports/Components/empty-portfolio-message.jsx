@@ -1,6 +1,6 @@
 import React        from 'react';
+import { Icon }     from 'deriv-components';
 import { localize } from 'App/i18n';
-import Icon         from 'Assets/icon.jsx';
 
 const EmptyPortfolioMessage = ({ error }) => (
     <div className='portfolio-empty'>
@@ -9,7 +9,7 @@ const EmptyPortfolioMessage = ({ error }) => (
                 <span className='portfolio-empty__text'>{error}</span>
                 :
                 <React.Fragment>
-                    <Icon icon='IconPositions' className='portfolio-empty__icon' />
+                    <Icon icon='IconPositions' className='portfolio-empty__icon' disabled />
                     <span className='portfolio-empty__text'>{localize('No open positions')}</span>
                 </React.Fragment>
             }

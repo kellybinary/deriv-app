@@ -1,7 +1,7 @@
-import classNames    from 'classnames';
-import PropTypes     from 'prop-types';
-import React         from 'react';
-import IconTradeType from 'Assets/Trading/Types/icon-trade-types.jsx';
+import classNames from 'classnames';
+import PropTypes  from 'prop-types';
+import React      from 'react';
+import { Icon }   from 'deriv-components';
 
 const IconTradeCategory = ({ category, className }) => {
     let IconCategory;
@@ -11,15 +11,15 @@ const IconTradeCategory = ({ category, className }) => {
                 IconCategory = (
                     <React.Fragment>
                         <div className='category-wrapper'>
-                            <IconTradeType
+                            <Icon
+                                icon='IconTradetypeCall'
                                 className='category-type'
-                                type='call'
                             />
                         </div>
                         <div className='category-wrapper'>
-                            <IconTradeType
+                            <Icon
+                                icon='IconTradetypePut'
                                 className='category-type'
-                                type='put'
                             />
                         </div>
                     </React.Fragment>
@@ -29,16 +29,15 @@ const IconTradeCategory = ({ category, className }) => {
                 IconCategory = (
                     <React.Fragment>
                         <div className='category-wrapper'>
-                            <IconTradeType
+                            <Icon
+                                icon='IconTradetypeCall'
                                 className='category-type'
-                                type='calle'
                             />
                         </div>
                         <div className='category-wrapper'>
-                            <IconTradeType
-                                
+                            <Icon
+                                icon='IconTradetypePut'
                                 className='category-type'
-                                type='pute'
                             />
                         </div>
                     </React.Fragment>
@@ -48,15 +47,15 @@ const IconTradeCategory = ({ category, className }) => {
                 IconCategory = (
                     <React.Fragment>
                         <div className='category-wrapper'>
-                            <IconTradeType
+                            <Icon
+                                icon='IconTradetypeCallBarrier'
                                 className='category-type'
-                                type='call_barrier'
                             />
                         </div>
                         <div className='category-wrapper'>
-                            <IconTradeType
+                            <Icon
+                                icon='IconTradetypePutBarrier'
                                 className='category-type'
-                                type='put_barrier'
                             />
                         </div>
                     </React.Fragment>
@@ -66,13 +65,13 @@ const IconTradeCategory = ({ category, className }) => {
                 IconCategory = (
                     <React.Fragment>
                         <div className='category-wrapper'>
-                            <IconTradeType
+                            <Icon
                                 className='category-type'
                                 type='expirymiss'
                             />
                         </div>
                         <div className='category-wrapper'>
-                            <IconTradeType
+                            <Icon
                                 className='category-type'
                                 type='expiryrange'
                             />
@@ -84,13 +83,13 @@ const IconTradeCategory = ({ category, className }) => {
                 IconCategory = (
                     <React.Fragment>
                         <div className='category-wrapper'>
-                            <IconTradeType
+                            <Icon
                                 className='category-type'
                                 type='range'
                             />
                         </div>
                         <div className='category-wrapper'>
-                            <IconTradeType
+                            <Icon
                                 className='category-type'
                                 type='upordown'
                             />
@@ -102,15 +101,15 @@ const IconTradeCategory = ({ category, className }) => {
                 IconCategory = (
                     <React.Fragment>
                         <div className='category-wrapper'>
-                            <IconTradeType
+                            <Icon
+                                icon='IconTradetypeDigitmatch'
                                 className='category-type'
-                                type='digitmatch'
                             />
                         </div>
                         <div className='category-wrapper'>
-                            <IconTradeType
+                            <Icon
+                                icon='IconTradetypeDigitdiff'
                                 className='category-type'
-                                type='digitdiff'
                             />
                         </div>
                     </React.Fragment>
@@ -120,15 +119,15 @@ const IconTradeCategory = ({ category, className }) => {
                 IconCategory = (
                     <React.Fragment>
                         <div className='category-wrapper'>
-                            <IconTradeType
+                            <Icon
+                                icon='IconTradetypeDigiteven'
                                 className='category-type'
-                                type='digiteven'
                             />
                         </div>
                         <div className='category-wrapper'>
-                            <IconTradeType
+                            <Icon
+                                icon='IconTradetypeDigitodd'
                                 className='category-type'
-                                type='digitodd'
                             />
                         </div>
                     </React.Fragment>
@@ -138,15 +137,15 @@ const IconTradeCategory = ({ category, className }) => {
                 IconCategory = (
                     <React.Fragment>
                         <div className='category-wrapper'>
-                            <IconTradeType
+                            <Icon
+                                icon='IconTradetypeDigitover'
                                 className='category-type'
-                                type='digitover'
                             />
                         </div>
                         <div className='category-wrapper'>
-                            <IconTradeType
+                            <Icon
+                                icon='IconTradetypeDigitunder'
                                 className='category-type'
-                                type='digitunder'
                             />
                         </div>
                     </React.Fragment>
@@ -156,15 +155,15 @@ const IconTradeCategory = ({ category, className }) => {
                 IconCategory = (
                     <React.Fragment>
                         <div className='category-wrapper'>
-                            <IconTradeType
+                            <Icon
+                                icon='IconTradetypeOnetouch'
                                 className='category-type'
-                                type='onetouch'
                             />
                         </div>
                         <div className='category-wrapper'>
-                            <IconTradeType
+                            <Icon
+                                icon='IconTradetypeNotouch'
                                 className='category-type'
-                                type='notouch'
                             />
                         </div>
                     </React.Fragment>
@@ -174,13 +173,13 @@ const IconTradeCategory = ({ category, className }) => {
                 IconCategory = (
                     <React.Fragment>
                         <div className='category-wrapper'>
-                            <IconTradeType
+                            <Icon
                                 className='category-type'
                                 type='asianu'
                             />
                         </div>
                         <div className='category-wrapper'>
-                            <IconTradeType
+                            <Icon
                                 className='category-type'
                                 type='asiand'
                             />
@@ -191,7 +190,7 @@ const IconTradeCategory = ({ category, className }) => {
             case 'lb_call':
                 IconCategory = (
                     <div className='category-wrapper'>
-                        <IconTradeType
+                        <Icon
                             className='category-type'
                             type='lbfloatcall'
                         />
@@ -201,7 +200,7 @@ const IconTradeCategory = ({ category, className }) => {
             case 'lb_put':
                 IconCategory = (
                     <div className='category-wrapper'>
-                        <IconTradeType
+                        <Icon
                             className='category-type'
                             type='lbfloatput'
                         />
@@ -211,7 +210,7 @@ const IconTradeCategory = ({ category, className }) => {
             case 'lb_high_low':
                 IconCategory = (
                     <div className='category-wrapper'>
-                        <IconTradeType
+                        <Icon
                             className='category-type'
                             type='lbhighlow'
                         />
@@ -221,7 +220,7 @@ const IconTradeCategory = ({ category, className }) => {
             default:
                 IconCategory = (
                     <div className='category-wrapper'>
-                        <IconTradeType
+                        <Icon
                             className='category-type'
                             type='unknown'
                         />

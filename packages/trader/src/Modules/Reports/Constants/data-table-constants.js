@@ -1,13 +1,12 @@
-import classNames           from 'classnames';
-import { Label, Money }     from 'deriv-components';
-import React                from 'react';
-import Icon                 from 'Assets/icon.jsx';
-import { localize }         from 'App/i18n';
-import ProgressSliderStream from 'App/Containers/ProgressSliderStream';
-import { getProfitOrLoss }  from 'Modules/Reports/Helpers/profit-loss';
-import IndicativeCell       from '../Components/indicative-cell.jsx';
-import MarketSymbolIconRow  from '../Components/market-symbol-icon-row.jsx';
-import ProfitLossCell       from '../Components/profit_loss_cell.jsx';
+import classNames             from 'classnames';
+import { Icon, Label, Money } from 'deriv-components';
+import React                  from 'react';
+import { localize }           from 'App/i18n';
+import ProgressSliderStream   from 'App/Containers/ProgressSliderStream';
+import { getProfitOrLoss }    from 'Modules/Reports/Helpers/profit-loss';
+import IndicativeCell         from '../Components/indicative-cell.jsx';
+import MarketSymbolIconRow    from '../Components/market-symbol-icon-row.jsx';
+import ProfitLossCell         from '../Components/profit_loss_cell.jsx';
 
 const getModeFromValue = (key) => {
     const map = {

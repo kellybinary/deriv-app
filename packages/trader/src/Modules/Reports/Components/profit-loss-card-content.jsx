@@ -1,10 +1,9 @@
-import classNames           from 'classnames';
-import { Money }            from 'deriv-components';
-import PropTypes            from 'prop-types';
-import React                from 'react';
-import CurrencyUtils        from 'deriv-shared/utils/currency';
-import Localize             from 'App/Components/Elements/localize.jsx';
-import Icon                 from 'Assets/icon.jsx';
+import classNames      from 'classnames';
+import { Icon, Money } from 'deriv-components';
+import PropTypes       from 'prop-types';
+import React           from 'react';
+import CurrencyUtils   from 'deriv-shared/utils/currency';
+import Localize        from 'App/Components/Elements/localize.jsx';
 
 const ProfitLossCardContent = ({
     currency,

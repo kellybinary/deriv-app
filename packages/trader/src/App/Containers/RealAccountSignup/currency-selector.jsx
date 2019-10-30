@@ -1,12 +1,13 @@
-import classNames           from 'classnames';
-import { ThemedScrollbars } from 'deriv-components';
-import PropTypes            from 'prop-types';
-import React                from 'react';
-import { Field, Formik }    from 'formik';
-import { connect }          from 'Stores/connect';
-import Icon                 from 'Assets/icon.jsx';
-import { localize }         from 'App/i18n';
-import FormSubmitButton     from './form-submit-button.jsx';
+import classNames        from 'classnames';
+import {
+    Icon,
+    ThemedScrollbars }   from 'deriv-components';
+import PropTypes         from 'prop-types';
+import React             from 'react';
+import { Field, Formik } from 'formik';
+import { connect }       from 'Stores/connect';
+import { localize }      from 'App/i18n';
+import FormSubmitButton  from './form-submit-button.jsx';
 import 'Sass/currency-select-radio.scss';
 
 // Radio input
@@ -39,10 +40,7 @@ export const RadioButton = ({
                 })}
             >
                 <div>
-                    <Icon
-                        icon='IconAccountsCurrency'
-                        type={id.toLowerCase()}
-                    />
+                    <Icon icon={`IconCurrency-${id.toLowerCase()}`} />
                     <p className='label'>{label}<br />({id})</p>
                 </div>
             </label>

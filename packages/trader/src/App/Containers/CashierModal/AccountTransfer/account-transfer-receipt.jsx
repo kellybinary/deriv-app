@@ -1,12 +1,11 @@
-import classNames     from 'classnames';
-import PropTypes      from 'prop-types';
-import React          from 'react';
-import { withRouter } from 'react-router';
-import { Button }     from 'deriv-components';
-import Localize       from 'App/Components/Elements/localize.jsx';
-import { localize }   from 'App/i18n';
-import Icon           from 'Assets/icon.jsx';
-import { connect }    from 'Stores/connect';
+import classNames       from 'classnames';
+import PropTypes        from 'prop-types';
+import React            from 'react';
+import { withRouter }   from 'react-router';
+import { Button, Icon } from 'deriv-components';
+import Localize         from 'App/Components/Elements/localize.jsx';
+import { localize }     from 'App/i18n';
+import { connect }      from 'Stores/connect';
 
 class AccountTransferReceipt extends React.Component {
     componentWillUnmount() {
@@ -22,7 +21,7 @@ class AccountTransferReceipt extends React.Component {
 
         return (
             <div className='cashier__wrapper account-transfer__receipt'>
-                <Icon icon='IconTransferDone' className='account-transfer__receipt-icon' />
+                <Icon icon='IconTransferDone' className='account-transfer__receipt-icon' height={128} width={128} />
                 <h2 className='cashier__header'>
                     <Localize i18n_default_text='Your funds have been transferred.' />
                 </h2>
@@ -34,24 +33,14 @@ class AccountTransferReceipt extends React.Component {
                 </div>
                 <div className='cashier__transferred-details-wrapper'>
                     <span className='account-transfer__transfer-details-from'>
-                        <Icon
-                            icon='IconAccountsCurrency'
-                            type={selected_from.mt_icon || selected_from.currency.toLowerCase()}
-                            height={16}
-                            width={16}
-                        />
+                        <Icon icon={`IconCurrency-${selected_from.mt_icon || selected_from.currency.toLowerCase()}`} />
                         <span className='cashier__transferred-details'>
                             <span className='cashier__text--bold'>{selected_from.text}</span>
                         </span>
                     </span>
-                    <Icon className='cashier__transferred-icon' icon='IconBack' />
+                    <Icon className='cashier__transferred-icon' icon='IconArrowLeft' />
                     <span className='account-transfer__transfer-details-to'>
-                        <Icon
-                            icon='IconAccountsCurrency'
-                            type={selected_to.mt_icon || selected_to.currency.toLowerCase()}
-                            height={16}
-                            width={16}
-                        />
+                        <Icon icon={`IconCurrency-${selected_to.mt_icon || selected_to.currency.toLowerCase()}`} />
                         <span className='cashier__transferred-details'>
                             <span className='cashier__text--bold'>{selected_to.text}</span>
                         </span>

@@ -10,26 +10,20 @@
 
 %inline-icon {
     @include colorIcon(var(--text-general), none);
-    --fill-color1: var(--text-general);
 
     &.active {
         @include colorIcon(var(--text-prominent), none);
-        --fill-color1: var(--text-prominent);
     }
     &.disabled {
         @include colorIcon(var(--text-disabled), none);
-        --fill-color1: var(--text-disabled);
     }
     &.white {
         @include colorIcon(var(--text-prominent));
-        --fill-color1: var(--text-colored-background);
     }
     &.border_hover_color {
         @include colorIcon(var(--text-prominent));
-        --fill-color1: var(--text-prominent);
     }
     &.secondary {
         @include colorIcon(var(--text-less-prominent));
-        --fill-color1: var(--text-less-prominent);
     }
 }

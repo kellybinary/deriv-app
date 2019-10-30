@@ -1,6 +1,6 @@
 import React        from 'react';
 import { localize } from 'App/i18n';
-import Icon         from 'Assets/icon.jsx';
+import Icon         from 'Assets/icon.jsx'; // TODO: replace this once Notification card is merged
 
 const EmptyNotification = () => (
     <div className='drawer__no-notifications-container'>

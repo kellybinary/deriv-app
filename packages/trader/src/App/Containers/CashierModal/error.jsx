@@ -1,12 +1,11 @@
-import PropTypes    from 'prop-types';
-import React        from 'react';
-import { Button }   from 'deriv-components';
-import Localize     from 'App/Components/Elements/localize.jsx';
-import ButtonLink   from 'App/Components/Routes/button-link.jsx';
-import { localize } from 'App/i18n';
-import Icon         from 'Assets/icon.jsx';
-import { WS }       from 'Services';
-import { connect }  from 'Stores/connect';
+import PropTypes        from 'prop-types';
+import React            from 'react';
+import { Button, Icon } from 'deriv-components';
+import Localize         from 'App/Components/Elements/localize.jsx';
+import ButtonLink       from 'App/Components/Routes/button-link.jsx';
+import { localize }     from 'App/i18n';
+import { WS }           from 'Services';
+import { connect }      from 'Stores/connect';
 
 const ErrorComponent = ({
     header,
@@ -17,7 +16,7 @@ const ErrorComponent = ({
     footer,
 }) => (
     <div className='cashier__wrapper'>
-        <Icon icon='IconCashierError' className='cashier-error__icon' />
+        <Icon icon='IconCashierError' className='cashier-error__icon' height={128} width={128} />
         {header && <h2 className='cashier-error__header'>{header}</h2>}
         {message && <p className='cashier__paragraph'>{message}</p>}
         {button_link &&

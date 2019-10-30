@@ -1,11 +1,11 @@
 import classNames            from 'classnames';
 import {
+    Icon,
     Modal,
     Loading }                from 'deriv-components';
 import React, { Component }  from 'react';
 import { localize }          from 'App/i18n';
 import Localize              from 'App/Components/Elements/localize.jsx';
-import Icon                  from 'Assets/icon.jsx';
 import IconDuplicate         from 'Assets/Signup/icon-duplicate.jsx';
 import { connect }           from 'Stores/connect';
 import AccountWizard         from './account-wizard.jsx';
@@ -80,7 +80,7 @@ class RealAccountSignup extends Component {
                             onCancel={this.closeModalWithHooks}
                             onSubmit={this.closeModalThenOpenCashier}
                             message={this.props.state_value.success_message}
-                            icon={<Icon type={this.props.state_value.current_currency.toLowerCase()} icon='IconAccountsCurrency' />}
+                            icon={<Icon icon={`IconCurrency-${this.props.state_value.current_currency.toLowerCase()}`} />}
                             text_submit={localize('Deposit now')}
                             text_cancel={ RealAccountSignup.text_cancel() }
                         />

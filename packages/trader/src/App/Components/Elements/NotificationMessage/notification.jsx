@@ -1,7 +1,7 @@
 import PropTypes   from 'prop-types';
 import React       from 'react';
 import classNames  from 'classnames';
-import Icon        from 'Assets/icon.jsx';
+import Icon        from 'Assets/icon.jsx'; // TODO: replace this once Notification card is merged
 import CloseButton from './close-button.jsx';
 import {
     default_delay,

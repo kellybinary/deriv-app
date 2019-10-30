@@ -1,8 +1,8 @@
 import classNames                 from 'classnames';
 import PropTypes                  from 'prop-types';
 import React                      from 'react';
+import { Icon }                   from 'deriv-components';
 import { localize }               from 'App/i18n';
-import Icon                       from 'Assets/icon.jsx';
 import { getContractTypeDisplay } from 'Constants/contract';
 
 const PurchaseButton = ({
@@ -21,7 +21,9 @@ const PurchaseButton = ({
 }) => {
     const getIconType = () => {
         if (!should_fade && is_loading) return '';
-        return (is_high_low) ? `${type.toLowerCase()}_barrier` : type.toLowerCase();
+        if (is_high_low)                return `${type.toLowerCase()}-barrier`;
+        if (/CALLE|PUTE/.test(type))    return type.slice(0, -1).toLowerCase();
+        return type.toLowerCase();
     };
     const is_button_disabled = (is_disabled && !is_loading) || is_proposal_empty;
 
@@ -49,9 +51,9 @@ const PurchaseButton = ({
                     <div className='btn-purchase__type-wrapper'>
                         <div className='btn-purchase__icon_wrapper'>
                             <Icon
-                                icon='IconTradeType'
+                                icon={`IconTradetype-${getIconType()}`}
                                 className='btn-purchase__icon'
-                                type={getIconType()}
+                                active
                             />
                         </div>
                         <div className='btn-purchase__text_wrapper'>

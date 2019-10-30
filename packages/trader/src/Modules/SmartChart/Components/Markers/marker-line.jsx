@@ -1,8 +1,8 @@
-import classNames           from 'classnames';
+import classNames   from 'classnames';
 import { observer } from 'mobx-react';
 import PropTypes    from 'prop-types';
 import React        from 'react';
-import Icon         from 'Assets/icon.jsx';
+import { Icon }     from 'deriv-components';
 
 const MarkerLine = ({
     label,
@@ -21,15 +21,20 @@ const MarkerLine = ({
                         'chart-marker-line__icon--won' : status === 'won',
                         'chart-marker-line__icon--lost': status === 'lost',
                     })}
+                    medium
+                    green={status === 'won' || undefined}
+                    red={status === 'lost' || undefined}
                 />
             }
             { label === marker_config.LINE_START.content_config.label &&
                 <Icon
-                    icon='IconStartTime'
+                    icon='IconStartTimeCircle'
                     className={classNames(
                         'chart-marker-line__icon',
                         'chart-marker-line__icon--time',
                     )}
+                    medium
+                    secondary
                 />
             }
         </div>

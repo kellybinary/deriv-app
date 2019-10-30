@@ -1,7 +1,7 @@
-import classNames          from 'classnames';
-import PropTypes           from 'prop-types';
-import React               from 'react';
-import Icon              from 'Assets/icon.jsx';
+import classNames from 'classnames';
+import PropTypes  from 'prop-types';
+import React      from 'react';
+import { Icon }   from 'deriv-components';
 
 class Tooltip extends React.PureComponent {
     state = {
@@ -50,7 +50,7 @@ class Tooltip extends React.PureComponent {
                         />
                     </React.Fragment>
                 }
-                {icon === 'question' && <Icon icon='IconQuestion' className={icon_class} />}
+                {icon === 'question' && <Icon icon='IconQuestionmark' className={icon_class} />}
                 {icon === 'dot'      && <Icon icon='IconRedDot' className={icon_class} />}
                 {children}
             </span>
