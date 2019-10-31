@@ -71,7 +71,6 @@ class ContractReplay extends React.Component {
             <div id='dt_contract_replay_container' className='trade-container__replay' ref={this.setWrapperRef}>
                 <ContractDrawer
                     contract_info={contract_info}
-                    is_dark_theme={is_dark_theme}
                     is_from_reports={is_from_table_row}
                     is_sell_requested={is_sell_requested}
                     onClickSell={onClickSell}

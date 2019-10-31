@@ -54,7 +54,6 @@ class ContractDrawer extends Component {
         } = this.props.contract_info;
         const {
             contract_info,
-            is_dark_theme,
             is_sell_requested,
             onClickSell,
         } = this.props;
@@ -170,7 +169,6 @@ class ContractDrawer extends Component {
                 <ContractAudit
                     contract_info={contract_info}
                     contract_end_time={getEndTime(contract_info)}
-                    is_dark_theme={is_dark_theme}
                     is_open={true}
                     is_shade_visible={this.handleShade}
                     duration={getDurationTime(contract_info)}

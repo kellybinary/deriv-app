@@ -1,6 +1,7 @@
 .dc-icon {
     --fill-color1: var(--text-prominent);
     --fill-color2: var(--text-less-prominent);
+    --fill-color3: var(--general-section-1);
 
     &--disabled {
         --fill-color1: var(--text-disabled);
