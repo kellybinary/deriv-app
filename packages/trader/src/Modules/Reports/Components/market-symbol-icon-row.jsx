@@ -39,8 +39,9 @@ const MarketSymbolIconRow = ({ payload, show_description }) => {
                     >
                         <Icon
                             icon={`IconTradetype-${(Shortcode.isHighLow({ shortcode_info: info_from_shortcode }))
-                                ? `${info_from_shortcode.category.toLowerCase()}-barrier`
+                                ? `${info_from_shortcode.category.toLowerCase()}_barrier`
                                 : info_from_shortcode.category.toLowerCase()}`}
+                            color
                         />
                     </Popover>
                     {show_description && info_from_shortcode.category}

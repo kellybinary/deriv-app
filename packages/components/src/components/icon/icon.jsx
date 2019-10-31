@@ -32,6 +32,7 @@ const Icon = ({
     green,
     red,
     secondary,
+    color,
 }) => {
     const sizes = {
         small : 16,
@@ -51,6 +52,7 @@ const Icon = ({
                 'dc-icon--green'    : green,
                 'dc-icon--red'      : red,
                 'dc-icon--secondary': secondary,
+                'dc-icon--color'    : color,
             })}
             height={height || size}
             width={width || size}

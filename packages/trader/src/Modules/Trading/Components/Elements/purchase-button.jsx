@@ -21,7 +21,7 @@ const PurchaseButton = ({
 }) => {
     const getIconType = () => {
         if (!should_fade && is_loading) return '';
-        if (is_high_low)                return `${type.toLowerCase()}-barrier`;
+        if (is_high_low)                return `${type.toLowerCase()}_barrier`;
         if (/CALLE|PUTE/.test(type))    return type.slice(0, -1).toLowerCase();
         return type.toLowerCase();
     };

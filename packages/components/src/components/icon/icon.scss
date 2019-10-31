@@ -1,13 +1,13 @@
 .dc-icon {
-    --fill-color1: var(--text-general);
+    --fill-color1: var(--text-prominent);
+    --fill-color2: var(--text-less-prominent);
 
     &--disabled {
         --fill-color1: var(--text-disabled);
     }
     &--active {
         --fill-color1: #{$color-white};
-        --fill-arrowhead: #{$color-white};
-        --fill-arrowtail: #{$color-white};
+        --fill-color2: #{$color-white};
     }
     &--green {
         --fill-color1: var(--text-profit-success);
@@ -18,7 +18,11 @@
     &--secondary {
         --fill-color1: var(--text-less-prominent);
     }
-    &:hover:not(&--active):not(&--disabled) {
+    &--color {
+        --fill-color1: var(--brand-red-coral);
+        --fill-color2: var(--brand-secondary);
+    }
+    &:hover:not(&--active):not(&--disabled):not(&--red):not(&--green):not(&--color) {
         --fill-color1: var(--text-prominent);
     }
 }
