@@ -1,7 +1,7 @@
 import React          from 'react';
 import ReactDOM       from 'react-dom';
+import { Icon }       from 'deriv-components';
 import ScratchStore   from '../../stores/scratch-store';
-import { Arrow1Icon } from '../../components/Icons.jsx';
 import { translate }  from '../../utils/lang/i18n';
 
 /* eslint-disable func-names, no-underscore-dangle */
@@ -398,7 +398,7 @@ Blockly.Toolbox.Category.prototype.createDom = function () {
 
     if (this.is_category_return_) {
         const el_return_arrow = goog.dom.createDom('div', 'toolbox__category-arrow toolbox__category-arrow--back');
-        ReactDOM.render(<Arrow1Icon className='arrow' />, el_return_arrow);
+        ReactDOM.render(<Icon icon='IconChevronDown' className='arrow' />, el_return_arrow);
         el_item.appendChild(el_return_arrow);
     } else {
         const el_colour = goog.dom.createDom('div', 'toolbox__category-colour');
@@ -420,7 +420,7 @@ Blockly.Toolbox.Category.prototype.createDom = function () {
 
     if (this.has_child_category_) {
         const el_category_arrow = goog.dom.createDom('div', 'toolbox__category-arrow toolbox__category-arrow--open');
-        ReactDOM.render(<Arrow1Icon className='arrow' />, el_category_arrow);
+        ReactDOM.render(<Icon icon='IconChevronDown' className='arrow' />, el_category_arrow);
         el_item.appendChild(el_category_arrow);
     } else if (this.iconURI_) {
         // If category has iconURI attribute, it refers to an entry in our bot-sprite.svg

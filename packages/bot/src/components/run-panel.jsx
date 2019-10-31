@@ -1,11 +1,11 @@
 import { Button,
     Drawer,
+    Icon,
     Popover,
     Tabs }                                    from 'deriv-components';
 import PropTypes                              from 'prop-types';
 import React                                  from 'react';
 import Dialog                                 from './dialog.jsx';
-import { InfoOutlineIcon, RunIcon, StopIcon } from './Icons.jsx';
 import Journal                                from './journal.jsx';
 import Summary                                from './summary.jsx';
 import TradeAnimation                         from './trade-animation.jsx';
@@ -66,14 +66,14 @@ const drawerFooter = ({
                         <Button
                             is_disabled={is_stop_button_disabled}
                             text={translate('Stop bot')}
-                            icon={<StopIcon className='run-panel__button--icon' />}
+                            icon={<Icon icon='IconStop' className='run-panel__button--icon' active />}
                             onClick={onStopButtonClick}
                             has_effect
                             primary
                         /> :
                         <Button
                             text={translate('Run bot')}
-                            icon={<RunIcon className='run-panel__button--icon' />}
+                            icon={<Icon icon='IconRun' className='run-panel__button--icon' active />}
                             onClick={onRunButtonClick}
                             has_effect
                             green
@@ -89,7 +89,7 @@ const drawerFooter = ({
                      in the transaction table if the bot is stopped while placing trades. You may refer to
                      the statement page for details of all completed transactions.`)}
                 >
-                    <InfoOutlineIcon className='run-panel__icon-info' />
+                    <Icon icon='IconInfoOutline' className='run-panel__icon-info' />
                 </Popover>
             </div>
             {is_dialog_open &&

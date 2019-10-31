@@ -1,9 +1,7 @@
 import classNames    from 'classnames';
 import PropTypes     from 'prop-types';
 import React         from 'react';
-import {
-    CheckIcon,
-    CrossIcon }      from './Icons.jsx';
+import { Icon }      from 'deriv-components';
 import { translate } from '../utils/lang/i18n';
 import                    '../assets/sass/contract-result-overlay.scss';
 
@@ -20,12 +18,12 @@ const ContractResultOverlay = (props) => {
                 { has_won_contract ?
                     <React.Fragment>
                         {translate('Won')}
-                        <CheckIcon className='db-contract-card__result-icon' />
+                        <Icon icon='IconCheckmarkCircle' className='db-contract-card__result-icon' green />
                     </React.Fragment>
                     :
                     <React.Fragment>
                         {translate('Lost')}
-                        <CrossIcon className='db-contract-card__result-icon' />
+                        <Icon icon='IconCloseCircle' className='db-contract-card__result-icon' red />
                     </React.Fragment>
                 }
             </span>

@@ -1,6 +1,7 @@
 import classNames           from 'classnames';
 import {
     Button,
+    Icon,
     Input,
     Popover,
 }                           from 'deriv-components';
@@ -12,22 +13,6 @@ import {
 import PropTypes            from 'prop-types';
 import React                from 'react';
 import Dialog               from './dialog.jsx';
-import {
-    ToolbarCloseIcon,
-    ToolbarNewFileIcon,
-    ToolbarOpenIcon,
-    ToolbarReaarangeIcon,
-    ToolbarRedoIcon,
-    ToolbarRenameIcon,
-    ToolbarRunIcon,
-    ToolbarSaveIcon,
-    ToolbarSearchIcon,
-    ToolbarStartIcon,
-    ToolbarStopIcon,
-    ToolbarUndoIcon,
-    ToolbarZoomInIcon,
-    ToolbarZoomOutIcon,
-}                           from './Icons.jsx';
 import SaveLoadModal        from './saveload-modal.jsx';
 import TradeAnimation       from './trade-animation.jsx';
 import { connect }          from '../stores/connect';
@@ -56,11 +41,12 @@ const SearchBox = ({ onSearch, onSearchClear, onSearchBlur }) => (
                                     onBlur={onSearchBlur}
                                     trailing_icon={
                                         search ?
-                                            <ToolbarCloseIcon
+                                            <Icon
+                                                icon='IconClose'
                                                 className='toolbar__btn--icon'
                                                 onClick={() => onSearchClear(setFieldValue)}
                                             />
-                                            : <ToolbarSearchIcon />
+                                            : <Icon icon='IconSearch' />
                                     }
                                 />
                             )}
@@ -96,7 +82,7 @@ const BotNameBox = ({ onBotNameTyped, file_name }) => (
                                         label={translate('Bot name')}
                                         placeholder={translate('Untitled Bot')}
                                         trailing_icon={
-                                            <ToolbarRenameIcon />
+                                            <Icon icon='IconEdit' />
                                         }
                                     />
                                 )}
@@ -126,19 +112,20 @@ const ButtonGroup = ({
             alignment='bottom'
             message={translate('Import')}
         >
-            <ToolbarOpenIcon className='toolbar__icon' onClick={() => toggleSaveLoadModal(false)} />
+            <Icon icon='IconFolderOpen' className='toolbar__icon' onClick={() => toggleSaveLoadModal(false)} />
         </Popover>
         <Popover
             alignment='bottom'
             message={translate('Reset')}
         >
-            <ToolbarNewFileIcon className='toolbar__icon' onClick={onResetClick} />
+            <Icon icon='IconNewFile' className='toolbar__icon' onClick={onResetClick} />
         </Popover>
         <Popover
             alignment='bottom'
             message={translate('Save')}
         >
-            <ToolbarSaveIcon
+            <Icon
+                icon='IconSave'
                 className='toolbar__icon'
                 onClick={() => toggleSaveLoadModal(true)}
             />
@@ -148,13 +135,13 @@ const ButtonGroup = ({
             alignment='bottom'
             message={translate('Undo')}
         >
-            <ToolbarUndoIcon className='toolbar__icon' onClick={onUndoClick} />️
+            <Icon icon='IconUndo' className='toolbar__icon' onClick={onUndoClick} />️
         </Popover>
         <Popover
             alignment='bottom'
             message={translate('Redo')}
         >
-            <ToolbarRedoIcon className='toolbar__icon' onClick={onRedoClick} />
+            <Icon icon='IconRedo' className='toolbar__icon' onClick={onRedoClick} />
         </Popover>
         <div className='vertical-divider' />
         {is_stop_button_visible ?
@@ -162,7 +149,8 @@ const ButtonGroup = ({
                 alignment='bottom'
                 message={translate('Stop')}
             >
-                <ToolbarStopIcon
+                <Icon
+                    icon='IconStopOutlined'
                     className={classNames(
                         'toolbar__icon',
                         'toolbar__icon--stop',
@@ -175,26 +163,26 @@ const ButtonGroup = ({
                 alignment='bottom'
                 message={translate('Run')}
             >
-                <ToolbarRunIcon className='toolbar__icon' onClick={onRunClick} />
+                <Icon icon='IconRunOutlined' className='toolbar__icon' onClick={onRunClick} />
             </Popover>
         }
         <Popover
             alignment='bottom'
             message={translate('Sort')}
         >
-            <ToolbarReaarangeIcon className='toolbar__icon' onClick={onSortClick} />
+            <Icon icon='IconSort' className='toolbar__icon' onClick={onSortClick} />
         </Popover>
         <Popover
             alignment='bottom'
             message={translate('Zoom in')}
         >
-            <ToolbarZoomInIcon className='toolbar__icon' onClick={() => onZoomInOutClick(true)} />
+            <Icon icon='IconZoomIn' className='toolbar__icon' onClick={() => onZoomInOutClick(true)} />
         </Popover>
         <Popover
             alignment='bottom'
             message={translate('Zoom out')}
         >
-            <ToolbarZoomOutIcon className='toolbar__icon' onClick={() => onZoomInOutClick(false)} />
+            <Icon icon='IconZoomOut' className='toolbar__icon' onClick={() => onZoomInOutClick(false)} />
         </Popover>
     </div>
 );
@@ -233,7 +221,7 @@ const Toolbar = ({
                     className='toolbar__btn--icon toolbar__btn--start'
                     has_effect
                     onClick={onToolboxToggle}
-                    icon={<ToolbarStartIcon />}
+                    icon={<Icon icon='IconPuzzle' active />}
                     green
                 >
                     {translate('Get started')}

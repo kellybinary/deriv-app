@@ -1,74 +1,45 @@
 import PropTypes  from 'prop-types';
 import React      from 'react';
-import {
-    TradeTypeAsianDown,
-    TradeTypeAsianUp,
-    TradeTypeCallBarrier,
-    TradeTypeCall,
-    TradeTypeCalleLight,
-    TradeTypeCallSpread,
-    TradeTypePutSpread,
-    TradeTypeDigitDiff,
-    TradeTypeDigitEven,
-    TradeTypeDigitMatch,
-    TradeTypeDigitOdd,
-    TradeTypeDigitOver,
-    TradeTypeDigitUnder,
-    TradeTypeExpiryMiss,
-    TradeTypeExpiryRange,
-    TradeTypeExpiryRangee,
-    TradeTypeNoTouch,
-    TradeTypeOneTouch,
-    TradeTypePutBarrier,
-    TradeTypePut,
-    TradeTypeRange,
-    TradeTypeResetCall,
-    TradeTypeResetPut,
-    TradeTypeRunHigh,
-    TradeTypeRunLow,
-    TradeTypeTickHigh,
-    TradeTypeTickLow,
-    TradeTypeUpOrDown,
-    TradeTypeUnknown } from './Icons.jsx';
+import { Icon }   from 'deriv-components';
 
-const IconTradeType = ({ trade_type, className }) => {
+const IconTradetype = ({ trade_type, className }) => {
     switch (trade_type.toLowerCase()) {
-        case 'asiand'      : return <TradeTypeAsianDown className={className} />;
-        case 'asianu'      : return <TradeTypeAsianUp className={className} />;
-        case 'call_barrier': return <TradeTypeCallBarrier className={className} />;
+        case 'asiand'      : return <Icon icon='IconTradetypeAsiand' className={className} color />;
+        case 'asianu'      : return <Icon icon='IconTradetypeAsianu' className={className} color />;
+        case 'call_barrier': return <Icon icon='IconTradetypeCallBarrier' className={className} color />;
         case 'calle'       :
-        case 'call'        : return <TradeTypeCall className={className} />;
-        case 'calle_light' : return <TradeTypeCalleLight className={className} />;
-        case 'callspread'  : return <TradeTypeCallSpread className={className} />;
-        case 'putspread'   : return <TradeTypePutSpread className={className} />;
-        case 'digitdiff'   : return <TradeTypeDigitDiff className={className} />;
-        case 'digiteven'   : return <TradeTypeDigitEven className={className} />;
-        case 'digitmatch'  : return <TradeTypeDigitMatch className={className} />;
-        case 'digitodd'    : return <TradeTypeDigitOdd className={className} />;
-        case 'digitover'   : return <TradeTypeDigitOver className={className} />;
-        case 'digitunder'  : return <TradeTypeDigitUnder className={className} />;
-        case 'expirymiss'  : return <TradeTypeExpiryMiss className={className} />;
-        case 'expiryrange' : return <TradeTypeExpiryRange className={className} />;
-        case 'expiryrangee': return <TradeTypeExpiryRangee className={className} />;
-        case 'notouch'     : return <TradeTypeNoTouch className={className} />;
-        case 'onetouch'    : return <TradeTypeOneTouch className={className} />;
-        case 'put_barrier' : return <TradeTypePutBarrier className={className} />;
+        case 'call'        : return <Icon icon='IconTradetypeCall' className={className} color />;
+        case 'calle_light' : return <Icon icon='IconTradetypeCalleLight' className={className} color />;
+        case 'callspread'  : return <Icon icon='IconTradetypeCallSpread' className={className} color />;
+        case 'putspread'   : return <Icon icon='IconTradetypePutSpread' className={className} color />;
+        case 'digitdiff'   : return <Icon icon='IconTradetypeDigitdiff' className={className} color />;
+        case 'digiteven'   : return <Icon icon='IconTradetypeDigiteven' className={className} color />;
+        case 'digitmatch'  : return <Icon icon='IconTradetypeDigitmatch' className={className} color />;
+        case 'digitodd'    : return <Icon icon='IconTradetypeDigitodd' className={className} color />;
+        case 'digitover'   : return <Icon icon='IconTradetypeDigitover' className={className} color />;
+        case 'digitunder'  : return <Icon icon='IconTradetypeDigitunder' className={className} color />;
+        case 'expirymiss'  : return <Icon icon='IconTradetypeExpirymiss' className={className} color />;
+        case 'expiryrange' : return <Icon icon='IconTradetypeExpiryrange' className={className} color />;
+        case 'expiryrangee': return <Icon icon='IconTradetypeExpiryrangee' className={className} color />;
+        case 'notouch'     : return <Icon icon='IconTradetypeNoTouch' className={className} color />;
+        case 'onetouch'    : return <Icon icon='IconTradetypeOnetouch' className={className} color />;
+        case 'put_barrier' : return <Icon icon='IconTradetypePutBarrier' className={className} color />;
         case 'pute'        :
-        case 'put'         : return <TradeTypePut className={className} />;
-        case 'range'       : return <TradeTypeRange className={className} />;
-        case 'resetcall'   : return <TradeTypeResetCall className={className} />;
-        case 'resetput'    : return <TradeTypeResetPut className={className} />;
-        case 'runhigh'     : return <TradeTypeRunHigh className={className} />;
-        case 'runlow'      : return <TradeTypeRunLow className={className} />;
-        case 'tickhigh'    : return <TradeTypeTickHigh className={className} />;
-        case 'ticklow'     : return <TradeTypeTickLow className={className} />;
-        case 'upordown'    : return <TradeTypeUpOrDown className={className} />;
-        default            : return <TradeTypeUnknown className={className} />;
+        case 'put'         : return <Icon icon='IconTradetypePut' className={className} color />;
+        case 'range'       : return <Icon icon='IconTradetypeRange' className={className} color />;
+        case 'resetcall'   : return <Icon icon='IconTradetypeResetcall' className={className} color />;
+        case 'resetput'    : return <Icon icon='IconTradetypeResetput' className={className} color />;
+        case 'runhigh'     : return <Icon icon='IconTradetypeRunhigh' className={className} color />;
+        case 'runlow'      : return <Icon icon='IconTradetypeRunlow' className={className} color />;
+        case 'tickhigh'    : return <Icon icon='IconTradetypeTickhigh' className={className} color />;
+        case 'ticklow'     : return <Icon icon='IconTradetypeTicklow' className={className} color />;
+        case 'upordown'    : return <Icon icon='IconTradetypeUpordown' className={className} color />;
+        default            : return <Icon icon='IconTradetypeUnknown' className={className} color />;
     }
 };
 
-IconTradeType.propTypes = {
+IconTradetype.propTypes = {
     trade_type: PropTypes.string,
 };
 
-export default IconTradeType;
+export default IconTradetype;

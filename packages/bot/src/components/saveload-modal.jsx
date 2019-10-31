@@ -4,6 +4,7 @@ import React            from 'react';
 import {
     Button,
     Checkbox,
+    Icon,
     Modal,
     RadioGroup,
 }                       from 'deriv-components';
@@ -12,10 +13,6 @@ import {
     Form,
     Field,
 }                       from 'formik';
-import {
-    ToolbarLocalIcon,
-    ToolbarDriveIcon,
-}                       from './Icons.jsx';
 import { connect }      from '../stores/connect';
 import { translate }    from '../utils/tools';
 import '../assets/sass/google-drive.scss';
@@ -65,7 +62,7 @@ const SaveLoadModal = ({
                                                 id   : 'local',
                                                 label: <IconRadio
                                                     text={translate('Local')}
-                                                    icon={<ToolbarLocalIcon />}
+                                                    icon={<Icon icon='IconLocalDrive' height={48} width={48} />}
                                                 />,
                                                 value: true,
                                             },
@@ -73,7 +70,7 @@ const SaveLoadModal = ({
                                                 id   : 'drive',
                                                 label: <IconRadio
                                                     text={'Google Drive'}
-                                                    icon={<ToolbarDriveIcon />}
+                                                    icon={<Icon icon='IconGoogleDrive' height={48} width={48} />}
                                                     google_drive_connected={is_authorised}
                                                     onDriveConnect={onDriveConnect}
                                                 />,

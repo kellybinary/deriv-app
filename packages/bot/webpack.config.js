@@ -97,6 +97,7 @@ module.exports = {
             { from: './src/scratch/xml', to: 'xml' },
             { from: './node_modules/scratch-blocks/media', to: 'media' },
             { from: './src/assets/images', to: 'media' },
+            { from: path.resolve(__dirname, '../node_modules/deriv-components/lib/icon/sprite.svg'), to: 'sprite.svg', toType: 'file' },
         ]),
         new SpriteLoaderPlugin(),
         new MergeIntoSingleFilePlugin({

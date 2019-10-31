@@ -1,17 +1,11 @@
 import className       from 'classnames';
 import {
+    Icon,
     Money,
     Popover,
     ThemedScrollbars } from 'deriv-components';
 import { PropTypes }   from 'prop-types';
 import React           from 'react';
-import {
-    BuyPriceIcon,
-    ExitSpotIcon,
-    EntrySpotIcon,
-    PendingIcon,
-    RefrenceIdIcon,
-    CompletedIcon }    from './Icons.jsx';
 import IconTradeType   from './icon-trade-types.jsx';
 import { connect }     from '../stores/connect';
 import { translate }   from '../utils/tools';
@@ -39,7 +33,7 @@ const Transaction = ({ contract }) => {
                                     alignment='left'
                                     message={translate('Refrence ID')}
                                 >
-                                    <RefrenceIdIcon className='transactions__middle' />
+                                    <Icon icon='IconId' className='transactions__middle' />
                                 </Popover>
                                 <div className='transactions__inline transactions__middle'>
                                     {contract.refrence_id}
@@ -51,7 +45,7 @@ const Transaction = ({ contract }) => {
                                     alignment='left'
                                     message={translate('Buy price')}
                                 >
-                                    <BuyPriceIcon className='transactions__middle' />
+                                    <Icon icon='IconBuyPrice' className='transactions__middle' />
                                 </Popover>
 
                                 <Money
@@ -68,7 +62,7 @@ const Transaction = ({ contract }) => {
                                 alignment='left'
                                 message={translate('Entry spot')}
                             >
-                                <EntrySpotIcon className='transactions__middle' />
+                                <Icon icon='IconEntrySpot' className='transactions__middle' />
                             </Popover>
                             <div className='transactions__inline transactions__middle'>
                                 {contract.entry_spot}
@@ -80,7 +74,7 @@ const Transaction = ({ contract }) => {
                                 alignment='left'
                                 message={translate('Exit spot')}
                             >
-                                <ExitSpotIcon className='transactions__middle' />
+                                <Icon icon='IconExitSpot' className='transactions__middle' />
                             </Popover>
                             <div className='transactions__inline transactions__middle'>
                                 {contract.exit_spot}
@@ -115,14 +109,14 @@ const Transaction = ({ contract }) => {
                                     alignment='left'
                                     message={translate('Completed')}
                                 >
-                                    <CompletedIcon className='transactions__middle' />
+                                    <Icon icon='IconContractCompleted' className='transactions__middle' />
                                 </Popover> :
                                 <Popover
                                     className='transactions__inline transactions__middle'
                                     alignment='left'
                                     message={translate('Pending')}
                                 >
-                                    <PendingIcon className='transactions__middle' />
+                                    <Icon icon='IconClock' className='transactions__middle' disabled />
                                 </Popover>}
                     </td>
                 </tr>
