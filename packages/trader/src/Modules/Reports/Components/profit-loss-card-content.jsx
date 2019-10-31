@@ -1,9 +1,10 @@
-import classNames      from 'classnames';
-import { Icon, Money } from 'deriv-components';
-import PropTypes       from 'prop-types';
-import React           from 'react';
-import CurrencyUtils   from 'deriv-shared/utils/currency';
-import Localize        from 'App/Components/Elements/localize.jsx';
+import classNames    from 'classnames';
+import { Money }     from 'deriv-components';
+import PropTypes     from 'prop-types';
+import React         from 'react';
+import CurrencyUtils from 'deriv-shared/utils/currency';
+import Localize      from 'App/Components/Elements/localize.jsx';
+import IconPriceMove from 'Assets/Trading/icon-price-move.jsx';
 
 const ProfitLossCardContent = ({
     currency,
@@ -33,8 +34,7 @@ const ProfitLossCardContent = ({
                     },
                 )}
                 >
-                    <Icon
-                        icon='IconPriceMove'
+                    <IconPriceMove
                         type={(!is_sold) ? status : null}
                     />
                 </div>
@@ -52,8 +52,7 @@ const ProfitLossCardContent = ({
                     },
                 )}
                 >
-                    <Icon
-                        icon='IconPriceMove'
+                    <IconPriceMove
                         type={(!is_sold) ? status : null}
                     />
                 </div>

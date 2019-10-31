@@ -5,13 +5,13 @@ import { CSSTransition }       from 'react-transition-group';
 import { NavLink }             from 'react-router-dom';
 import {
     Button,
-    Icon,
     Money,
     UnderlyingIcon }           from 'deriv-components';
 import CurrencyUtils           from 'deriv-shared/utils/currency';
 import Shortcode               from 'Modules/Reports/Helpers/shortcode';
 import { localize }            from 'App/i18n';
 import { PositionsCardLoader } from 'App/Components/Elements/ContentLoader';
+import IconPriceMove           from 'Assets/Trading/icon-price-move.jsx';
 import ContractTypeCell        from './contract-type-cell.jsx';
 import ProgressSlider          from './ProgressSlider';
 import ResultOverlay           from './result-overlay.jsx';
@@ -110,8 +110,7 @@ const PositionsDrawerCard = ({
                         },
                     )}
                     >
-                        <Icon
-                            icon='IconPriceMove'
+                        <IconPriceMove
                             type={(status !== 'complete') ? status : null}
                         />
                     </div>
@@ -124,8 +123,7 @@ const PositionsDrawerCard = ({
                         },
                     )}
                     >
-                        <Icon
-                            icon='IconPriceMove'
+                        <IconPriceMove
                             type={(status !== 'complete') ? status : null}
                         />
                     </div>
