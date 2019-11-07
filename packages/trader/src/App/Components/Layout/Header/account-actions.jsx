@@ -1,4 +1,4 @@
-import { Button, Popover }  from 'deriv-components';
+import { Button, Icon, Popover } from 'deriv-components';
 import * as PropTypes       from 'prop-types';
 import React, { Component } from 'react';
 import { localize }         from 'App/i18n';
