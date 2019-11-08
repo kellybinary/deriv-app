@@ -3,10 +3,10 @@ import React            from 'react';
 import {
     Button,
     Dropdown,
+    Icon,
     Input,
     Modal,
     Tabs,
-    UnderlyingIcon,
 }                       from 'deriv-components';
 import {
     Formik,
@@ -21,7 +21,7 @@ import '../assets/sass/quick-strategy.scss';
 
 const MarketOption = ({ symbol }) => (
     <div key={symbol.value} className='quick-strategy__option'>
-        <UnderlyingIcon market={symbol.value} />
+        <Icon icon={symbol.value} underlying />
         <span className='quick-strategy__symbol'>{symbol.name}</span>
     </div>
 );

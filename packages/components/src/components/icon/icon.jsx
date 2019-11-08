@@ -1,6 +1,7 @@
-import classNames from 'classnames';
-import PropTypes  from 'prop-types';
-import React      from 'react';
+import classNames       from 'classnames';
+import PropTypes        from 'prop-types';
+import React            from 'react';
+import { getKebabCase } from '../../../utils/string';
 
 const getUrlBase = (path = '') => {
     const l = window.location;
@@ -8,14 +9,6 @@ const getUrlBase = (path = '') => {
     if (!/^\/br_|bot/.test(l.pathname)) return path;
 
     return `/${l.pathname.split('/')[1]}${/^\//.test(path) ? path : `/${path}`}`;
-};
-
-const getKebabCase = (str) => {
-    if (!str) return str;
-    return str
-        .replace(/([a-z])([A-Z])/g, '$1-$2') // get all lowercase letters that are near to uppercase ones
-        .replace(/[\s_]+/g, '-')             // replace all spaces and low dash
-        .toLowerCase();
 };
 
 /* eslint-disable react/display-name */
@@ -33,6 +26,7 @@ const Icon = ({
     red,
     secondary,
     color,
+    underlying,
 }) => {
     const sizes = {
         small : 16,
@@ -41,6 +35,17 @@ const Icon = ({
     };
 
     const size = large ? sizes.large : (medium ? sizes.medium : sizes.small);
+
+    let spriteFileName = 'common';
+    if (icon.includes('IconTradetype')) {
+        spriteFileName = 'tradetypes';
+    } else if (icon.includes('IconFlag-')) {
+        spriteFileName = 'flags';
+    } else if (icon.includes('IconCurrency-')) {
+        spriteFileName = 'currencies';
+    } else if (underlying) {
+        spriteFileName = 'underlying';
+    }
 
     return (
         <svg
@@ -58,7 +63,7 @@ const Icon = ({
             width={width || size}
             onClick={onClick}
         >
-            <use xlinkHref={`${getUrlBase('/sprite.svg')}#${getKebabCase(icon)}`} />
+            <use xlinkHref={`${getUrlBase(`/${spriteFileName}.svg`)}#${underlying ? `ic-${icon}` : getKebabCase(icon)}`} />
         </svg>
     );
 };

@@ -1,7 +1,6 @@
 import {
     Icon,
-    Popover,
-    UnderlyingIcon }   from 'deriv-components';
+    Popover }          from 'deriv-components';
 import PropTypes       from 'prop-types';
 import React           from 'react';
 import {
@@ -24,7 +23,7 @@ const MarketSymbolIconRow = ({ payload, show_description }) => {
                         message={getMarketName(info_from_shortcode.underlying)}
                         disable_target_icon
                     >
-                        <UnderlyingIcon market={info_from_shortcode.underlying} />
+                        <Icon icon={info_from_shortcode.underlying} medium underlying />
                     </Popover>
                     {show_description && payload.display_name}
                 </div>

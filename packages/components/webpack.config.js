@@ -7,6 +7,8 @@ const shared_utils         = require('deriv-shared/utils/index.js');
 const is_serve   = process.env.BUILD_MODE === 'serve';
 const is_release = process.env.NODE_ENV === 'production' || process.env.NODE_ENV === 'staging';
 
+const Icons = require('./utils/icons.js');
+
 module.exports = {
     entry: {
         // index: path.join(__dirname, 'src', 'index.js'),
@@ -32,6 +34,7 @@ module.exports = {
         tabs               : path.resolve(__dirname, 'src', 'components/tabs/index.js'),
         'themed-scrollbars': path.resolve(__dirname, 'src', 'components/themed-scrollbars/index.js'),
         'underlying-icon'  : path.resolve(__dirname, 'src', 'components/underlying-icon/index.js'),
+        ...Icons,
     },
     output: {
         path         : path.resolve(__dirname, 'lib'),
@@ -85,9 +88,25 @@ module.exports = {
                     {
                         loader : 'svg-sprite-loader',
                         options: {
-                            extract       : true,
-                            spriteFilename: 'sprite.svg',
-                            publicPath    : '/icon/',
+                            extract: true,
+                            spriteFilename: svgPath => {
+                                if (svgPath.includes('components/icon/common')) {
+                                    return 'common.svg';
+                                }
+                                if (svgPath.includes('components/icon/currencies')) {
+                                    return 'currencies.svg';
+                                }
+                                if (svgPath.includes('components/icon/flags')) {
+                                    return 'flags.svg';
+                                }
+                                if (svgPath.includes('components/icon/tradetypes')) {
+                                    return 'tradetypes.svg';
+                                }
+                                if (svgPath.includes('components/icon/underlying')) {
+                                    return 'underlying.svg';
+                                }
+                            },
+                            publicPath: '/icon/',
                         },
                     },
                     {
@@ -121,7 +140,9 @@ module.exports = {
     plugins: [
         new MiniCssExtractPlugin({ filename: '[name].css' }),
         new StyleLintPlugin({ fix: true }),
-        new SpriteLoaderPlugin(),
+        new SpriteLoaderPlugin({
+            plainSprite: true
+        }),
     ],
     externals: {
         'formik'                    : 'formik',

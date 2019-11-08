@@ -13,7 +13,11 @@ const copyConfig = (base) => ([
     { from: path.resolve(__dirname, '../src/public/images/favicons/favicon.ico'), to: 'favicon.ico', toType: 'file' },
     { from: path.resolve(__dirname, '../src/public/images/favicons/**') },
     { from: path.resolve(__dirname, '../src/public/images/common/logos/platform_logos/**') },
-    { from: path.resolve(__dirname, '../node_modules/deriv-components/lib/icon/sprite.svg'), to: 'sprite.svg', toType: 'file' },
+    { from: path.resolve(__dirname, '../node_modules/deriv-components/lib/icon/common.svg'),     to: 'common.svg',     toType: 'file' },
+    { from: path.resolve(__dirname, '../node_modules/deriv-components/lib/icon/currencies.svg'), to: 'currencies.svg', toType: 'file' },
+    { from: path.resolve(__dirname, '../node_modules/deriv-components/lib/icon/flags.svg'),      to: 'flags.svg',      toType: 'file' },
+    { from: path.resolve(__dirname, '../node_modules/deriv-components/lib/icon/tradetypes.svg'), to: 'tradetypes.svg', toType: 'file' },
+    { from: path.resolve(__dirname, '../node_modules/deriv-components/lib/icon/underlying.svg'), to: 'underlying.svg', toType: 'file' },
     // { from: path.resolve(__dirname, '../src/_common/lib/pushwooshSDK/**'), flatten: true },
     {
         from: path.resolve(__dirname, '../src/templates/app/manifest.json'),

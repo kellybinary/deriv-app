@@ -1,8 +1,7 @@
 import classNames            from 'classnames';
 import {
     Icon,
-    Money,
-    UnderlyingIcon }         from 'deriv-components';
+    Money }                  from 'deriv-components';
 import React                 from 'react';
 import PropTypes             from 'prop-types';
 import CurrencyUtils         from 'deriv-shared/utils/currency';
@@ -43,7 +42,7 @@ const ContractCard = ({
                 { is_contract_completed && <ContractResultOverlay profit={contract.profit} /> }
                 <div className='db-contract-card__underlying'>
                     <div className='db-contract-card__underlying-name'>
-                        <UnderlyingIcon market={contract.underlying} />
+                        <Icon icon={contract.underlying} underlying />
                         <span className='db-contract-card__underlying-symbol'>
                             { contract.display_name }
                         </span>

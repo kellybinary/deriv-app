@@ -6,8 +6,7 @@ import { CSSTransition }       from 'react-transition-group';
 import {
     Button,
     Icon,
-    Money,
-    UnderlyingIcon }           from 'deriv-components';
+    Money }                    from 'deriv-components';
 import { localize }            from 'App/i18n';
 import routes                  from 'Constants/routes';
 import Localize                from 'App/Components/Elements/localize.jsx';
@@ -80,7 +79,7 @@ class ContractDrawer extends Component {
                         )}
                         >
                             <div id='dt_underlying_label' className='contract-card__underlying-name'>
-                                <UnderlyingIcon market={contract_info.underlying} />
+                                <Icon icon={contract_info.underlying} underlying large />
                                 <span className='contract-card__symbol'>
                                     {contract_info.display_name}
                                 </span>

@@ -5,8 +5,8 @@ import { CSSTransition }       from 'react-transition-group';
 import { NavLink }             from 'react-router-dom';
 import {
     Button,
-    Money,
-    UnderlyingIcon }           from 'deriv-components';
+    Icon,
+    Money }                    from 'deriv-components';
 import CurrencyUtils           from 'deriv-shared/utils/currency';
 import Shortcode               from 'Modules/Reports/Helpers/shortcode';
 import { localize }            from 'App/i18n';
@@ -54,7 +54,7 @@ const PositionsDrawerCard = ({
             )}
             >
                 <div className='positions-drawer-card__underlying-name'>
-                    <UnderlyingIcon market={contract_info.underlying} />
+                    <Icon icon={contract_info.underlying} underlying />
                     <span className='positions-drawer-card__symbol'>
                         {contract_info.display_name}
                     </span>
