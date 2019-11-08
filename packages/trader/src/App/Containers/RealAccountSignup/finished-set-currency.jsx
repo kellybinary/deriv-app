@@ -9,10 +9,10 @@ const FinishedSetCurrency = ({
     onSubmit,
     prev,
 }) => {
-    const IconPrevCurrency = () => <Icon icon={`IconCurrency-${prev.toLowerCase()}`} />;
-    const IconNextCurrency = () => <Icon icon={`IconCurrency-${current.toLowerCase()}`} />;
-    const IconArrow        = () => <Icon icon='IconRedArrow' />;
-    const IconWon          = ({ className }) => <Icon className={className} icon='IconWon' />;
+    const IconPrevCurrency = () => <Icon icon={`IconCurrency-${prev.toLowerCase()}`} width={90} height={120} />;
+    const IconNextCurrency = () => <Icon icon={`IconCurrency-${current.toLowerCase()}`} width={90} height={120} />;
+    const IconArrow        = () => <Icon icon='IconRedArrow' width={50} height={20} />;
+    const IconWon          = ({ className }) => <Icon className={className} icon='IconCheckmarkCircle' />;
 
     return (
         <div className='success-change'>

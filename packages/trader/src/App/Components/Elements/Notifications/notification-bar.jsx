@@ -2,7 +2,7 @@ import classNames        from 'classnames';
 import PropTypes         from 'prop-types';
 import React             from 'react';
 import { CSSTransition } from 'react-transition-group';
-import Icon              from 'Assets/icon.jsx'; // TODO: replace this once Notification card is merged
+import { Icon }          from 'deriv-components';
 
 class NotificationBar extends React.Component {
     state = {};

@@ -219,7 +219,7 @@ class AccountTransferForm extends React.Component {
                                             <div className='cashier__form-submit'>
                                                 {this.props.error.message &&
                                                 <React.Fragment>
-                                                    <Icon icon='IconEmergency' className='cashier__form-error-icon' />
+                                                    <Icon icon='IconDangerBg' className='cashier__form-error-icon' />
                                                     <Icon icon='IconError' className='cashier__form-error-small-icon' />
                                                     <p className='cashier__form-error'>
                                                         {this.props.error.message}

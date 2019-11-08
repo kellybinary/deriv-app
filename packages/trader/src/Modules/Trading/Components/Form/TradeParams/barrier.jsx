@@ -69,8 +69,8 @@ const Barrier = ({
                             is_float
                             is_signed
                         />
-                        <Icon icon='IconBarrierUp'   className='trade-container__barriers--up' />
-                        <Icon icon='IconBarrierDown' className='trade-container__barriers--down' />
+                        <Icon icon='IconArrowUp'   className='trade-container__barriers--up' />
+                        <Icon icon='IconArrowDown' className='trade-container__barriers--down' />
                     </React.Fragment>
                 }
             </div>

@@ -6,7 +6,6 @@ import {
 import React, { Component }  from 'react';
 import { localize }          from 'App/i18n';
 import Localize              from 'App/Components/Elements/localize.jsx';
-import IconDuplicate         from 'Assets/Signup/icon-duplicate.jsx';
 import { connect }           from 'Stores/connect';
 import AccountWizard         from './account-wizard.jsx';
 import AddOrManageAccounts   from './add-or-manage-accounts.jsx';
@@ -17,7 +16,7 @@ import 'Sass/real-account-signup.scss';
 
 const ErrorModal = ({ message }) => (
     <div className='account-wizard--error'>
-        <IconDuplicate />
+        <Icon icon='IconDuplicate' />
         <h1><Localize i18n_default_text='Whoops!' /></h1>
         <p>
             {localize(message)}

@@ -136,7 +136,7 @@ const ButtonAddAccount = ({
 }) => (
     <UpgradeButton
         onClick={onClick}
-        icon={<Icon icon='IconAdd' />}
+        icon={<Icon icon='IconAdd' medium />}
     >
         {text}
     </UpgradeButton>

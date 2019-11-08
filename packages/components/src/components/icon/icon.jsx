@@ -16,16 +16,19 @@ const Icon = ({
     className,
     icon,
     onClick,
-    disabled,
-    active,
+    // size
     height,
     width,
     medium,
     large,
+    // colors
+    active,
+    disabled,
     green,
     red,
     secondary,
     color,
+    // custom
     underlying,
 }) => {
     const sizes = {
@@ -37,14 +40,16 @@ const Icon = ({
     const size = large ? sizes.large : (medium ? sizes.medium : sizes.small);
 
     let spriteFileName = 'common';
-    if (icon.includes('IconTradetype')) {
-        spriteFileName = 'tradetypes';
-    } else if (icon.includes('IconFlag-')) {
-        spriteFileName = 'flags';
-    } else if (icon.includes('IconCurrency-')) {
-        spriteFileName = 'currencies';
-    } else if (underlying) {
+    if (underlying) {
         spriteFileName = 'underlying';
+    } else if (icon) {
+        if (icon.includes('IconTradetype')) {
+            spriteFileName = 'tradetypes';
+        } else if (icon.includes('IconFlag-')) {
+            spriteFileName = 'flags';
+        } else if (icon.includes('IconCurrency-')) {
+            spriteFileName = 'currencies';
+        }
     }
 
     return (
