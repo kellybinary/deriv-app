@@ -3958,20 +3958,6 @@ html, body {
       position: relative;
       border-color: inherit;
       border-top-width: 1px; }
-.chart-line.horizontal .title-wrapper {
-      position: absolute;
-      height: 24px;
-      background-image: linear-gradient(transparent 30%, var(--general-main-1) 50%, transparent 75%);
-      /* stylelint-disable-line plugin/no-unsupported-browser-features */
-      top: -11px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 11px;
-      padding: 3px 10px;
-      font-weight: bold; }
-.chart-line.horizontal .title-wrapper .title {
-        white-space: pre-wrap; }
 /*hover*/
 .draggable.chart-line:hover.horizontal {
   cursor: ns-resize; }
@@ -3988,14 +3974,6 @@ html, body {
   right: -1px;
   border: 1px solid inherit;
   border-radius: 4px; }
-.drag-price .arrow-icon {
-    height: 39px;
-    padding: 4px 0px;
-    position: absolute;
-    transition: none;
-    left: 2px;
-    background: var(--general-main-1);
-    width: calc(100% - 2px); }
 /*hover*/
 .no-touch .price-arrow span {
   position: absolute;
