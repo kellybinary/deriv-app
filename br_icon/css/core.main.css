@@ -222,9 +222,6 @@
   --fill-color2: var(--text-less-prominent);
   --fill-color3: var(--general-section-1); }
 
-.dc-icon:hover:not(.dc-icon--active):not(.dc-icon--disabled):not(.dc-icon--red):not(.dc-icon--green):not(.dc-icon--brand) {
-  --fill-color1: var(--text-prominent); }
-
 .dc-icon--disabled {
   --fill-color1: var(--text-disabled);
   --fill-color2: var(--text-disabled); }
@@ -253,29 +250,38 @@
   --fill-color2: var(--brand-secondary);
   --fill-color3: #fff; }
 
-.dc-popover__target__icon--disabled .info .color1-fill {
-  fill: var(--text-disabled); }
+.dc-icon, .dc-popover__target__icon .info:hover {
+  --fill-color1: var(--text-general);
+  --fill-color2: var(--text-less-prominent);
+  --fill-color3: var(--general-section-1); }
 
-.dc-popover__target__icon--disabled .info .color1-stroke {
-  stroke: var(--text-disabled); }
+.dc-icon--disabled, .dc-popover__target__icon--disabled .info, .dc-popover__target__icon--disabled .info:hover {
+  --fill-color1: var(--text-disabled);
+  --fill-color2: var(--text-disabled); }
 
-.dc-popover__target__icon--disabled .info .color2-fill {
-  fill: none; }
+.dc-icon--active {
+  --fill-color1: #fff;
+  --fill-color2: #fff; }
 
-.dc-popover__target__icon--disabled .info .color2-stroke {
-  stroke: none; }
+.dc-icon--green {
+  --fill-color1: var(--text-profit-success);
+  --fill-color2: var(--text-profit-success);
+  --fill-color3: #fff; }
 
-.dc-popover__target__icon .info:hover .color1-fill {
-  fill: var(--text-prominent); }
+.dc-icon--red {
+  --fill-color1: var(--text-loss-danger);
+  --fill-color2: var(--text-loss-danger);
+  --fill-color3: #fff; }
 
-.dc-popover__target__icon .info:hover .color1-stroke {
-  stroke: var(--text-prominent); }
+.dc-icon--secondary, .dc-popover__target__icon .info {
+  --fill-color1: var(--text-less-prominent);
+  --fill-color2: var(--text-less-prominent);
+  --fill-color3: #fff; }
 
-.dc-popover__target__icon .info .color1-fill {
-  fill: var(--text-less-prominent); }
-
-.dc-popover__target__icon .info .color1-stroke {
-  stroke: var(--text-less-prominent); }
+.dc-icon--brand {
+  --fill-color1: var(--brand-red-coral);
+  --fill-color2: var(--brand-secondary);
+  --fill-color3: #fff; }
 
 .dc-popover__target__icon .counter {
   color: var(--brand-red-coral);
@@ -419,9 +425,6 @@
   --fill-color2: var(--text-less-prominent);
   --fill-color3: var(--general-section-1); }
 
-.dc-icon:hover:not(.dc-icon--active):not(.dc-icon--disabled):not(.dc-icon--red):not(.dc-icon--green):not(.dc-icon--brand) {
-  --fill-color1: var(--text-prominent); }
-
 .dc-icon--disabled {
   --fill-color1: var(--text-disabled);
   --fill-color2: var(--text-disabled); }
@@ -552,9 +555,6 @@
   --fill-color1: var(--text-general);
   --fill-color2: var(--text-less-prominent);
   --fill-color3: var(--general-section-1); }
-
-.dc-icon:hover:not(.dc-icon--active):not(.dc-icon--disabled):not(.dc-icon--red):not(.dc-icon--green):not(.dc-icon--brand) {
-  --fill-color1: var(--text-prominent); }
 
 .dc-icon--disabled {
   --fill-color1: var(--text-disabled);
@@ -1281,9 +1281,6 @@ html {
   --fill-color1: var(--text-general);
   --fill-color2: var(--text-less-prominent);
   --fill-color3: var(--general-section-1); }
-
-.dc-icon:hover:not(.dc-icon--active):not(.dc-icon--disabled):not(.dc-icon--red):not(.dc-icon--green):not(.dc-icon--brand) {
-  --fill-color1: var(--text-prominent); }
 
 .dc-icon--disabled {
   --fill-color1: var(--text-disabled);
@@ -2853,9 +2850,6 @@ html {
   --fill-color2: var(--text-less-prominent);
   --fill-color3: var(--general-section-1); }
 
-.dc-icon:hover:not(.dc-icon--active):not(.dc-icon--disabled):not(.dc-icon--red):not(.dc-icon--green):not(.dc-icon--brand) {
-  --fill-color1: var(--text-prominent); }
-
 .dc-icon--disabled {
   --fill-color1: var(--text-disabled);
   --fill-color2: var(--text-disabled); }
@@ -4180,9 +4174,6 @@ html {
   --fill-color1: var(--text-general);
   --fill-color2: var(--text-less-prominent);
   --fill-color3: var(--general-section-1); }
-
-.dc-icon:hover:not(.dc-icon--active):not(.dc-icon--disabled):not(.dc-icon--red):not(.dc-icon--green):not(.dc-icon--brand) {
-  --fill-color1: var(--text-prominent); }
 
 .dc-icon--disabled {
   --fill-color1: var(--text-disabled);
@@ -6215,9 +6206,6 @@ html {
   --fill-color1: var(--text-general);
   --fill-color2: var(--text-less-prominent);
   --fill-color3: var(--general-section-1); }
-
-.dc-icon:hover:not(.dc-icon--active):not(.dc-icon--disabled):not(.dc-icon--red):not(.dc-icon--green):not(.dc-icon--brand) {
-  --fill-color1: var(--text-prominent); }
 
 .dc-icon--disabled {
   --fill-color1: var(--text-disabled);
