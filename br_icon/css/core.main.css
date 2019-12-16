@@ -9302,13 +9302,11 @@ table {
     margin-left: 4px; }
   .account-wallet__label {
     margin-left: 16px !important; }
-  .account-wallet .inline-icon {
-    width: 24px;
-    height: 24px;
+  .account-wallet .dc-icon {
     display: inline-block;
     vertical-align: middle;
     margin: 0 8px; }
-    .account-wallet .inline-icon .color1-fill {
+    .account-wallet .dc-icon .color1-fill {
       fill: var(--text-profit-success); }
 
 /** @define mobile-dialog; weak */
@@ -9519,7 +9517,8 @@ table {
     margin-left: -2.4rem;
     position: absolute;
     bottom: 0;
-    height: 8rem; }
+    height: 8rem;
+    overflow: hidden; }
   .cashier__form-error {
     flex: 1;
     margin: 2rem 5.6rem 4.4rem 0;
@@ -9528,7 +9527,11 @@ table {
     line-height: 1.33; }
     .cashier__form-error-icon {
       position: absolute;
-      left: 0; }
+      left: -10px;
+      bottom: -15px;
+      pointer-events: none;
+      opacity: 0.07;
+      z-index: 0; }
     .cashier__form-error-small-icon {
       margin: 2rem 1.6rem 4.4rem 2.4rem; }
   .cashier__form-submit-button {
