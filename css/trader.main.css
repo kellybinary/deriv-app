@@ -1988,6 +1988,8 @@ table {
         background: var(--general-hover); }
   .contract-drawer__icon {
     margin-right: 16px; }
+  .contract-drawer__body {
+    height: calc(100% - 200px); }
 
 /** @define .contract-card */
 .contract-card {
@@ -2085,7 +2087,7 @@ table {
     color: var(--text-prominent);
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 0.4rem; }
+    grid-gap: 0.8rem 0.4rem; }
   .contract-card__footer {
     margin-bottom: 0.5em;
     padding: 0 4px; }
@@ -2126,8 +2128,7 @@ table {
       margin-left: 0.8rem;
       padding-top: 0.2rem; }
   .contract-card__item__header {
-    margin-bottom: 0.4rem;
-    line-height: 1.5; }
+    line-height: 1.4; }
   .contract-card__item__body {
     font-size: 1.2rem;
     color: var(--text-general);
@@ -2136,9 +2137,9 @@ table {
     text-align: left;
     line-height: 1.25;
     display: flex;
-    align-items: center;
     align-self: flex-start;
-    color: var(--text-prominent); }
+    color: var(--text-prominent);
+    line-height: 1.5; }
     .contract-card__item__body--is-crypto {
       margin-left: -6px; }
   .contract-card__item__body--loss {
@@ -2293,7 +2294,7 @@ table {
     .positions-drawer-card__result--lost, .positions-drawer-card__result--lost:after {
       background-image: var(--gradient-danger); }
     .positions-drawer-card__result--lg {
-      max-height: 160px; }
+      max-height: 190px; }
     .positions-drawer-card__result:hover {
       background: 0 !important; }
       .positions-drawer-card__result:hover .result__caption {
@@ -2367,21 +2368,26 @@ table {
     .positions-drawer-card__grid-price-payout {
       grid-template-columns: 1fr 1fr;
       padding: 0 8px; }
-  .positions-drawer-card__purchase-label, .positions-drawer-card__payout-label {
+    .positions-drawer-card__grid-items {
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 0.8rem 0.4rem;
+      padding: 0.8rem; }
+  .positions-drawer-card__purchase-label, .positions-drawer-card__payout-label, .positions-drawer-card__item-label {
     text-transform: none;
     font-size: 1rem;
     font-weight: normal;
     white-space: nowrap;
     max-width: 90px;
+    line-height: 1.4;
     color: var(--text-general); }
-  .positions-drawer-card__purchase-value, .positions-drawer-card__payout-value {
+  .positions-drawer-card__purchase-value, .positions-drawer-card__payout-value, .positions-drawer-card__item-value {
     font-size: 1.2em;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     font-weight: bold;
-    padding: 4px 0 8px; }
-  .positions-drawer-card__purchase-price, .positions-drawer-card__payout-price {
+    line-height: 1.5; }
+  .positions-drawer-card__purchase-price, .positions-drawer-card__payout-price, .positions-drawer-card__item-price {
     display: flex;
     flex-direction: column; }
   .positions-drawer-card__payout-price {
@@ -3091,17 +3097,24 @@ table {
 .contract-audit__wrapper {
   margin-top: 1em;
   border-radius: 4px;
-  padding: 2px 4px;
   opacity: 1;
   height: 100%;
   max-height: calc(100vh - 32.6em);
   overflow: hidden;
   background-color: var(--general-main-1);
-  color: var(--text-prominent); }
+  color: var(--text-prominent);
+  /* postcss-bem-linter: ignore */ }
+  .contract-audit__wrapper-tabs--active {
+    max-height: calc(calc(100vh - 32.6em) - 96px); }
+  .contract-audit__wrapper-tabs--expired {
+    max-height: calc(calc(100vh - 32.6em) - 48px); }
+  .contract-audit__wrapper .dc-tabs {
+    height: inherit;
+    grid-template-rows: 1fr 20fr; }
 
 .contract-audit__grid {
   display: flex;
-  padding: 8px 8px 4px; }
+  padding: 0.8rem 0; }
   .contract-audit__grid:not(:first-child) {
     border-top: 1px solid var(--general-section-2); }
 
