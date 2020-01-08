@@ -3167,13 +3167,13 @@ table {
   align-items: center;
   flex-direction: column;
   padding: 16px; }
-  .contract-audit__empty__header {
+  .contract-audit__empty-header {
     font-size: 1.4rem;
     font-weight: bold;
     text-align: center;
     color: var(--text-less-prominent);
     padding: 8px; }
-  .contract-audit__empty__message {
+  .contract-audit__empty-message {
     color: var(--text-less-prominent);
     font-size: 1.2rem;
     text-align: center;
