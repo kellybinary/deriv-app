@@ -3176,7 +3176,8 @@ table {
   .contract-audit__empty__message {
     color: var(--text-less-prominent);
     font-size: 1.2rem;
-    text-align: center; }
+    text-align: center;
+    line-height: 1.4; }
 
 /** @define contracts-type-dialog; */
 .contracts-type-dialog {
