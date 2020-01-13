@@ -319,9 +319,6 @@
   flex-grow: 2;
   text-align: left; }
 
-.dc-popover__bubble__text .bold {
-  font-weight: bold; }
-
 .dc-popover__bubble__text--error {
   color: var(--text-colored-background); }
 
@@ -4276,10 +4273,6 @@ html {
   border: none;
   background-color: var(--brand-red-coral); }
 
-.dc-checkbox--disabled {
-  opacity: 0.5;
-  cursor: not-allowed !important; }
-
 .dc-checkbox__label {
   color: var(--text-general);
   font-size: var(--text-size-xs); }
@@ -8174,7 +8167,8 @@ table {
     padding: 8px 12px 0;
     color: var(--text-prominent); }
   .contract-card__footer {
-    margin-bottom: 0.5em; }
+    margin-bottom: 0.5em;
+    padding: 0 4px; }
     .contract-card__footer-wrapper {
       font-size: 1.2rem;
       color: var(--text-general);
@@ -8506,7 +8500,7 @@ table {
     align-items: center;
     justify-content: center;
     transition: transform 0.25s ease, opacity 0.25s linear;
-    padding-top: 8px;
+    margin: 4px -4px -4px;
     border-top: 1px solid var(--general-section-1); }
     .positions-drawer-card__sell-button--enter-done {
       opacity: 1;
@@ -8539,6 +8533,7 @@ table {
 
 /** @define btn; */
 .btn--sell {
+  margin: 8px 4px 4px !important;
   width: 100%; }
 
 /** @define remaining-time; */
