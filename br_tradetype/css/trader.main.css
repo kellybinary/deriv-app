@@ -4226,6 +4226,8 @@ table {
         stroke: var(--text-general); }
       .vertical-tab__header__icon--active {
         margin-left: -4px; }
+    .vertical-tab__header__counter {
+      margin-left: 1rem; }
     .vertical-tab__header--highlight {
       position: absolute;
       display: block;
