@@ -2126,9 +2126,9 @@ table {
       font-size: 1.2rem;
       margin-left: 0.8rem;
       padding-top: 0.2rem; }
-  .contract-card__item__header {
+  .contract-card-item__header {
     line-height: 1.4; }
-  .contract-card__item__body {
+  .contract-card-item__body {
     font-size: 1.2rem;
     color: var(--text-general);
     font-weight: 700;
@@ -2139,15 +2139,15 @@ table {
     align-self: flex-start;
     color: var(--text-prominent);
     line-height: 1.5; }
-    .contract-card__item__body--is-crypto {
+    .contract-card-item__body--is-crypto {
       margin-left: -6px; }
-  .contract-card__item__body--loss {
+  .contract-card-item__body--loss {
     color: var(--text-loss-danger) !important; }
-    .contract-card__item__body--loss:before {
+    .contract-card-item__body--loss:before {
       content: '-'; }
-  .contract-card__item__body--profit {
+  .contract-card-item__body--profit {
     color: var(--text-profit-success) !important; }
-    .contract-card__item__body--profit:before {
+    .contract-card-item__body--profit:before {
       content: '+'; }
   .contract-card__indicative--movement {
     margin-left: 2px;
@@ -3110,10 +3110,6 @@ table {
   background-color: var(--general-main-1);
   color: var(--text-prominent);
   /* postcss-bem-linter: ignore */ }
-  .contract-audit__wrapper-tabs--active {
-    max-height: calc(calc(100vh - 32.6em) - 96px); }
-  .contract-audit__wrapper-tabs--expired {
-    max-height: calc(calc(100vh - 32.6em) - 48px); }
   .contract-audit__wrapper .dc-tabs {
     height: inherit;
     grid-template-rows: 1fr 20fr; }
@@ -3178,6 +3174,15 @@ table {
     font-size: 1.2rem;
     text-align: center;
     line-height: 1.4; }
+
+.contract-audit__tabs--active {
+  max-height: calc(calc(100vh - 32.6em) - 96px); }
+
+.contract-audit__tabs--expired {
+  max-height: calc(calc(100vh - 32.6em) - 48px); }
+
+.contract-audit__tabs-content {
+  padding: 0.8rem 1.6rem; }
 
 /** @define contracts-type-dialog; */
 .contracts-type-dialog {

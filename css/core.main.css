@@ -8375,10 +8375,13 @@ table {
       margin-bottom: 16px; }
     .positions-drawer-card__wrapper:last-child {
       margin-bottom: 10px; }
-    .positions-drawer-card__wrapper--enter-done {
+    .positions-drawer-card__wrapper .positions-drawer-card__wrapper--transition.positions-drawer-card__wrapper--enter-done {
       opacity: 1;
       transform: translateY(0); }
-    .positions-drawer-card__wrapper--enter, .positions-drawer-card__wrapper--exit {
+    .positions-drawer-card__wrapper .positions-drawer-card__wrapper--transition.positions-drawer-card__wrapper--enter {
+      opacity: 0;
+      transform: translateY(-16px); }
+    .positions-drawer-card__wrapper .positions-drawer-card__wrapper--transition.positions-drawer-card__wrapper--exit {
       opacity: 0;
       transform: translateY(-16px); }
   .positions-drawer-card--active {
