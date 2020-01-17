@@ -4357,9 +4357,12 @@ table {
       /* postcss-bem-linter: ignore */ }
       .contracts-type-dialog__list-wrapper .vertical-tab__action-bar .dc-input {
         margin-bottom: 0;
+        /* postcss-bem-linter: ignore */
         /* postcss-bem-linter: ignore */ }
         .contracts-type-dialog__list-wrapper .vertical-tab__action-bar .dc-input__field {
           padding-left: 36px; }
+        .contracts-type-dialog__list-wrapper .vertical-tab__action-bar .dc-input__trailing-icon {
+          cursor: pointer; }
     .contracts-type-dialog__list-wrapper .vertical-tab__content {
       padding: 0 !important; }
     .contracts-type-dialog__list-wrapper .vertical-tab__tab {
