@@ -4345,7 +4345,8 @@ table {
     background: var(--general-main-2);
     box-shadow: 0 2px 8px 0 var(--shadow-menu);
     min-width: 560px;
-    min-height: 680px;
+    height: 680px;
+    max-height: 80vh;
     overflow: hidden;
     /* postcss-bem-linter: ignore */
     /* postcss-bem-linter: ignore */
@@ -4358,9 +4359,13 @@ table {
       .contracts-type-dialog__list-wrapper .vertical-tab__action-bar .dc-input {
         margin-bottom: 0;
         /* postcss-bem-linter: ignore */
+        /* postcss-bem-linter: ignore */
         /* postcss-bem-linter: ignore */ }
         .contracts-type-dialog__list-wrapper .vertical-tab__action-bar .dc-input__field {
-          padding-left: 36px; }
+          padding: 0.8rem 1.2rem 0.8rem 3.6rem;
+          height: 3.2rem; }
+        .contracts-type-dialog__list-wrapper .vertical-tab__action-bar .dc-input__leading-icon {
+          top: 0.8rem; }
         .contracts-type-dialog__list-wrapper .vertical-tab__action-bar .dc-input__trailing-icon {
           cursor: pointer; }
     .contracts-type-dialog__list-wrapper .vertical-tab__content {
@@ -4462,7 +4467,7 @@ table {
 /** @define contract-type-list; */
 .contract-type-list {
   padding: 1.6em 1.6em 0em;
-  border-bottom: 4px solid var(--general-section-2); }
+  border-bottom: 4px solid var(--general-section-1); }
   .contract-type-list__label {
     font-size: 1.4rem;
     color: var(--text-general);
