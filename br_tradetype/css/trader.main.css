@@ -216,6 +216,17 @@ html {
   height: 100%;
   overflow: hidden; }
 
+/** @define no-results-found */
+.no-results-found {
+  padding: 1.6rem;
+  text-align: center; }
+  .no-results-found__title, .no-results-found__subtitle {
+    line-height: 1.5; }
+  .no-results-found__title {
+    font-size: 1.4rem; }
+  .no-results-found__subtitle {
+    font-size: 1.2rem; }
+
 /** @define cq-bottom-ui-widgets; weak */
 .cq-bottom-ui-widgets {
   z-index: 4;
@@ -724,6 +735,17 @@ html {
 .deriv-app {
   height: 100%;
   overflow: hidden; }
+
+/** @define no-results-found */
+.no-results-found {
+  padding: 1.6rem;
+  text-align: center; }
+  .no-results-found__title, .no-results-found__subtitle {
+    line-height: 1.5; }
+  .no-results-found__title {
+    font-size: 1.4rem; }
+  .no-results-found__subtitle {
+    font-size: 1.2rem; }
 
 .account {
   margin: 0 16px; }
@@ -1323,6 +1345,17 @@ html {
 .deriv-app {
   height: 100%;
   overflow: hidden; }
+
+/** @define no-results-found */
+.no-results-found {
+  padding: 1.6rem;
+  text-align: center; }
+  .no-results-found__title, .no-results-found__subtitle {
+    line-height: 1.5; }
+  .no-results-found__title {
+    font-size: 1.4rem; }
+  .no-results-found__subtitle {
+    font-size: 1.2rem; }
 
 /* @define .composite-calendar; weak; */
 .composite-calendar {
@@ -2011,6 +2044,17 @@ html {
 .deriv-app {
   height: 100%;
   overflow: hidden; }
+
+/** @define no-results-found */
+.no-results-found {
+  padding: 1.6rem;
+  text-align: center; }
+  .no-results-found__title, .no-results-found__subtitle {
+    line-height: 1.5; }
+  .no-results-found__title {
+    font-size: 1.4rem; }
+  .no-results-found__subtitle {
+    font-size: 1.2rem; }
 
 /*------------------------------------*
  *  # Reset SCSS
