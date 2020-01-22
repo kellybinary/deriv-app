@@ -4390,14 +4390,14 @@ table {
     box-shadow: 0 2px 8px 0 var(--shadow-menu);
     min-width: 560px;
     height: 680px;
-    max-height: 80vh;
+    max-height: calc(100vh - 116px);
     overflow: hidden;
     /* postcss-bem-linter: ignore */
     /* postcss-bem-linter: ignore */
     /* postcss-bem-linter: ignore */ }
     .contracts-type-dialog__list-wrapper .vertical-tab__action-bar {
       flex-flow: row;
-      border-bottom: 2px solid var(--general-section-2);
+      border-bottom: 2px solid var(--general-section-1);
       height: 56px;
       /* postcss-bem-linter: ignore */ }
       .contracts-type-dialog__list-wrapper .vertical-tab__action-bar .dc-input {
@@ -4609,18 +4609,31 @@ table {
 
 /** @define contract-type-info; */
 .contract-type-info {
-  overflow: hidden; }
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
+  .contract-type-info__cards-wrapper {
+    display: flex;
+    flex-direction: row;
+    transition: transform 0.3s linear;
+    padding: 2.4rem;
+    width: 100%;
+    height: 100%; }
   .contract-type-info__card {
+    height: 100%;
     width: 272px;
-    margin-right: 24px; }
+    margin-right: 2.4rem;
+    display: flex;
+    flex-direction: column; }
     .contract-type-info__card-wrapper {
-      display: flex;
-      flex-direction: row;
-      transition: transform 0.3s linear;
-      padding: 24px;
-      width: 100%; }
+      width: 288px !important;
+      height: 535px !important;
+      max-height: calc(100vh - 250px);
+      margin-right: 2.4rem; }
   .contract-type-info__choose-button {
-    margin: 1.6rem 0 1rem;
+    margin-bottom: 1rem;
     width: 100%;
     /* postcss-bem-linter: ignore */ }
     .contract-type-info__choose-button span {
@@ -4631,45 +4644,55 @@ table {
       text-align: center;
       line-height: 1.5; }
   .contract-type-info__content {
-    margin-top: 1.5em;
-    height: 260px;
+    margin-top: 2.4rem;
+    margin-bottom: auto;
     overflow: hidden;
-    /* postcss-bem-linter: ignore */ }
-    .contract-type-info__content p {
-      font-size: 1.4rem;
-      color: var(--text-general);
-      font-weight: 400;
-      text-transform: none;
-      text-align: left;
-      line-height: 1.5;
-      margin-bottom: 5.71429px;
-      color: var(--text-general); }
-  .contract-type-info__gif {
-    width: 100%;
-    height: 140px;
-    border-radius: 4px;
-    background-color: var(--general-section-2);
-    color: var(--text-general); }
-    .contract-type-info__gif-image {
-      width: 270px;
-      height: 142px; }
-      .contract-type-info__gif-image--dark {
-        margin-left: -6px;
-        margin-top: -2px; }
-  .contract-type-info__header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    /* postcss-bem-linter: ignore */
     /* postcss-bem-linter: ignore */
     /* postcss-bem-linter: ignore */ }
-    .contract-type-info__header .title {
+    .contract-type-info__content h2 {
       font-size: 1.4rem;
       color: var(--text-general);
       font-weight: 700;
       text-transform: none;
       text-align: left;
       line-height: 1.5;
-      margin-left: 0.8rem;
+      margin-bottom: 0.8rem;
+      color: var(--text-prominent); }
+    .contract-type-info__content p, .contract-type-info__content ul li {
+      font-size: 1.4rem;
+      color: var(--text-general);
+      font-weight: 400;
+      text-transform: none;
+      text-align: left;
+      line-height: 1.5;
+      margin-bottom: 1.6rem;
+      color: var(--text-general); }
+    .contract-type-info__content ul {
+      margin-left: 1.6rem;
+      list-style: disc;
+      /* postcss-bem-linter: ignore */ }
+      .contract-type-info__content ul li {
+        margin-bottom: 0.8rem; }
+  .contract-type-info__gif {
+    width: 100%;
+    height: 148px;
+    border-radius: 4px; }
+  .contract-type-info__header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 288px;
+    /* postcss-bem-linter: ignore */
+    /* postcss-bem-linter: ignore */ }
+    .contract-type-info__header .title {
+      font-size: 1.6rem;
+      color: var(--text-general);
+      font-weight: 700;
+      text-transform: none;
+      text-align: left;
+      line-height: 1.75;
+      margin: auto;
       color: var(--text-prominent);
       cursor: default; }
     .contract-type-info__header span {
@@ -4681,23 +4704,24 @@ table {
   align-items: center;
   width: 320px;
   padding: 0 2.4rem;
-  overflow: hidden; }
+  overflow: hidden;
+  margin-bottom: 2.4rem; }
   .contract-type-info-navigation__list {
     display: inline-block;
     text-align: center;
     margin: 0 auto;
     position: relative; }
   .contract-type-info-navigation__circle-button {
-    width: 0.8em;
-    height: 0.8em;
+    width: 0.8rem;
+    height: 0.8rem;
     border-radius: 50%;
     display: inline-block;
-    margin: 0 0.4em;
+    margin: 0 0.8rem;
     cursor: pointer;
     background-color: var(--text-disabled); }
     .contract-type-info-navigation__circle-button--active {
       position: absolute;
-      top: 1px;
+      top: 0;
       left: 0;
       cursor: auto;
       cursor: initial;
