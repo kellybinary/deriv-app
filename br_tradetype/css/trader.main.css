@@ -4622,6 +4622,7 @@ table {
     width: 100%;
     height: 100%; }
   .contract-type-info__card {
+    min-height: 535px;
     height: 100%;
     width: 272px;
     margin-right: 2.4rem;
