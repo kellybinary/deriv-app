@@ -1961,6 +1961,12 @@ html {
 .dc-dropdown--disabled {
   pointer-events: none; }
 
+.dc-dropdown--disabled .dc-dropdown__display {
+  border: 1px solid var(--general-disabled); }
+
+.dc-dropdown--disabled .dc-dropdown__display-text {
+  color: var(--text-disabled); }
+
 .dc-dropdown-container {
   position: relative;
   margin-top: 8px;
