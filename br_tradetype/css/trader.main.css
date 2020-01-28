@@ -4399,6 +4399,7 @@ table {
       flex-flow: row;
       border-bottom: 2px solid var(--general-section-1);
       height: 56px;
+      width: 320px;
       /* postcss-bem-linter: ignore */ }
       .contract-type-dialog__wrapper .vertical-tab__action-bar .dc-input {
         margin-bottom: 0;
@@ -4622,17 +4623,12 @@ table {
     width: 100%;
     height: 100%; }
   .contract-type-info__card {
-    min-height: 535px;
-    height: 100%;
+    min-height: calc(100vh - 368px);
     width: 272px;
     margin-right: 2.4rem;
     display: flex;
-    flex-direction: column; }
-    .contract-type-info__card-wrapper {
-      width: 288px !important;
-      height: 535px !important;
-      max-height: calc(100vh - 262px);
-      margin-right: 2.4rem; }
+    flex-direction: column;
+    padding-bottom: 0.8rem; }
   .contract-type-info__content {
     margin-top: 2.4rem;
     margin-bottom: auto;
@@ -4668,56 +4664,50 @@ table {
     width: 100%;
     height: 148px;
     border-radius: 4px; }
-  .contract-type-info__header {
+  .contract-type-info__action-bar {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 288px;
-    /* postcss-bem-linter: ignore */
-    /* postcss-bem-linter: ignore */ }
-    .contract-type-info__header .title {
-      font-size: 1.6rem;
-      color: var(--text-general);
-      font-weight: 700;
-      text-transform: none;
-      text-align: left;
-      line-height: 1.75;
-      margin: auto;
-      color: var(--text-prominent);
-      cursor: default; }
-    .contract-type-info__header span {
-      cursor: pointer; }
-
-/** @define contract-type-info-nav; */
-.contract-type-info-nav {
-  display: flex;
-  align-items: center;
-  width: 320px;
-  padding: 0 2.4rem;
-  overflow: hidden;
-  margin-bottom: 2.4rem; }
-  .contract-type-info-nav__list {
-    display: inline-block;
-    text-align: center;
-    margin: 0 auto;
-    position: relative; }
-  .contract-type-info-nav__item {
-    width: 0.8rem;
-    height: 0.8rem;
-    border-radius: 50%;
-    display: inline-block;
-    margin: 0 0.8rem;
-    cursor: pointer;
-    background-color: var(--text-disabled); }
-    .contract-type-info-nav__item--active {
-      position: absolute;
-      top: 0;
-      left: 0;
-      cursor: auto;
-      cursor: initial;
-      transition: transform 0.3s linear;
-      background-color: var(--brand-red-coral); }
-  .contract-type-info-nav__icon {
+    width: 100%; }
+  .contract-type-info__title {
+    font-size: 1.6rem;
+    color: var(--text-general);
+    font-weight: 700;
+    text-transform: none;
+    text-align: left;
+    line-height: 1.75;
+    margin: auto;
+    color: var(--text-prominent);
+    cursor: default; }
+  .contract-type-info__nav {
+    display: flex;
+    align-items: center;
+    width: 320px;
+    padding: 0 2.4rem;
+    overflow: hidden;
+    margin-bottom: 2.4rem; }
+    .contract-type-info__nav-list {
+      display: inline-block;
+      text-align: center;
+      margin: 0 auto;
+      position: relative; }
+    .contract-type-info__nav-item {
+      width: 0.8rem;
+      height: 0.8rem;
+      border-radius: 50%;
+      display: inline-block;
+      margin: 0 0.8rem;
+      cursor: pointer;
+      background-color: var(--text-disabled); }
+      .contract-type-info__nav-item--active {
+        position: absolute;
+        top: 0;
+        left: 0;
+        cursor: auto;
+        cursor: initial;
+        transition: transform 0.3s linear;
+        background-color: var(--brand-red-coral); }
+  .contract-type-info__icon {
     cursor: pointer; }
 
 /** @define error-box */
