@@ -9807,21 +9807,21 @@ table {
 .category-wrapper {
   width: 2.4em;
   height: 2.4em;
-  border-radius: 3px;
+  border-radius: 4px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--general-main-2); }
+  background: var(--general-section-1); }
 
 /** @define type-wrapper */
 .type-wrapper {
   width: 2.4em;
   height: 2.4em;
-  border-radius: 3px;
+  border-radius: 4px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--general-main-2);
+  background: var(--general-section-1);
   /* postcss-bem-linter: ignore */
   /* postcss-bem-linter: ignore */ }
   .type-wrapper .color1-fill {

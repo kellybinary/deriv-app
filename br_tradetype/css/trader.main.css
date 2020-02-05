@@ -1915,12 +1915,12 @@ html,
       fill: none; }
     .disabled.advanced-simple-toggle__icon .color2-stroke, .disabled.footer__icon .color2-stroke, .contract-drawer svg.disabled .color2-stroke, .positions-drawer__icon-close svg.disabled .color2-stroke, .disabled.input-wrapper__icon .color2-stroke, .disabled.time-picker__icon .color2-stroke, .account-settings-toggle svg.disabled .color2-stroke, .disabled.contract-type-widget__select-arrow .color2-stroke, .disabled.side-menu__icon .color2-stroke, .info-box-container .disabled.info-box-longcode-icon .color2-stroke, .portfolio-empty__icon .color2-stroke {
       stroke: none; }
-  .white.advanced-simple-toggle__icon, .footer__link:hover .white.footer__icon, .white.footer__icon, .contract-drawer svg.white, .positions-drawer__icon-close svg.white, .white.input-wrapper__icon, .white.time-picker__icon, .account-settings-toggle svg.white, .white.contract-type-widget__select-arrow, .contract-type-item__icon:hover svg, .white.side-menu__icon, .btn-purchase__info--left .btn-purchase__icon_wrapper, .info-box-container .white.info-box-longcode-icon {
+  .white.advanced-simple-toggle__icon, .footer__link:hover .white.footer__icon, .white.footer__icon, .contract-drawer svg.white, .positions-drawer__icon-close svg.white, .white.input-wrapper__icon, .white.time-picker__icon, .account-settings-toggle svg.white, .white.contract-type-widget__select-arrow, .white.side-menu__icon, .btn-purchase__info--left .btn-purchase__icon_wrapper, .info-box-container .white.info-box-longcode-icon {
     /* postcss-bem-linter: ignore */
     /* postcss-bem-linter: ignore */ }
-    .white.advanced-simple-toggle__icon .color1-fill, .white.footer__icon .color1-fill, .contract-drawer svg.white .color1-fill, .positions-drawer__icon-close svg.white .color1-fill, .white.input-wrapper__icon .color1-fill, .white.time-picker__icon .color1-fill, .account-settings-toggle svg.white .color1-fill, .white.contract-type-widget__select-arrow .color1-fill, .contract-type-item__icon:hover svg .color1-fill, .white.side-menu__icon .color1-fill, .btn-purchase__info--left .btn-purchase__icon_wrapper .color1-fill, .info-box-container .white.info-box-longcode-icon .color1-fill {
+    .white.advanced-simple-toggle__icon .color1-fill, .white.footer__icon .color1-fill, .contract-drawer svg.white .color1-fill, .positions-drawer__icon-close svg.white .color1-fill, .white.input-wrapper__icon .color1-fill, .white.time-picker__icon .color1-fill, .account-settings-toggle svg.white .color1-fill, .white.contract-type-widget__select-arrow .color1-fill, .white.side-menu__icon .color1-fill, .btn-purchase__info--left .btn-purchase__icon_wrapper .color1-fill, .info-box-container .white.info-box-longcode-icon .color1-fill {
       fill: var(--text-prominent); }
-    .white.advanced-simple-toggle__icon .color1-stroke, .white.footer__icon .color1-stroke, .contract-drawer svg.white .color1-stroke, .positions-drawer__icon-close svg.white .color1-stroke, .white.input-wrapper__icon .color1-stroke, .white.time-picker__icon .color1-stroke, .account-settings-toggle svg.white .color1-stroke, .white.contract-type-widget__select-arrow .color1-stroke, .contract-type-item__icon:hover svg .color1-stroke, .white.side-menu__icon .color1-stroke, .btn-purchase__info--left .btn-purchase__icon_wrapper .color1-stroke, .info-box-container .white.info-box-longcode-icon .color1-stroke {
+    .white.advanced-simple-toggle__icon .color1-stroke, .white.footer__icon .color1-stroke, .contract-drawer svg.white .color1-stroke, .positions-drawer__icon-close svg.white .color1-stroke, .white.input-wrapper__icon .color1-stroke, .white.time-picker__icon .color1-stroke, .account-settings-toggle svg.white .color1-stroke, .white.contract-type-widget__select-arrow .color1-stroke, .white.side-menu__icon .color1-stroke, .btn-purchase__info--left .btn-purchase__icon_wrapper .color1-stroke, .info-box-container .white.info-box-longcode-icon .color1-stroke {
       stroke: var(--text-prominent); }
   .border_hover_color.advanced-simple-toggle__icon, .footer__link:hover .border_hover_color.footer__icon, .border_hover_color.footer__icon, .contract-drawer svg.border_hover_color, .positions-drawer__icon-close svg.border_hover_color, .border_hover_color.input-wrapper__icon, .border_hover_color.time-picker__icon, .account-settings-toggle svg.border_hover_color, .border_hover_color.contract-type-widget__select-arrow, .border_hover_color.side-menu__icon, .info-box-container .border_hover_color.info-box-longcode-icon {
     /* postcss-bem-linter: ignore */
@@ -1929,12 +1929,12 @@ html,
       fill: var(--text-prominent); }
     .border_hover_color.advanced-simple-toggle__icon .color1-stroke, .border_hover_color.footer__icon .color1-stroke, .contract-drawer svg.border_hover_color .color1-stroke, .positions-drawer__icon-close svg.border_hover_color .color1-stroke, .border_hover_color.input-wrapper__icon .color1-stroke, .border_hover_color.time-picker__icon .color1-stroke, .account-settings-toggle svg.border_hover_color .color1-stroke, .border_hover_color.contract-type-widget__select-arrow .color1-stroke, .border_hover_color.side-menu__icon .color1-stroke, .info-box-container .border_hover_color.info-box-longcode-icon .color1-stroke {
       stroke: var(--text-prominent); }
-  .secondary.advanced-simple-toggle__icon, .footer__link:hover .secondary.footer__icon, .secondary.footer__icon, .contract-drawer svg.secondary, .positions-drawer__icon-close svg.secondary, .secondary.input-wrapper__icon, .secondary.time-picker__icon, .account-settings-toggle svg.secondary, .secondary.contract-type-widget__select-arrow, .contract-type-item__icon svg, .secondary.side-menu__icon, .info-box-container .secondary.info-box-longcode-icon {
+  .secondary.advanced-simple-toggle__icon, .footer__link:hover .secondary.footer__icon, .secondary.footer__icon, .contract-drawer svg.secondary, .positions-drawer__icon-close svg.secondary, .secondary.input-wrapper__icon, .secondary.time-picker__icon, .account-settings-toggle svg.secondary, .secondary.contract-type-widget__select-arrow, .secondary.side-menu__icon, .info-box-container .secondary.info-box-longcode-icon {
     /* postcss-bem-linter: ignore */
     /* postcss-bem-linter: ignore */ }
-    .secondary.advanced-simple-toggle__icon .color1-fill, .secondary.footer__icon .color1-fill, .contract-drawer svg.secondary .color1-fill, .positions-drawer__icon-close svg.secondary .color1-fill, .secondary.input-wrapper__icon .color1-fill, .secondary.time-picker__icon .color1-fill, .account-settings-toggle svg.secondary .color1-fill, .secondary.contract-type-widget__select-arrow .color1-fill, .contract-type-item__icon svg .color1-fill, .secondary.side-menu__icon .color1-fill, .info-box-container .secondary.info-box-longcode-icon .color1-fill {
+    .secondary.advanced-simple-toggle__icon .color1-fill, .secondary.footer__icon .color1-fill, .contract-drawer svg.secondary .color1-fill, .positions-drawer__icon-close svg.secondary .color1-fill, .secondary.input-wrapper__icon .color1-fill, .secondary.time-picker__icon .color1-fill, .account-settings-toggle svg.secondary .color1-fill, .secondary.contract-type-widget__select-arrow .color1-fill, .secondary.side-menu__icon .color1-fill, .info-box-container .secondary.info-box-longcode-icon .color1-fill {
       fill: var(--text-less-prominent); }
-    .secondary.advanced-simple-toggle__icon .color1-stroke, .secondary.footer__icon .color1-stroke, .contract-drawer svg.secondary .color1-stroke, .positions-drawer__icon-close svg.secondary .color1-stroke, .secondary.input-wrapper__icon .color1-stroke, .secondary.time-picker__icon .color1-stroke, .account-settings-toggle svg.secondary .color1-stroke, .secondary.contract-type-widget__select-arrow .color1-stroke, .contract-type-item__icon svg .color1-stroke, .secondary.side-menu__icon .color1-stroke, .info-box-container .secondary.info-box-longcode-icon .color1-stroke {
+    .secondary.advanced-simple-toggle__icon .color1-stroke, .secondary.footer__icon .color1-stroke, .contract-drawer svg.secondary .color1-stroke, .positions-drawer__icon-close svg.secondary .color1-stroke, .secondary.input-wrapper__icon .color1-stroke, .secondary.time-picker__icon .color1-stroke, .account-settings-toggle svg.secondary .color1-stroke, .secondary.contract-type-widget__select-arrow .color1-stroke, .secondary.side-menu__icon .color1-stroke, .info-box-container .secondary.info-box-longcode-icon .color1-stroke {
       stroke: var(--text-less-prominent); }
 
 /* postcss-bem-linter: ignore */
@@ -2911,21 +2911,21 @@ table {
 .category-wrapper {
   width: 2.4em;
   height: 2.4em;
-  border-radius: 3px;
+  border-radius: 4px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--general-main-2); }
+  background: var(--general-section-1); }
 
 /** @define type-wrapper */
 .type-wrapper {
   width: 2.4em;
   height: 2.4em;
-  border-radius: 3px;
+  border-radius: 4px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--general-main-2);
+  background: var(--general-section-1);
   /* postcss-bem-linter: ignore */
   /* postcss-bem-linter: ignore */ }
   .type-wrapper .color1-fill {
@@ -4666,7 +4666,7 @@ table {
 
 /** @define contract-type-list; */
 .contract-type-list {
-  padding: 1.6em 1.6em 0em;
+  padding: 1.6rem;
   border-bottom: 4px solid var(--general-section-1); }
   .contract-type-list__label {
     font-size: 1.4rem;
@@ -4676,11 +4676,10 @@ table {
     text-align: left;
     line-height: 1.5;
     color: var(--text-prominent);
-    margin-bottom: 0.6em; }
+    margin-bottom: 0.8rem;
+    margin-left: 1.6rem; }
   .contract-type-list:last-child {
     border-bottom: none; }
-  .contract-type-list__contracts-wrapper {
-    margin-bottom: 1.4rem; }
 
 /** @define contract-type-item */
 .contract-type-item {
@@ -4689,9 +4688,8 @@ table {
   display: inline-flex;
   flex-direction: row;
   align-items: center;
-  padding: 0.8em;
+  padding: 0.8rem 1.6rem;
   box-sizing: border-box;
-  margin-bottom: 0.1em;
   transition: transform 0.3s opacity 0.3s;
   color: var(--text-general);
   border-radius: 4px; }
@@ -4707,61 +4705,42 @@ table {
     text-align: left;
     line-height: 1.5;
     color: var(--text-general);
-    padding-left: 0.4em; }
+    padding-left: 1.6rem; }
   .contract-type-item__icon {
     display: none;
-    height: 16px;
-    width: 16px;
     margin-left: auto;
     /* postcss-bem-linter: ignore */ }
-    .contract-type-item__icon svg {
+    .contract-type-item__icon .dc-icon {
       pointer-events: none; }
     .contract-type-item__icon:hover {
       /* postcss-bem-linter: ignore */ }
-      .contract-type-item__icon:hover svg {
+      .contract-type-item__icon:hover .dc-icon {
         pointer-events: none; }
   .contract-type-item--invisible {
     display: none; }
   .contract-type-item--selected {
     background: var(--state-active);
-    color: var(--text-prominent);
-    /* postcss-bem-linter: ignore */ }
+    color: var(--text-prominent); }
     .contract-type-item--selected:hover {
       background: var(--state-active); }
-    .contract-type-item--selected span {
+    .contract-type-item--selected .contract-type-item__title {
       font-weight: bold;
       color: var(--text-prominent); }
     .contract-type-item--selected .contract-type-item__icon {
       /* postcss-bem-linter: ignore */ }
-      .contract-type-item--selected .contract-type-item__icon svg {
+      .contract-type-item--selected .contract-type-item__icon .dc-icon {
         pointer-events: none; }
-        .contract-type-item--selected .contract-type-item__icon svg .color1-fill {
-          fill: var(--text-prominent); }
       .contract-type-item--selected .contract-type-item__icon:hover {
         /* postcss-bem-linter: ignore */ }
-        .contract-type-item--selected .contract-type-item__icon:hover svg {
+        .contract-type-item--selected .contract-type-item__icon:hover .dc-icon {
           pointer-events: none; }
-          .contract-type-item--selected .contract-type-item__icon:hover svg .color1-fill {
-            fill: var(--text-prominent) !important; }
   .contract-type-item__icon-wrapper {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    margin-right: 0.7em;
     /* postcss-bem-linter: ignore */ }
-    .contract-type-item__icon-wrapper .category-wrapper {
-      margin: 0 0.2em;
-      background-color: var(--general-section-1); }
-      .contract-type-item__icon-wrapper .category-wrapper svg {
-        /* postcss-bem-linter: ignore */
-        /* postcss-bem-linter: ignore */
-        /* postcss-bem-linter: ignore */ }
-        .contract-type-item__icon-wrapper .category-wrapper svg .transparent {
-          fill: var(--general-section-1); }
-        .contract-type-item__icon-wrapper .category-wrapper svg .color1-fill {
-          fill: var(--brand-red-coral); }
-        .contract-type-item__icon-wrapper .category-wrapper svg .color2-fill {
-          fill: var(--brand-secondary); }
+    .contract-type-item__icon-wrapper .category-wrapper + .category-wrapper {
+      margin-left: 0.4rem; }
 
 /** @define contract-type-info; */
 .contract-type-info {
