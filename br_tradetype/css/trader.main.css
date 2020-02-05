@@ -225,7 +225,8 @@ html,
   .no-results-found__title, .no-results-found__subtitle {
     line-height: 1.5; }
   .no-results-found__title {
-    font-size: 1.4rem; }
+    font-size: 1.4rem;
+    word-break: break-word; }
   .no-results-found__subtitle {
     font-size: 1.2rem; }
 
@@ -749,7 +750,8 @@ html,
   .no-results-found__title, .no-results-found__subtitle {
     line-height: 1.5; }
   .no-results-found__title {
-    font-size: 1.4rem; }
+    font-size: 1.4rem;
+    word-break: break-word; }
   .no-results-found__subtitle {
     font-size: 1.2rem; }
 
@@ -1356,7 +1358,8 @@ html,
   .no-results-found__title, .no-results-found__subtitle {
     line-height: 1.5; }
   .no-results-found__title {
-    font-size: 1.4rem; }
+    font-size: 1.4rem;
+    word-break: break-word; }
   .no-results-found__subtitle {
     font-size: 1.2rem; }
 
@@ -2065,7 +2068,8 @@ html,
   .no-results-found__title, .no-results-found__subtitle {
     line-height: 1.5; }
   .no-results-found__title {
-    font-size: 1.4rem; }
+    font-size: 1.4rem;
+    word-break: break-word; }
   .no-results-found__subtitle {
     font-size: 1.2rem; }
 
