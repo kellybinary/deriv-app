@@ -4568,6 +4568,8 @@ table {
         .contract-type-dialog__wrapper .dc-vertical-tab__action-bar .dc-input__field {
           padding: 0.8rem 1.2rem 0.8rem 3.6rem;
           height: 3.2rem; }
+          .contract-type-dialog__wrapper .dc-vertical-tab__action-bar .dc-input__field::-moz-placeholder {
+            line-height: 16px; }
         .contract-type-dialog__wrapper .dc-vertical-tab__action-bar .dc-input__leading-icon {
           top: 0.8rem; }
         .contract-type-dialog__wrapper .dc-vertical-tab__action-bar .dc-input__trailing-icon {
