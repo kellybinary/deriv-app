@@ -5,9 +5,9 @@ import { Popover } from '@deriv/components';
 import { isDesktop, isMobile } from '@deriv/shared/utils/screen';
 import { localize } from '@deriv/translations';
 import { isContractElapsed } from 'Stores/Modules/Contract/Helpers/logic';
-import { SlideIn } from 'App/Components/Animations';
+import { Bounce, SlideIn } from 'App/Components/Animations';
 import { getMarketNamesMap } from 'Constants';
-import { LastDigitPrediction } from '../LastDigitPrediction';
+import { DigitSpot, LastDigitPrediction } from '../LastDigitPrediction';
 import 'Sass/app/modules/contract/digits.scss';
 
 class Digits extends React.PureComponent {
@@ -19,6 +19,16 @@ class Digits extends React.PureComponent {
     componentDidMount() {
         this.setState({ mounted: true });
     }
+
+    onLastDigitSpot = ({ spot, is_lost, is_selected_winning, is_latest, is_won }) => {
+        this.setState({
+            is_lost,
+            is_won,
+            is_latest,
+            is_selected_winning,
+            spot,
+        });
+    };
 
     get popover_message() {
         const { contract_info, is_trade_page, underlying } = this.props;
@@ -69,6 +79,17 @@ class Digits extends React.PureComponent {
                 keyname='digits'
                 type='bottom'
             >
+                {isMobile() && this.state.spot && (
+                    <Bounce is_visible={!!this.state.spot} className='digits__digit-spot' keyname='digits__digit-spot'>
+                        <DigitSpot
+                            current_spot={this.state.spot}
+                            is_lost={this.state.is_lost}
+                            is_selected_winning={this.state.is_selected_winning}
+                            is_visible={!!(this.state.is_latest && this.state.spot)}
+                            is_won={this.state.is_won}
+                        />
+                    </Bounce>
+                )}
                 {isDesktop() && (
                     <div className='digits__tooltip-container'>
                         <Popover
@@ -95,6 +116,7 @@ class Digits extends React.PureComponent {
                     is_trade_page={is_trade_page}
                     status={!is_contract_elapsed && is_tick_ready ? display_status : null}
                     tick={tick}
+                    onLastDigitSpot={this.onLastDigitSpot}
                 />
                 {isMobile() && <span className='digits__tooltip-text'>{this.popover_message}</span>}
             </SlideIn>

@@ -174,6 +174,20 @@
                     background: var(--text-loss-danger);
                 }
             }
+            @include mobile {
+                position: relative;
+                top: 0;
+                left: 0;
+                right: 0;
+
+                &-value,
+                &-last {
+                    font-size: 2rem;
+                }
+                &-last {
+                    padding: 0 6px;
+                }
+            }
         }
     }
     &__pie-container {
@@ -312,7 +326,7 @@
         grid-template-columns: repeat(5, 1fr);
         grid-gap: 1.4rem;
         align-items: center;
-        margin: 3.2rem 0 0;
+        margin: 2.4rem 0 0;
 
         &__container {
             width: 100%;
