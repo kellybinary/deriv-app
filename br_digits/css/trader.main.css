@@ -268,10 +268,6 @@ html,
         left: -2px;
         box-shadow: 0px 1px 18px var(--text-loss-danger);
         border: 3px solid var(--text-loss-danger); }
-        @media (min-width: 320px) and (max-width: 767px) {
-          .digits__digit--loss .digits__pie-container:before {
-            top: -5px;
-            left: -3px; } }
     .digits__digit-display-value {
       transition: transform 0.25s linear;
       position: absolute;
@@ -280,9 +276,6 @@ html,
       color: var(--text-prominent); }
       .digits__digit-display-value--no-stats {
         transform: scale(1) translateY(5px); }
-        @media (min-width: 320px) and (max-width: 767px) {
-          .digits__digit-display-value--no-stats {
-            transform: scale(1.4) translateY(5px); } }
     .digits__digit-display-percentage {
       top: 20px;
       position: absolute;
@@ -330,11 +323,6 @@ html,
         .digits__digit-value--loss .digits__digit-display-value,
         .digits__digit-value--loss .digits__digit-display-percentage {
           color: #ffffff; }
-      @media (min-width: 320px) and (max-width: 767px) {
-        .digits__digit-value {
-          height: 4.6rem;
-          width: 4.6rem;
-          margin: 0; } }
     .digits__digit-spot {
       position: absolute;
       top: -25px;
@@ -375,16 +363,6 @@ html,
           color: var(--text-colored-background);
           border-color: var(--text-loss-danger);
           background: var(--text-loss-danger); }
-      @media (min-width: 320px) and (max-width: 767px) {
-        .digits__digit-spot {
-          position: relative;
-          top: 0;
-          left: 0;
-          right: 0; }
-          .digits__digit-spot-value, .digits__digit-spot-last {
-            font-size: 2rem; }
-          .digits__digit-spot-last {
-            padding: 0 6px; } }
   .digits__pie-container {
     position: absolute;
     top: -1px;
@@ -397,24 +375,12 @@ html,
       top: 1px;
       left: 1px;
       content: ''; }
-      @media (min-width: 320px) and (max-width: 767px) {
-        .digits__pie-container:before {
-          top: -4px;
-          left: -2px;
-          width: 4.8rem;
-          height: 4.8rem; } }
     .digits__pie-container--selected:before {
       top: -2px;
       left: -2px;
       width: 42px;
       height: 42px;
       border: 2px solid var(--text-profit-success); }
-      @media (min-width: 320px) and (max-width: 767px) {
-        .digits__pie-container--selected:before {
-          top: -4px;
-          left: -2px;
-          width: 4.8rem;
-          height: 4.8rem; } }
   .digits__pie-progress {
     transform: rotate(-90deg);
     width: 42px;
@@ -431,11 +397,6 @@ html,
         stroke: var(--text-profit-success); }
       .digits__pie-progress .progress__value--is-min {
         stroke: var(--text-loss-danger); }
-    @media (min-width: 320px) and (max-width: 767px) {
-      .digits__pie-progress {
-        width: 4.8rem;
-        height: 4.8rem;
-        margin-top: -0.2rem; } }
   .digits__pointer {
     position: absolute;
     bottom: -12px;
@@ -486,9 +447,12 @@ html,
     .digits {
       display: grid;
       grid-template-columns: repeat(5, 1fr);
-      grid-gap: 1.4rem;
+      grid-gap: 1.6rem;
       align-items: center;
-      margin: 2.4rem 0 0; }
+      margin: 2.4rem 0 1.6rem 0; }
+      .digits--trade {
+        grid-gap: 0.8rem 1.2rem;
+        margin: 0 0 0.8rem 0; }
       .digits__container {
         width: 100%;
         margin: 0;
@@ -501,7 +465,6 @@ html,
         font-size: 1.2rem;
         color: var(--text-general);
         line-height: 18px;
-        margin-top: 2.4rem;
         text-align: center; }
       .digits__digit {
         margin: auto; } }
