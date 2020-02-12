@@ -644,7 +644,8 @@
   line-height: 24px;
   padding: 1.2rem 1.6rem;
   display: flex;
-  align-items: center; }
+  align-items: center;
+  height: 100%; }
 
 .dc-modal-header__section {
   flex-grow: 1;
