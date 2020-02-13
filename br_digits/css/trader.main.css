@@ -363,6 +363,16 @@ html,
           color: var(--text-colored-background);
           border-color: var(--text-loss-danger);
           background: var(--text-loss-danger); }
+      @media (min-width: 320px) and (max-width: 767px) {
+        .digits__digit-spot {
+          position: relative;
+          top: 0;
+          left: 0;
+          right: 0; }
+          .digits__digit-spot-value, .digits__digit-spot-last {
+            font-size: 1.6rem; }
+          .digits__digit-spot-last {
+            padding: 0 7px; } }
   .digits__pie-container {
     position: absolute;
     top: -1px;
@@ -449,14 +459,14 @@ html,
       grid-template-columns: repeat(5, 1fr);
       grid-gap: 1.6rem;
       align-items: center;
-      margin: 2.4rem 0 1.6rem 0; }
+      margin: 1.6rem 0; }
       .digits--trade {
         grid-gap: 0.8rem 1.2rem;
-        margin: 0 0 0.8rem 0; }
+        margin: 1.2rem 0 0.8rem; }
       .digits__container {
         width: 100%;
         margin: 0;
-        padding: 3.2rem;
+        padding: 1.6rem 3.2rem;
         display: flex;
         flex-direction: column;
         justify-content: center;
