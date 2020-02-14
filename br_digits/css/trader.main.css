@@ -470,11 +470,10 @@ html,
     .digits {
       display: grid;
       grid-template-columns: repeat(5, 1fr);
-      grid-gap: 1.6rem;
+      grid-gap: 2.4rem;
       align-items: center;
       margin: 1.6rem 0; }
       .digits--trade {
-        grid-gap: 0.8rem 1.2rem;
         margin: 1.2rem 0 0.8rem; }
       .digits__container {
         width: 100%;
