@@ -1496,18 +1496,16 @@ html,
   .table__head, .table__foot {
     font-weight: 500;
     white-space: nowrap; }
-  .table__foot {
-    border-top: 2px solid var(--general-section-1); }
   .table__foot .table__row {
     color: var(--text-general);
+    border-top: var(--general-section-1);
     border-bottom: none; }
 
 /** @define reports; weak */
 .reports {
   margin: 16px;
   box-shadow: 18px 8px 8px var(--shadow-menu);
-  border-radius: 4px;
-  /* postcss-bem-linter: ignore */ }
+  border-radius: 4px; }
   .reports__meta {
     width: 100%;
     display: flex;
@@ -1541,9 +1539,6 @@ html,
     margin-left: 8px;
     fill: var(--text-general);
     border-radius: 4px; }
-  .reports .dc-tabs--open-positions {
-    flex: 1;
-    grid-template-rows: 36px calc(100% - 36px); }
 
 /** @define statement; weak */
 .statement {
@@ -1683,8 +1678,6 @@ html,
   .profit-table .sell_time,
   .profit-table .purchase_time {
     text-align: left; }
-  .profit-table .profit_loss {
-    font-weight: bold; }
 
 /** @define open-positions; weak */
 .open-positions {
@@ -1711,8 +1704,7 @@ html,
   .open-positions__profit-loss {
     display: flex;
     justify-content: center;
-    align-items: center;
-    font-weight: bold; }
+    align-items: center; }
     .open-positions__profit-loss--movement {
       width: 16px;
       height: 16px; }
@@ -1732,28 +1724,17 @@ html,
         content: '+';
         color: inherit; }
   .open-positions__table {
-    height: calc(100% - 24px);
-    flex: 1;
-    margin-top: 20px; }
+    height: calc(100% - 42px);
+    flex: 1; }
   .open-positions__row {
     /*                     icon   refId buy_price  potential_payout potential_profit  indicative_price rem_time */
     grid-template-columns: 0.8fr 1.2fr 1fr 1fr 1fr 1fr 1fr;
     width: 100%; }
-    .open-positions__row-action {
-      display: flex;
-      align-items: center;
-      padding-right: 24px;
-      min-width: 194px; }
-      .open-positions__row-action .remaining-time {
-        margin-left: 0.4rem; }
-      .open-positions__row-action .btn {
-        height: 2.4rem;
-        padding: 0 8px; }
-        .open-positions__row-action .btn + .btn {
-          margin-left: 8px; }
-    .open-positions__row_wrapper {
-      display: flex;
-      flex-direction: row; }
+  .open-positions .buy_price,
+  .open-positions .payout,
+  .open-positions .indicative,
+  .open-positions .profit {
+    justify-content: flex-end; }
   .open-positions .type {
     padding-right: 0; }
   .open-positions .progress-slider {
@@ -1771,11 +1752,6 @@ html,
         padding: 0;
         margin-right: 8px;
         white-space: nowrap; }
-
-/** @define open-positions-multiplier; weak */
-.open-positions-multiplier .open-positions__row {
-  /*                     icon   stake multiplier deal_cancellation take_profit  stop_loss potential_profit_loss */
-  grid-template-columns: 0.7fr 1fr 0.7fr 1fr 1fr 1fr 1fr; }
 
 /** @define empty-trade-history; weak*/
 .empty-trade-history {
@@ -3481,8 +3457,6 @@ table {
         background: var(--general-hover); }
   .contract-drawer__icon {
     margin-right: 16px; }
-  .contract-drawer__body {
-    height: calc(100% - 200px); }
 
 /** @define .contract-card */
 .contract-card {
@@ -3497,7 +3471,7 @@ table {
   color: var(--text-prominent); }
   .contract-card .progress-slider,
   .contract-card .progress-slider--completed {
-    margin: 0.8rem 0 0;
+    margin: 0;
     border-bottom: 1px solid var(--general-section-1); }
   .contract-card:before {
     content: '';
@@ -3575,16 +3549,12 @@ table {
   .contract-card__header {
     display: flex;
     justify-content: space-evenly;
-    flex-direction: column;
     margin: 0.5em 0.2em; }
   .contract-card__body {
     border-radius: 4px;
     width: 100%;
-    padding: 4px 12px 0;
-    color: var(--text-prominent);
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 0.8rem 0.4rem; }
+    padding: 8px 12px 0;
+    color: var(--text-prominent); }
   .contract-card__footer {
     margin-bottom: 0.5em;
     padding: 0 4px; }
@@ -3603,9 +3573,9 @@ table {
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100%;
+    margin: 8px 0 -4px;
     transition: transform 0.25s ease, opacity 0.25s linear;
-    padding-top: 8px;
-    padding-bottom: 4px;
     border-top: 1px solid var(--general-section-1); }
     .contract-card__sell-button--enter-done {
       opacity: 1;
@@ -3613,48 +3583,8 @@ table {
     .contract-card__sell-button--enter, .contract-card__sell-button--exit {
       opacity: 0;
       transform: translateY(-8px); }
-    .contract-card__sell-button--has-cancel-btn {
-      justify-content: space-between; }
-      .contract-card__sell-button--has-cancel-btn .btn--cancel {
-        margin-left: 0.8rem; }
-    .contract-card__sell-button .remaining-time {
-      border-radius: 0.4rem;
-      color: var(--text-loss-danger);
-      font-size: 1.2rem;
-      margin-left: 0.8rem;
-      padding-top: 0.2rem; }
-  .contract-card-item__header {
-    line-height: 1.4; }
-  .contract-card-item__body {
-    font-size: 1.2rem;
-    color: var(--text-general);
-    font-weight: 700;
-    text-transform: none;
-    text-align: left;
-    line-height: 1.25;
-    display: flex;
-    align-self: flex-start;
-    color: var(--text-prominent);
-    line-height: 1.5; }
-    .contract-card-item__body--is-crypto {
-      margin-left: -6px; }
-  .contract-card-item__body--loss {
-    color: var(--text-loss-danger) !important; }
-    .contract-card-item__body--loss:before {
-      content: '-'; }
-  .contract-card-item__body--profit {
-    color: var(--text-profit-success) !important; }
-    .contract-card-item__body--profit:before {
-      content: '+'; }
-  .contract-card__indicative--movement {
-    margin-left: 2px;
-    width: 16px;
-    height: 16px; }
-    .contract-card__indicative--movement-complete, .contract-card__indicative--movement-complete:after {
-      display: none; }
-    .contract-card__indicative--movement:after {
-      content: '';
-      width: 16px; }
+    .contract-card__sell-button .btn--sell {
+      height: 32px; }
   .contract-card .contract-audit__wrapper {
     padding: 2px 0;
     width: 100%; }
@@ -3789,8 +3719,6 @@ table {
       background-image: var(--gradient-success); }
     .positions-drawer-card__result--lost, .positions-drawer-card__result--lost:after {
       background-image: var(--gradient-danger); }
-    .positions-drawer-card__result--lg {
-      max-height: 190px; }
     .positions-drawer-card__result:hover {
       background: 0 !important; }
       .positions-drawer-card__result:hover .result__caption {
@@ -3864,26 +3792,21 @@ table {
     .positions-drawer-card__grid-price-payout {
       grid-template-columns: 1fr 1fr;
       padding: 0 8px; }
-    .positions-drawer-card__grid-items {
-      grid-template-columns: 1fr 1fr;
-      grid-gap: 0.8rem 0.4rem;
-      padding: 0.8rem; }
-  .positions-drawer-card__purchase-label, .positions-drawer-card__payout-label, .positions-drawer-card__item-label {
+  .positions-drawer-card__purchase-label, .positions-drawer-card__payout-label {
     text-transform: none;
     font-size: 1rem;
     font-weight: normal;
     white-space: nowrap;
     max-width: 90px;
-    line-height: 1.4;
     color: var(--text-general); }
-  .positions-drawer-card__purchase-value, .positions-drawer-card__payout-value, .positions-drawer-card__item-value {
+  .positions-drawer-card__purchase-value, .positions-drawer-card__payout-value {
     font-size: 1.2em;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     font-weight: bold;
-    line-height: 1.5; }
-  .positions-drawer-card__purchase-price, .positions-drawer-card__payout-price, .positions-drawer-card__item-price {
+    padding: 4px 0 8px; }
+  .positions-drawer-card__purchase-price, .positions-drawer-card__payout-price {
     display: flex;
     flex-direction: column; }
   .positions-drawer-card__payout-price {
@@ -3966,7 +3889,7 @@ table {
     align-items: center;
     justify-content: center;
     transition: transform 0.25s ease, opacity 0.25s linear;
-    padding-top: 8px;
+    margin: 4px -4px -4px;
     border-top: 1px solid var(--general-section-1); }
     .positions-drawer-card__sell-button--enter-done {
       opacity: 1;
@@ -3974,16 +3897,6 @@ table {
     .positions-drawer-card__sell-button--enter, .positions-drawer-card__sell-button--exit {
       opacity: 0;
       transform: translateY(-8px); }
-    .positions-drawer-card__sell-button--has-cancel-btn {
-      justify-content: space-between; }
-      .positions-drawer-card__sell-button--has-cancel-btn .btn--cancel {
-        margin-left: 0.8rem; }
-    .positions-drawer-card__sell-button .remaining-time {
-      border-radius: 0.4rem;
-      color: var(--text-loss-danger);
-      font-size: 1.2rem;
-      margin-left: 0.8rem;
-      padding-top: 0.2rem; }
 
 /** @define contract-type */
 .contract-type {
@@ -4009,6 +3922,7 @@ table {
 
 /** @define btn; */
 .btn--sell {
+  margin: 8px 4px 4px !important;
   width: 100%; }
 
 /** @define remaining-time; */
@@ -4205,47 +4119,6 @@ table {
     left: 107%;
     right: -8%; } }
 
-/** @define positions-drawer-dialog; weak */
-.positions-drawer-dialog {
-  position: fixed;
-  display: grid;
-  grid-gap: 0.8rem;
-  background: var(--general-main-2);
-  border-radius: 4px;
-  box-shadow: 0 4px 8px 2px var(--shadow-menu);
-  transition: transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1), opacity 0.25s linear;
-  padding: 0.8rem;
-  width: 240px;
-  z-index: 99; }
-  .positions-drawer-dialog--enter-done {
-    opacity: 1;
-    transform: translate3d(0, 0, 0); }
-  .positions-drawer-dialog--enter, .positions-drawer-dialog--exit {
-    opacity: 0;
-    transform: translate3d(-20px, 0, 0); }
-  .positions-drawer-dialog__input .input-wrapper__input {
-    border: 1px solid var(--border-normal); }
-  .positions-drawer-dialog__button {
-    margin-top: 0.8rem; }
-    .positions-drawer-dialog__button .btn {
-      width: 100%; }
-
-/** @define positions-drawer-dialog-toggle; */
-.positions-drawer-dialog-toggle {
-  position: absolute;
-  width: 108px;
-  height: 80px;
-  right: 8px;
-  bottom: 54px;
-  border: 1px solid var(--general-section-1);
-  border-radius: 4px; }
-  .positions-drawer-dialog-toggle__icon {
-    float: right;
-    margin: 3px; }
-  .positions-drawer-dialog-toggle:hover {
-    cursor: pointer;
-    border-color: var(--button-secondary-default); }
-
 /** @define button-menu */
 .button-menu {
   display: flex;
@@ -4372,13 +4245,6 @@ table {
     .input-wrapper__button:disabled:hover {
       cursor: not-allowed;
       background: transparent; }
-  .input-wrapper--disabled {
-    pointer-events: none;
-    color: var(--text-disabled); }
-  .input-wrapper--inline {
-    display: flex;
-    justify-content: space-between;
-    align-items: center; }
 
 /** @define input */
 .input {
@@ -4471,8 +4337,6 @@ table {
   .input--error {
     color: #e31c4b;
     border: 1px solid #e31c4b !important; }
-  .input:disabled {
-    color: var(--text-disabled); }
 
 /** @define time-picker */
 .time-picker {
@@ -4600,24 +4464,17 @@ table {
 .contract-audit__wrapper {
   margin-top: 1em;
   border-radius: 4px;
+  padding: 2px 4px;
   opacity: 1;
-  height: 100%;
+  height: calc(100vh - 32.6em);
   max-height: calc(100vh - 32.6em);
   overflow: hidden;
   background-color: var(--general-main-1);
-  color: var(--text-prominent);
-  /* postcss-bem-linter: ignore */ }
-  .contract-audit__wrapper-tabs--active {
-    max-height: calc(calc(100vh - 32.6em) - 96px); }
-  .contract-audit__wrapper-tabs--expired {
-    max-height: calc(calc(100vh - 32.6em) - 48px); }
-  .contract-audit__wrapper .dc-tabs {
-    height: inherit;
-    grid-template-rows: 1fr 20fr; }
+  color: var(--text-prominent); }
 
 .contract-audit__grid {
   display: flex;
-  padding: 0.8rem 0; }
+  padding: 8px 8px 4px; }
   .contract-audit__grid:not(:first-child) {
     border-top: 1px solid var(--general-section-2); }
 
@@ -4647,37 +4504,6 @@ table {
   font-size: 1.2em;
   font-weight: bold;
   color: var(--text-prominent); }
-
-.contract-audit__timestamp {
-  align-self: center;
-  margin-left: auto;
-  text-align: right; }
-  .contract-audit__timestamp-value {
-    display: block;
-    line-height: 1.2; }
-
-.contract-audit__empty {
-  display: flex;
-  height: 100%;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  padding: 16px; }
-  .contract-audit__empty-header {
-    font-size: 1.4rem;
-    font-weight: bold;
-    text-align: center;
-    color: var(--text-less-prominent);
-    padding: 8px; }
-  .contract-audit__empty-message {
-    color: var(--text-less-prominent);
-    font-size: 1.2rem;
-    text-align: center;
-    line-height: 1.4; }
-
-.contract-audit__tabs-content {
-  padding: 0.8rem 1.6rem; }
 
 .vertical-tab__action-bar {
   width: 100%;
@@ -5232,6 +5058,58 @@ table {
       margin-right: 0; }
 
 /** @define popconfirm */
+.pl-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr; }
+  .pl-card__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .pl-card__item-payout {
+      padding-left: 4px; }
+    .pl-card__item__header {
+      font-size: 1rem;
+      color: var(--text-general);
+      font-weight: 400;
+      text-transform: none;
+      text-align: left;
+      line-height: unset;
+      margin-bottom: 4px;
+      align-self: flex-start;
+      white-space: nowrap;
+      max-width: 90px;
+      color: var(--text-general); }
+    .pl-card__item__body {
+      font-size: 1.2rem;
+      color: var(--text-general);
+      font-weight: 700;
+      text-transform: none;
+      text-align: left;
+      line-height: 1.25;
+      display: flex;
+      align-items: center;
+      align-self: flex-start;
+      color: var(--text-prominent); }
+      .pl-card__item__body--is-crypto {
+        margin-left: -6px; }
+    .pl-card__item__body--loss {
+      color: var(--text-loss-danger) !important; }
+      .pl-card__item__body--loss:before {
+        content: '-'; }
+    .pl-card__item__body--profit {
+      color: var(--text-profit-success) !important; }
+      .pl-card__item__body--profit:before {
+        content: '+'; }
+  .pl-card__indicative--movement {
+    margin-left: 2px;
+    width: 16px;
+    height: 16px; }
+    .pl-card__indicative--movement-complete, .pl-card__indicative--movement-complete:after {
+      display: none; }
+    .pl-card__indicative--movement:after {
+      content: '';
+      width: 16px; }
+
 /** @define btn-purchase */
 .btn-purchase {
   position: relative;
@@ -6380,11 +6258,11 @@ table {
     transform: translateX(100%); } }
 
 .loader, .btn-purchase--animated--slide .btn-purchase__icon_wrapper,
-.btn-purchase--animated--slide .btn-purchase__text_wrapper, .trade-container__price-info--slide, .trade-container__order-input-info--slide {
+.btn-purchase--animated--slide .btn-purchase__text_wrapper, .trade-container__price-info--slide {
   overflow: hidden;
   background-color: rgba(var(--general-main-1), 0.16); }
   .loader--loading, .btn-purchase--animated--slide .btn-purchase__icon,
-  .btn-purchase--animated--slide .btn-purchase__text, .trade-container__price-info--slide .trade-container__price-info-basis, .trade-container__order-input-info--slide .trade-container__price-info-basis {
+  .btn-purchase--animated--slide .btn-purchase__text, .trade-container__price-info--slide .trade-container__price-info-basis {
     width: inherit;
     height: inherit;
     -webkit-animation: slide 1s cubic-bezier(1, 0, 0.5, 0) infinite;
@@ -6409,27 +6287,17 @@ table {
 
 /** @define trade-container */
 .trade-container {
-  background: var(--general-main-1);
-  /* postcss-bem-linter: ignore */ }
+  background: var(--general-main-1); }
   .trade-container__fieldset {
     border-radius: 4px;
     padding: 0.8em;
     margin-bottom: 0.4em;
     background-color: var(--general-section-1);
     border-color: var(--general-section-1);
-    color: var(--text-general);
-    /* postcss-bem-linter: ignore */ }
-    .trade-container__fieldset > div:first-child {
-      margin-top: 0; }
+    color: var(--text-general); }
     .trade-container__fieldset-header {
       height: 1.5rem;
       position: relative; }
-      .trade-container__fieldset-header--inline {
-        /* postcss-bem-linter: ignore */ }
-        .trade-container__fieldset-header--inline .dc-popover {
-          position: absolute;
-          top: 0;
-          right: 0; }
     .trade-container__fieldset-info {
       font-size: 1.4rem;
       color: var(--text-general);
@@ -6442,17 +6310,6 @@ table {
         left: 5px; }
     .trade-container__fieldset-wrapper--disabled {
       opacity: 0.32; }
-    .trade-container__fieldset-tooltip-text, .trade-container__fieldset-text {
-      margin-top: 0.8rem;
-      font-size: 1.2rem;
-      text-align: right; }
-    .trade-container__fieldset-tooltip-text {
-      border-bottom: 1px dotted var(--text-general);
-      text-decoration: none;
-      width: -webkit-fit-content;
-      width: -moz-fit-content;
-      width: fit-content;
-      margin-left: auto; }
   .trade-container__input {
     align-self: center;
     -webkit-appearance: none;
@@ -6498,7 +6355,7 @@ table {
     background: transparent;
     border-color: transparent;
     z-index: 2;
-    color: inherit; }
+    color: var(--text-general); }
     .trade-container__currency--symbol {
       font-size: 1.4em;
       line-height: 1.5; }
@@ -6510,7 +6367,7 @@ table {
       text-align: center;
       line-height: 1.5;
       color: inherit; }
-  .trade-container__price, .trade-container__order-input {
+  .trade-container__price {
     line-height: 0.9rem;
     border: 0;
     width: 100%;
@@ -6518,19 +6375,19 @@ table {
     justify-content: space-between;
     position: relative;
     color: var(--text-prominent); }
-    .trade-container__price-info, .trade-container__order-input-info {
+    .trade-container__price-info {
       display: flex;
       justify-self: left;
       align-items: center; }
-      .trade-container__price-info--slide, .trade-container__order-input-info--slide {
+      .trade-container__price-info--slide {
         width: 92px;
         height: 8px;
         margin: 6.5px 0; }
-      .trade-container__price-info--fade .trade-container__price-info-value, .trade-container__order-input-info--fade .trade-container__price-info-value, .trade-container__price-info--fade .trade-container__order-input-info-value, .trade-container__order-input-info--fade .trade-container__order-input-info-value {
+      .trade-container__price-info--fade .trade-container__price-info-value {
         opacity: 0; }
-      .trade-container__price-info--fade .trade-container__price-info-movement, .trade-container__order-input-info--fade .trade-container__price-info-movement {
+      .trade-container__price-info--fade .trade-container__price-info-movement {
         opacity: 0; }
-      .trade-container__price-info-value, .trade-container__order-input-info-value {
+      .trade-container__price-info-value {
         font-size: 1.4em;
         font-weight: 700;
         text-align: left;
@@ -6539,7 +6396,7 @@ table {
         color: var(--text-prominent);
         opacity: 1;
         transition: 0.3s; }
-      .trade-container__price-info-basis, .trade-container__order-input-info-basis {
+      .trade-container__price-info-basis {
         margin-left: 0;
         font-weight: normal;
         font-size: 1.4rem;
@@ -6549,13 +6406,13 @@ table {
         text-align: left;
         line-height: 1.5;
         color: var(--text-less-prominent); }
-      .trade-container__price-info-currency, .trade-container__order-input-info-currency {
+      .trade-container__price-info-currency {
         margin-left: 4px;
         margin-right: 1px;
         display: inline-block;
         position: relative;
         font-weight: bold; }
-      .trade-container__price-info-movement, .trade-container__order-input-info-movement {
+      .trade-container__price-info-movement {
         margin-left: 4px;
         width: 16px;
         height: 16px;
@@ -6608,30 +6465,6 @@ table {
   .trade-container__amount .trade-container__input {
     padding: 0 30px;
     border-radius: 0 4px 4px 0; }
-  .trade-container__multiplier {
-    display: flex;
-    flex-direction: column;
-    /* postcss-bem-linter: ignore */ }
-    .trade-container__multiplier-dropdown {
-      /* postcss-bem-linter: ignore */
-      /* postcss-bem-linter: ignore */ }
-      .trade-container__multiplier-dropdown .dc-dropdown__display-text {
-        padding-right: unset;
-        padding-left: 1em; }
-      .trade-container__multiplier-dropdown .dc-dropdown__display-text,
-      .trade-container__multiplier-dropdown .dc-list__item-text {
-        text-transform: unset; }
-    .trade-container__multiplier .dc-popover {
-      align-self: flex-end; }
-  .trade-container__popover {
-    /* postcss-bem-linter: ignore */ }
-    .trade-container__popover .dc-checkbox {
-      margin-top: 0.8rem;
-      /* postcss-bem-linter: ignore */ }
-      .trade-container__popover .dc-checkbox__label {
-        font-size: inherit; }
-  .trade-container .symbols.disabled {
-    color: var(--text-disabled); }
 
 /** @define input-field; weak */
 .input-field .input-wrapper__icon {
