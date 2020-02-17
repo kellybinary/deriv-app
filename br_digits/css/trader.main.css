@@ -1314,6 +1314,149 @@ html,
 /**
  * Define Breakpoints here.
  */
+/** @define data-list; weak */
+.data-list {
+  position: relative; }
+  .data-list__body {
+    flex: 1; }
+  .data-list__footer {
+    width: 100%;
+    background: var(--general-main-1);
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 0px;
+    left: 0px; }
+  .data-list__item {
+    height: calc(100% - 8px);
+    margin-bottom: 8px;
+    background-color: var(--general-section-1);
+    padding: 4px 0px; }
+    .data-list__item--wrapper {
+      text-decoration: none; }
+  .data-list__row {
+    display: flex;
+    flex-direction: row;
+    padding: 4px 16px;
+    width: 100%; }
+    .data-list__row > * {
+      flex: 1; }
+    .data-list__row-content {
+      font-size: 1.4rem;
+      line-height: 2rem;
+      color: var(--text-general); }
+    .data-list__row-cell--amount {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      flex: none; }
+    .data-list__row-title {
+      font-size: 1.4rem;
+      font-weight: bold;
+      color: var(--text-prominent);
+      line-height: 2rem; }
+
+/*------------------------------------*
+ *  # Constants
+ *------------------------------------*/
+/* stylelint-disable color-no-hex */
+/* COLOR PALETTE */
+/* colors */
+/* alpha colors */
+/* gradient colors */
+/* Preserve legacy variables */
+/* Primary */
+/* stylelint-enable color-no-hex */
+/*------------------------------------*
+ *  # SASS Mixins and Functions
+ *------------------------------------*/
+/*
+ * SASS interpolation
+ */
+/*
+ * PX to EM
+ * @param $px - px value to be converted
+ * @param $base - base font size (in `em`)
+ * Note: 'em' values are calculate based on the element font-size
+ *       to properly converts 'px' to 'em', please pass in the element font-size with it
+ * Usage example:
+    padding: em(16px, 1.6em); // font-size in 'em'
+ */
+/*
+ * Set property by passing a property name, and values.
+ * @param $property name - padding, margin etc.
+ * @param $values        - values in `px` (space separated for multiple values)
+ * @param $font-size     - base font-size in `em`
+ * Usage example:
+   @include toEm(padding, 8px 16px 8px, 1.6em);
+ */
+/*
+ * Generate typefaces key-value pair of variable name and config
+ * Example:
+   --paragraph-center-bold-black: (14px, center, bold, black)
+ */
+/*
+ * Sets font-size, font-weight, color, text-transform, text-align and line-height
+ * Usage example:
+   @include setTypeface(16px, bold, black, uppercase);
+ */
+/*
+ * Set typefaces by passing a typeface variable name
+ * @param $var   - typeface variable
+ * @param $tt    - text-transform property
+ * @param $align - text-align property
+ * Usage example:
+   @include typeface(--paragraph-bold-black, uppercase, center);
+ */
+/*
+ * Range Slider Thumb styling is set here
+ */
+/*
+ * SVG icons colors
+ */
+/*
+ * Bar Spinner Animation
+ * @param $count    - number of bars
+ * @param $duration - duration of animation
+ * @param $phase    - each bar phase change delay
+ * Usage example:
+   @include createBarspinnerAnimation(5, 1.2s, 0,1);
+ */
+/*
+ * Tooltip colors
+ * @param $color - color property
+ * Usage example:
+   @include tooltipColor($COLOR_RED);
+ */
+/*
+ * Convert Tooltip colors
+ * @param $color - css color property
+ * Usage example:
+   @include convertTooltipColor(var(--status-default));
+ */
+/*
+    Constants
+*/
+/*
+    Variables
+*/
+/*
+    List of all typefaces variables in the format: --$FONT_SIZES-$TEXT_ALIGN-$FONT_WEIGHTS-COLORS.
+    See $FONT_SIZES, $TEXT_ALIGN, $FONT_WEIGHTS, $COLORS maps above for references.
+    Variables name example: --title-center-semibold-red
+ */
+/*
+    to use styles without modifier class on .inline-icon
+    use @extend
+
+    e.g. style icon on parent hover:
+        a:hover .inline-icon {
+            @extend %inline-icon.active;
+        }
+*/
+/**
+ * Define Breakpoints here.
+ */
 /* postcss-bem-linter: ignore */
 html {
   font-size: 62.5%;
@@ -1468,6 +1611,10 @@ html,
   .composite-calendar__input-fields {
     display: flex;
     border-radius: 4px; }
+    .composite-calendar__input-fields--fill {
+      width: 100%; }
+      .composite-calendar__input-fields--fill > .input-field {
+        width: 100%; }
     .composite-calendar__input-fields > .input-field {
       margin: 0;
       /* postcss-bem-linter: ignore */
@@ -1521,6 +1668,65 @@ html,
       align-items: center; }
       .composite-calendar__prepopulated-list li:hover:not(.composite-calendar__prepopulated-list--is-active) {
         background: var(--state-hover); }
+
+/* @define composite-calendar-modal; weak; */
+@media (min-width: 320px) and (max-width: 767px) {
+  .composite-calendar-modal__actions {
+    display: flex;
+    padding: 16px;
+    border-top: 2px solid var(--general-section-1); }
+    .composite-calendar-modal__actions > * {
+      flex: 1;
+      margin: 8px; }
+    .composite-calendar-modal__actions-today {
+      width: 100%;
+      margin-top: 40px; }
+  .composite-calendar-modal__radio-group {
+    padding: 16px 16px 24px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-bottom: 2px solid var(--general-section-1); }
+  .composite-calendar-modal__radio {
+    display: flex;
+    align-items: center;
+    padding: 7px 8px;
+    border: 1px solid;
+    border-color: var(--border-normal);
+    border-radius: 4px;
+    margin: 8px;
+    font-size: 1.4rem; }
+    .composite-calendar-modal__radio-input {
+      display: none; }
+    .composite-calendar-modal__radio-circle {
+      border: 2px solid var(--border-normal);
+      border-radius: 50%;
+      box-shadow: 0 0 1px 0 var(--shadow-menu);
+      width: 16px;
+      height: 16px;
+      transition: all 0.3s ease-in-out;
+      margin-right: 8px;
+      align-self: center; }
+      .composite-calendar-modal__radio-circle--selected {
+        border-width: 4px;
+        border-color: var(--brand-red-coral);
+        background: var(--text-prominent); }
+    .composite-calendar-modal__radio-label {
+      color: var(--text-prominent); }
+    .composite-calendar-modal__radio--selected {
+      border-color: var(--brand-secondary);
+      font-weight: bold; }
+  .composite-calendar-modal__custom {
+    padding: 16px; }
+    .composite-calendar-modal__custom-radio {
+      display: inline-flex; }
+    .composite-calendar-modal__custom-date-range {
+      margin: 8px;
+      display: flex;
+      flex-direction: column; }
+      .composite-calendar-modal__custom-date-range-start-date {
+        margin: 16px 0px; }
+      .composite-calendar-modal__custom-date-range-end-date {
+        margin-bottom: 8px; } }
 
 /** @define table */
 .table {
@@ -1586,47 +1792,78 @@ html,
     border-bottom: none; }
 
 /** @define reports; weak */
-.reports__meta {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 24px 16px; }
-  .reports__meta-description--heading {
-    font-size: 1.6rem;
-    color: var(--text-general);
-    font-weight: 700;
-    text-transform: none;
-    text-align: left;
-    line-height: 1.75;
-    color: var(--text-prominent);
-    line-height: 1.55; }
-  .reports__meta-description--paragraph {
-    font-size: 1.4rem;
-    color: var(--text-general);
-    font-weight: 400;
-    text-transform: none;
-    text-align: left;
-    line-height: 1.5;
-    color: var(--text-general); }
-  .reports__meta-filter {
-    position: relative;
-    display: flex; }
+.reports {
+  height: 100%; }
+  .reports__meta {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 24px 16px; }
+    .reports__meta-description--heading {
+      font-size: 1.6rem;
+      color: var(--text-general);
+      font-weight: 700;
+      text-transform: none;
+      text-align: left;
+      line-height: 1.75;
+      color: var(--text-prominent);
+      line-height: 1.55; }
+    .reports__meta-description--paragraph {
+      font-size: 1.4rem;
+      color: var(--text-general);
+      font-weight: 400;
+      text-transform: none;
+      text-align: left;
+      line-height: 1.5;
+      color: var(--text-general); }
+      @media (min-width: 320px) and (max-width: 767px) {
+        .reports__meta-description--paragraph {
+          padding: 16px; } }
+    .reports__meta-filter {
+      position: relative;
+      display: flex; }
+    @media (min-width: 1024px) {
+      .reports__meta {
+        align-items: center; } }
+    @media (min-width: 320px) and (max-width: 767px) {
+      .reports__meta {
+        flex-direction: column; } }
+  .reports__mobile-wrapper {
+    display: flex;
+    flex-direction: column; }
+  .reports .unknown-icon {
+    margin-left: 8px;
+    fill: var(--text-general);
+    border-radius: 4px; }
 
-.reports .unknown-icon {
-  margin-left: 8px;
-  fill: var(--text-general);
-  border-radius: 4px; }
+/** @define reports-page-wrapper; weak */
+.reports-page-wrapper {
+  height: 100%; }
 
 /** @define statement; weak */
 .statement {
-  height: 100%;
   /*
         TABLE STYLES
     */
   /*
         MOBILE CARDS
     */ }
+  @media (min-width: 1024px) {
+    .statement {
+      height: 100%; } }
+  @media (min-width: 320px) and (max-width: 767px) {
+    .statement {
+      flex: 1; }
+      .statement__data-list-body, .statement__data-list-footer {
+        padding: 0 24px; }
+      .statement__data-list-body {
+        height: 100%; }
+        .statement__data-list-body .action_type {
+          display: flex;
+          flex: none;
+          align-items: center; }
+          .statement__data-list-body .action_type__row-title {
+            display: none; } }
   .statement__content {
     width: 100%;
     max-height: 100%; }
@@ -1662,6 +1899,15 @@ html,
       color: var(--text-profit-success); }
     .statement .amount--loss {
       color: var(--text-loss-danger); }
+  @media (min-width: 320px) and (max-width: 767px) {
+    .statement .refid {
+      display: flex;
+      flex-direction: row; }
+      .statement .refid__row-title {
+        margin-right: 4px; } }
+  @media (min-width: 320px) and (max-width: 767px) {
+    .statement .market-symbol-icon {
+      width: 80px; } }
   .statement--card-view {
     background: var(--general-main-2);
     overflow: hidden; }
@@ -1736,10 +1982,31 @@ html,
 
 /** @define profit-table; weak */
 .profit-table {
-  height: 100%;
   /*
         TABLE STYLES
     */ }
+  @media (min-width: 1024px) {
+    .profit-table {
+      height: 100%; } }
+  @media (min-width: 320px) and (max-width: 767px) {
+    .profit-table {
+      flex: 1; }
+      .profit-table__data-list-body, .profit-table__data-list-footer {
+        padding: 0 24px; }
+      .profit-table__data-list-body {
+        height: calc(100% - 50px); }
+        .profit-table__data-list-body .sell_time__row-title {
+          display: flex;
+          align-items: center; }
+          .profit-table__data-list-body .sell_time__row-title .dc-icon {
+            margin-left: 4px; }
+      .profit-table__data-list-footer {
+        height: 50px;
+        min-height: 50px;
+        font-weight: bold; }
+        .profit-table__data-list-footer .data-list__row__content {
+          font-size: 1.2rem;
+          color: var(--text-prominent); } }
   .profit-table__content {
     width: 100%;
     max-height: 100%; }
@@ -1756,6 +2023,39 @@ html,
   .profit-table .sell_time,
   .profit-table .purchase_time {
     text-align: left; }
+  @media (min-width: 320px) and (max-width: 767px) {
+    .profit-table .transaction_id {
+      display: flex;
+      flex-direction: row; }
+      .profit-table .transaction_id__row-title {
+        margin-right: 4px; } }
+  @media (min-width: 320px) and (max-width: 767px) {
+    .profit-table .market-symbol-icon {
+      width: 80px; } }
+  .profit-table .duration-type {
+    flex: none;
+    position: relative;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 16px;
+    font-size: 1.4rem;
+    font-weight: bold; }
+    .profit-table .duration-type__background {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      opacity: 0.16;
+      border-radius: 16px; }
+    .profit-table .duration-type__ticks {
+      color: #ffad3a; }
+      .profit-table .duration-type__ticks__background {
+        background: #ffad3a; }
+    .profit-table .duration-type__minutes, .profit-table .duration-type__seconds, .profit-table .duration-type__hours, .profit-table .duration-type__days {
+      color: #0dc2e7; }
+      .profit-table .duration-type__minutes__background, .profit-table .duration-type__seconds__background, .profit-table .duration-type__hours__background, .profit-table .duration-type__days__background {
+        background: #0dc2e7; }
 
 /** @define open-positions; weak */
 .open-positions {
@@ -5554,9 +5854,6 @@ table {
   display: flex;
   justify-content: space-between;
   width: 100%; }
-  @media (min-width: 320px) and (max-width: 767px) {
-    .info-box-container {
-      left: 0; } }
   .info-box-container-button:hover {
     cursor: pointer; }
   .info-box-container-icon {
@@ -5681,6 +5978,9 @@ table {
     z-index: 11;
     right: 0;
     top: 0; }
+  @media (min-width: 320px) and (max-width: 767px) {
+    .info-box-container {
+      left: 0; } }
 
 /** @define bottom-widgets */
 .bottom-widgets {
