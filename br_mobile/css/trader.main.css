@@ -5408,7 +5408,17 @@ table {
       margin-right: 0; }
   @media (min-width: 320px) and (max-width: 767px) {
     .number-selector {
-      margin-top: 0; } }
+      margin-top: 0;
+      padding: 0.8rem;
+      border-radius: 4px;
+      background-color: var(--fill-normal); }
+      .number-selector__selection {
+        width: calc(20% - 7px);
+        height: 32px;
+        font-size: 1.6rem;
+        background-color: var(--general-section-1); }
+        .number-selector__selection:not(:first-child) {
+          margin-left: 0.8rem; } }
 
 /** @define popconfirm */
 .pl-card {
