@@ -1339,6 +1339,9 @@ html,
     padding: 4px 0px; }
     .data-list__item--wrapper {
       text-decoration: none; }
+    @media (min-width: 320px) and (max-width: 767px) {
+      .data-list__item {
+        border-radius: 4px; } }
   .data-list__row {
     display: flex;
     flex-direction: row;
@@ -1360,6 +1363,9 @@ html,
       font-weight: bold;
       color: var(--text-prominent);
       line-height: 2rem; }
+      @media (min-width: 320px) and (max-width: 767px) {
+        .data-list__row-title {
+          font-size: 1.2rem; } }
 
 /*------------------------------------*
  *  # Constants
@@ -3676,7 +3682,8 @@ table {
     align-self: flex-start;
     text-transform: none;
     margin-bottom: 4px;
-    color: var(--text-general); }
+    color: var(--text-general);
+    white-space: nowrap; }
   .contract-card .purchase-price__value,
   .contract-card .potential-payout__value {
     font-size: 1em;
