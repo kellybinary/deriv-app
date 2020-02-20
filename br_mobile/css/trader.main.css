@@ -1637,7 +1637,10 @@ html,
       .composite-calendar__input-fields > .input-field .input {
         height: 32px;
         background-color: var(--fill-normal);
-        border: 1px solid var(--border-normal); }
+        border: 1px solid var(--border-normal);
+        -webkit-appearance: none;
+           -moz-appearance: none;
+                appearance: none; }
         .composite-calendar__input-fields > .input-field .input:hover {
           border-color: var(--border-hover); }
         .composite-calendar__input-fields > .input-field .input:focus, .composite-calendar__input-fields > .input-field .input:active {
@@ -1690,8 +1693,7 @@ html,
       flex: 1;
       margin: 8px; }
     .composite-calendar-modal__actions-today {
-      width: 100%;
-      margin-top: 40px; }
+      width: 100%; }
   .composite-calendar-modal__radio-group {
     padding: 16px 16px 24px;
     display: grid;
@@ -3307,9 +3309,8 @@ table {
           margin-left: 0.8rem;
           margin-bottom: 0.8rem; }
           .trade-container__replay .contract-drawer .contract-card__grid-underlying-trade,
-          .trade-container__replay .contract-drawer .contract-card__footer-wrapper,
-          .trade-container__replay .contract-drawer .pl-card {
-            grid-template-columns: 1.5fr 1fr 1fr; }
+          .trade-container__replay .contract-drawer .contract-card__footer-wrapper {
+            grid-template-columns: 1fr 1fr 0.7fr; }
           .trade-container__replay .contract-drawer--with-collapsible-btn {
             padding-top: 0; } }
     .trade-container__replay .replay-chart__container {
@@ -3630,7 +3631,7 @@ table {
   .contract-drawer__icon {
     margin-right: 16px; }
 
-/** @define .contract-card */
+/** @define .contract-card; weak */
 .contract-card {
   box-sizing: border-box;
   display: flex;
@@ -3659,7 +3660,8 @@ table {
     background-image: linear-gradient(to top, rgba(16, 19, 32, 0), rgba(227, 28, 75, 0.16)); }
   .contract-card__grid {
     display: grid;
-    grid-template-rows: 1fr auto; }
+    grid-template-rows: 1fr auto;
+    grid-gap: 4px; }
     .contract-card__grid-underlying-trade {
       grid-template-columns: 1.5fr 1fr;
       width: 100%; }
@@ -3670,6 +3672,18 @@ table {
       margin-left: -4px;
       margin-right: -4px;
       background: var(--general-hover); }
+    .contract-card__grid-label {
+      font-size: 1rem;
+      align-self: flex-start;
+      text-transform: none;
+      line-height: 1.5;
+      color: var(--text-general);
+      white-space: nowrap; }
+    .contract-card__grid-value {
+      font-size: 1.2rem;
+      font-weight: bold;
+      align-self: flex-start;
+      line-height: 1.5; }
   .contract-card .purchase-price-container,
   .contract-card .potential-payout-container {
     display: flex;
@@ -3723,11 +3737,20 @@ table {
     display: flex;
     justify-content: space-evenly;
     margin: 0.5em 0.2em; }
+    @media (min-width: 320px) and (max-width: 767px) {
+      .contract-card__header {
+        margin: 0 8px; } }
   .contract-card__body {
     border-radius: 4px;
     width: 100%;
     padding: 8px 12px 0;
     color: var(--text-prominent); }
+    @media (min-width: 320px) and (max-width: 767px) {
+      .contract-card__body {
+        padding: 0 8px; }
+        .contract-card__body-wrapper {
+          display: flex;
+          padding-top: 0.8rem; } }
   .contract-card__footer {
     margin-bottom: 0.5em;
     padding: 0 4px; }
@@ -3758,6 +3781,15 @@ table {
       transform: translateY(-8px); }
     .contract-card__sell-button .btn--sell {
       height: 32px; }
+      @media (min-width: 320px) and (max-width: 767px) {
+        .contract-card__sell-button .btn--sell {
+          width: 100%; } }
+  .contract-card__status {
+    min-width: 25%;
+    text-align: center;
+    margin-right: 0.4rem; }
+    .contract-card__status .result-icon {
+      margin-left: 0.4rem; }
   .contract-card .contract-audit__wrapper {
     padding: 2px 0;
     width: 100%; }
@@ -5521,6 +5553,10 @@ table {
       .btn-purchase__bottom {
         width: 40vw; }
       .btn-purchase:hover {
+        transform: none !important; }
+      .btn-purchase--disabled, .btn-purchase[disabled] {
+        opacity: 0.32; }
+      .btn-purchase--swoosh {
         transform: none !important; } }
   .btn-purchase__icon_wrapper {
     /* postcss-bem-linter: ignore */
