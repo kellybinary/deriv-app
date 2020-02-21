@@ -3730,9 +3730,9 @@ table {
     .contract-card__type .category-type .color2-fill {
       fill: var(--brand-secondary) !important; }
   .contract-card__symbol {
-    margin-left: 0.5rem;
-    font-size: 1em;
-    line-height: 1.5; }
+    margin-left: 0.8rem;
+    font-size: 1.2rem;
+    line-height: normal; }
   .contract-card__header {
     display: flex;
     justify-content: space-evenly;
@@ -3804,6 +3804,9 @@ table {
   .contract-card .contract-audit__value {
     font-size: 1em;
     text-align: left; }
+  .contract-card .contract-type__type-wrapper {
+    width: unset;
+    height: unset; }
 
 .trade-container + .positions-drawer {
   transition: opacity 0.4s ease; }
@@ -4294,12 +4297,6 @@ table {
     width: 3.8em;
     line-height: 1.5;
     text-align: left; }
-
-/** @define btn; */
-.btn--sell {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content; }
 
 /** @define remaining-time; */
 .remaining-time {

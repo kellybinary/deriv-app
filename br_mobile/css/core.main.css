@@ -10343,7 +10343,9 @@ table {
     /* Making the wrapper stack above the body */
     -ms-scroll-chaining: none;
         overscroll-behavior: none;
-    z-index: 2; } }
+    z-index: 2; }
+  .modal-root {
+    height: 100% !important; } }
 
 /** @define app-contents; weak */
 .app-contents {
@@ -11093,9 +11095,9 @@ table {
     .contract-card__type .category-type .color2-fill {
       fill: var(--brand-secondary) !important; }
   .contract-card__symbol {
-    margin-left: 0.5rem;
-    font-size: 1em;
-    line-height: 1.5; }
+    margin-left: 0.8rem;
+    font-size: 1.2rem;
+    line-height: normal; }
   .contract-card__header {
     display: flex;
     justify-content: space-evenly;
