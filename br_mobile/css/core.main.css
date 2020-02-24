@@ -6829,6 +6829,17 @@ html,
     fill: var(--text-general); }
   .platform-switcher--active .platform-switcher__arrow {
     transform: rotate(180deg); }
+  @media (min-width: 320px) and (max-width: 767px) {
+    .platform-switcher {
+      width: 100%;
+      height: 100%;
+      justify-content: center;
+      -webkit-user-select: none;
+         -moz-user-select: none;
+          -ms-user-select: none;
+              user-select: none;
+      -webkit-touch-callout: none;
+      -webkit-tap-highlight-color: transparent; } }
 
 /*------------------------------------*
  *  # Constants
@@ -9418,6 +9429,11 @@ html,
   position: absolute;
   right: 0;
   top: 8px; }
+  @media (min-width: 320px) and (max-width: 767px) {
+    .notification-messages {
+      z-index: 99;
+      left: 1.6rem;
+      right: 1.6rem; } }
 
 /** @define notification; weak */
 .notification {
@@ -9494,6 +9510,11 @@ html,
     z-index: 0; }
   .notification:not(:last-child) {
     margin-bottom: 16px; }
+  @media (min-width: 320px) and (max-width: 767px) {
+    .notification {
+      max-width: unset; }
+      .notification--small {
+        max-width: unset; } }
 
 /*------------------------------------*
  *  # Constants
