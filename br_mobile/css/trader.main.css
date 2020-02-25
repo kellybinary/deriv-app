@@ -5415,6 +5415,8 @@ table {
         height: 32px;
         font-size: 1.6rem;
         background-color: var(--general-section-1); }
+        .number-selector__selection--selected {
+          background-color: var(--state-active); }
         .number-selector__selection:not(:first-child) {
           margin-left: 0.8rem; } }
 
