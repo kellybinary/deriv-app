@@ -941,7 +941,7 @@ html,
       padding: 16px 24px;
       align-items: center;
       justify-content: flex-end;
-      z-index: 999;
+      z-index: 4;
       border-radius: 0 4px 4px 0;
       border-top: 1px solid var(--general-section-1);
       border-width: 1px;
@@ -2517,65 +2517,65 @@ html,
             @extend %inline-icon.active;
         }
 */
-.contract-drawer svg, .positions-drawer__icon-close svg, .input-wrapper__icon, .time-picker__icon, .account-settings-toggle svg, .contract-type-widget__select-arrow, .side-menu__icon, .info-box-container .info-box-longcode-icon {
+.contract-drawer svg, .positions-drawer__icon-close svg, .input-wrapper__icon, .time-picker__icon, .account-settings-toggle svg, .contract-type-widget__select-arrow, .info-box-container .info-box-longcode-icon {
   /* postcss-bem-linter: ignore */
   /* postcss-bem-linter: ignore */
   /* postcss-bem-linter: ignore */
   /* postcss-bem-linter: ignore */ }
-  .contract-drawer svg .color1-fill, .positions-drawer__icon-close svg .color1-fill, .input-wrapper__icon .color1-fill, .time-picker__icon .color1-fill, .account-settings-toggle svg .color1-fill, .contract-type-widget__select-arrow .color1-fill, .side-menu__icon .color1-fill, .info-box-container .info-box-longcode-icon .color1-fill {
+  .contract-drawer svg .color1-fill, .positions-drawer__icon-close svg .color1-fill, .input-wrapper__icon .color1-fill, .time-picker__icon .color1-fill, .account-settings-toggle svg .color1-fill, .contract-type-widget__select-arrow .color1-fill, .info-box-container .info-box-longcode-icon .color1-fill {
     fill: var(--text-general); }
-  .contract-drawer svg .color1-stroke, .positions-drawer__icon-close svg .color1-stroke, .input-wrapper__icon .color1-stroke, .time-picker__icon .color1-stroke, .account-settings-toggle svg .color1-stroke, .contract-type-widget__select-arrow .color1-stroke, .side-menu__icon .color1-stroke, .info-box-container .info-box-longcode-icon .color1-stroke {
+  .contract-drawer svg .color1-stroke, .positions-drawer__icon-close svg .color1-stroke, .input-wrapper__icon .color1-stroke, .time-picker__icon .color1-stroke, .account-settings-toggle svg .color1-stroke, .contract-type-widget__select-arrow .color1-stroke, .info-box-container .info-box-longcode-icon .color1-stroke {
     stroke: var(--text-general); }
-  .contract-drawer svg .color2-fill, .positions-drawer__icon-close svg .color2-fill, .input-wrapper__icon .color2-fill, .time-picker__icon .color2-fill, .account-settings-toggle svg .color2-fill, .contract-type-widget__select-arrow .color2-fill, .side-menu__icon .color2-fill, .info-box-container .info-box-longcode-icon .color2-fill {
+  .contract-drawer svg .color2-fill, .positions-drawer__icon-close svg .color2-fill, .input-wrapper__icon .color2-fill, .time-picker__icon .color2-fill, .account-settings-toggle svg .color2-fill, .contract-type-widget__select-arrow .color2-fill, .info-box-container .info-box-longcode-icon .color2-fill {
     fill: none; }
-  .contract-drawer svg .color2-stroke, .positions-drawer__icon-close svg .color2-stroke, .input-wrapper__icon .color2-stroke, .time-picker__icon .color2-stroke, .account-settings-toggle svg .color2-stroke, .contract-type-widget__select-arrow .color2-stroke, .side-menu__icon .color2-stroke, .info-box-container .info-box-longcode-icon .color2-stroke {
+  .contract-drawer svg .color2-stroke, .positions-drawer__icon-close svg .color2-stroke, .input-wrapper__icon .color2-stroke, .time-picker__icon .color2-stroke, .account-settings-toggle svg .color2-stroke, .contract-type-widget__select-arrow .color2-stroke, .info-box-container .info-box-longcode-icon .color2-stroke {
     stroke: none; }
-  .contract-drawer svg.active, .positions-drawer__icon-close svg.active, .active.input-wrapper__icon, .active.time-picker__icon, .account-settings-toggle svg.active, .account-settings-toggle:hover svg, .active.contract-type-widget__select-arrow, .active.side-menu__icon, .info-box-container .active.info-box-longcode-icon {
+  .contract-drawer svg.active, .positions-drawer__icon-close svg.active, .active.input-wrapper__icon, .active.time-picker__icon, .account-settings-toggle svg.active, .account-settings-toggle:hover svg, .active.contract-type-widget__select-arrow, .info-box-container .active.info-box-longcode-icon {
     /* postcss-bem-linter: ignore */
     /* postcss-bem-linter: ignore */
     /* postcss-bem-linter: ignore */
     /* postcss-bem-linter: ignore */ }
-    .contract-drawer svg.active .color1-fill, .positions-drawer__icon-close svg.active .color1-fill, .active.input-wrapper__icon .color1-fill, .active.time-picker__icon .color1-fill, .account-settings-toggle svg.active .color1-fill, .account-settings-toggle:hover svg .color1-fill, .active.contract-type-widget__select-arrow .color1-fill, .active.side-menu__icon .color1-fill, .info-box-container .active.info-box-longcode-icon .color1-fill {
+    .contract-drawer svg.active .color1-fill, .positions-drawer__icon-close svg.active .color1-fill, .active.input-wrapper__icon .color1-fill, .active.time-picker__icon .color1-fill, .account-settings-toggle svg.active .color1-fill, .account-settings-toggle:hover svg .color1-fill, .active.contract-type-widget__select-arrow .color1-fill, .info-box-container .active.info-box-longcode-icon .color1-fill {
       fill: var(--text-prominent); }
-    .contract-drawer svg.active .color1-stroke, .positions-drawer__icon-close svg.active .color1-stroke, .active.input-wrapper__icon .color1-stroke, .active.time-picker__icon .color1-stroke, .account-settings-toggle svg.active .color1-stroke, .account-settings-toggle:hover svg .color1-stroke, .active.contract-type-widget__select-arrow .color1-stroke, .active.side-menu__icon .color1-stroke, .info-box-container .active.info-box-longcode-icon .color1-stroke {
+    .contract-drawer svg.active .color1-stroke, .positions-drawer__icon-close svg.active .color1-stroke, .active.input-wrapper__icon .color1-stroke, .active.time-picker__icon .color1-stroke, .account-settings-toggle svg.active .color1-stroke, .account-settings-toggle:hover svg .color1-stroke, .active.contract-type-widget__select-arrow .color1-stroke, .info-box-container .active.info-box-longcode-icon .color1-stroke {
       stroke: var(--text-prominent); }
-    .contract-drawer svg.active .color2-fill, .positions-drawer__icon-close svg.active .color2-fill, .active.input-wrapper__icon .color2-fill, .active.time-picker__icon .color2-fill, .account-settings-toggle svg.active .color2-fill, .account-settings-toggle:hover svg .color2-fill, .active.contract-type-widget__select-arrow .color2-fill, .active.side-menu__icon .color2-fill, .info-box-container .active.info-box-longcode-icon .color2-fill {
+    .contract-drawer svg.active .color2-fill, .positions-drawer__icon-close svg.active .color2-fill, .active.input-wrapper__icon .color2-fill, .active.time-picker__icon .color2-fill, .account-settings-toggle svg.active .color2-fill, .account-settings-toggle:hover svg .color2-fill, .active.contract-type-widget__select-arrow .color2-fill, .info-box-container .active.info-box-longcode-icon .color2-fill {
       fill: none; }
-    .contract-drawer svg.active .color2-stroke, .positions-drawer__icon-close svg.active .color2-stroke, .active.input-wrapper__icon .color2-stroke, .active.time-picker__icon .color2-stroke, .account-settings-toggle svg.active .color2-stroke, .account-settings-toggle:hover svg .color2-stroke, .active.contract-type-widget__select-arrow .color2-stroke, .active.side-menu__icon .color2-stroke, .info-box-container .active.info-box-longcode-icon .color2-stroke {
+    .contract-drawer svg.active .color2-stroke, .positions-drawer__icon-close svg.active .color2-stroke, .active.input-wrapper__icon .color2-stroke, .active.time-picker__icon .color2-stroke, .account-settings-toggle svg.active .color2-stroke, .account-settings-toggle:hover svg .color2-stroke, .active.contract-type-widget__select-arrow .color2-stroke, .info-box-container .active.info-box-longcode-icon .color2-stroke {
       stroke: none; }
-  .contract-drawer svg.disabled, .positions-drawer__icon-close svg.disabled, .disabled.input-wrapper__icon, .disabled.time-picker__icon, .account-settings-toggle svg.disabled, .disabled.contract-type-widget__select-arrow, .disabled.side-menu__icon, .info-box-container .disabled.info-box-longcode-icon, .portfolio-empty__icon {
+  .contract-drawer svg.disabled, .positions-drawer__icon-close svg.disabled, .disabled.input-wrapper__icon, .disabled.time-picker__icon, .account-settings-toggle svg.disabled, .disabled.contract-type-widget__select-arrow, .info-box-container .disabled.info-box-longcode-icon, .portfolio-empty__icon {
     /* postcss-bem-linter: ignore */
     /* postcss-bem-linter: ignore */
     /* postcss-bem-linter: ignore */
     /* postcss-bem-linter: ignore */ }
-    .contract-drawer svg.disabled .color1-fill, .positions-drawer__icon-close svg.disabled .color1-fill, .disabled.input-wrapper__icon .color1-fill, .disabled.time-picker__icon .color1-fill, .account-settings-toggle svg.disabled .color1-fill, .disabled.contract-type-widget__select-arrow .color1-fill, .disabled.side-menu__icon .color1-fill, .info-box-container .disabled.info-box-longcode-icon .color1-fill, .portfolio-empty__icon .color1-fill {
+    .contract-drawer svg.disabled .color1-fill, .positions-drawer__icon-close svg.disabled .color1-fill, .disabled.input-wrapper__icon .color1-fill, .disabled.time-picker__icon .color1-fill, .account-settings-toggle svg.disabled .color1-fill, .disabled.contract-type-widget__select-arrow .color1-fill, .info-box-container .disabled.info-box-longcode-icon .color1-fill, .portfolio-empty__icon .color1-fill {
       fill: var(--text-disabled); }
-    .contract-drawer svg.disabled .color1-stroke, .positions-drawer__icon-close svg.disabled .color1-stroke, .disabled.input-wrapper__icon .color1-stroke, .disabled.time-picker__icon .color1-stroke, .account-settings-toggle svg.disabled .color1-stroke, .disabled.contract-type-widget__select-arrow .color1-stroke, .disabled.side-menu__icon .color1-stroke, .info-box-container .disabled.info-box-longcode-icon .color1-stroke, .portfolio-empty__icon .color1-stroke {
+    .contract-drawer svg.disabled .color1-stroke, .positions-drawer__icon-close svg.disabled .color1-stroke, .disabled.input-wrapper__icon .color1-stroke, .disabled.time-picker__icon .color1-stroke, .account-settings-toggle svg.disabled .color1-stroke, .disabled.contract-type-widget__select-arrow .color1-stroke, .info-box-container .disabled.info-box-longcode-icon .color1-stroke, .portfolio-empty__icon .color1-stroke {
       stroke: var(--text-disabled); }
-    .contract-drawer svg.disabled .color2-fill, .positions-drawer__icon-close svg.disabled .color2-fill, .disabled.input-wrapper__icon .color2-fill, .disabled.time-picker__icon .color2-fill, .account-settings-toggle svg.disabled .color2-fill, .disabled.contract-type-widget__select-arrow .color2-fill, .disabled.side-menu__icon .color2-fill, .info-box-container .disabled.info-box-longcode-icon .color2-fill, .portfolio-empty__icon .color2-fill {
+    .contract-drawer svg.disabled .color2-fill, .positions-drawer__icon-close svg.disabled .color2-fill, .disabled.input-wrapper__icon .color2-fill, .disabled.time-picker__icon .color2-fill, .account-settings-toggle svg.disabled .color2-fill, .disabled.contract-type-widget__select-arrow .color2-fill, .info-box-container .disabled.info-box-longcode-icon .color2-fill, .portfolio-empty__icon .color2-fill {
       fill: none; }
-    .contract-drawer svg.disabled .color2-stroke, .positions-drawer__icon-close svg.disabled .color2-stroke, .disabled.input-wrapper__icon .color2-stroke, .disabled.time-picker__icon .color2-stroke, .account-settings-toggle svg.disabled .color2-stroke, .disabled.contract-type-widget__select-arrow .color2-stroke, .disabled.side-menu__icon .color2-stroke, .info-box-container .disabled.info-box-longcode-icon .color2-stroke, .portfolio-empty__icon .color2-stroke {
+    .contract-drawer svg.disabled .color2-stroke, .positions-drawer__icon-close svg.disabled .color2-stroke, .disabled.input-wrapper__icon .color2-stroke, .disabled.time-picker__icon .color2-stroke, .account-settings-toggle svg.disabled .color2-stroke, .disabled.contract-type-widget__select-arrow .color2-stroke, .info-box-container .disabled.info-box-longcode-icon .color2-stroke, .portfolio-empty__icon .color2-stroke {
       stroke: none; }
-  .contract-drawer svg.white, .positions-drawer__icon-close svg.white, .white.input-wrapper__icon, .white.time-picker__icon, .account-settings-toggle svg.white, .white.contract-type-widget__select-arrow, .white.side-menu__icon, .btn-purchase__icon_wrapper, .info-box-container .white.info-box-longcode-icon {
+  .contract-drawer svg.white, .positions-drawer__icon-close svg.white, .white.input-wrapper__icon, .white.time-picker__icon, .account-settings-toggle svg.white, .white.contract-type-widget__select-arrow, .btn-purchase__icon_wrapper, .info-box-container .white.info-box-longcode-icon {
     /* postcss-bem-linter: ignore */
     /* postcss-bem-linter: ignore */ }
-    .contract-drawer svg.white .color1-fill, .positions-drawer__icon-close svg.white .color1-fill, .white.input-wrapper__icon .color1-fill, .white.time-picker__icon .color1-fill, .account-settings-toggle svg.white .color1-fill, .white.contract-type-widget__select-arrow .color1-fill, .white.side-menu__icon .color1-fill, .btn-purchase__icon_wrapper .color1-fill, .info-box-container .white.info-box-longcode-icon .color1-fill {
+    .contract-drawer svg.white .color1-fill, .positions-drawer__icon-close svg.white .color1-fill, .white.input-wrapper__icon .color1-fill, .white.time-picker__icon .color1-fill, .account-settings-toggle svg.white .color1-fill, .white.contract-type-widget__select-arrow .color1-fill, .btn-purchase__icon_wrapper .color1-fill, .info-box-container .white.info-box-longcode-icon .color1-fill {
       fill: var(--text-prominent); }
-    .contract-drawer svg.white .color1-stroke, .positions-drawer__icon-close svg.white .color1-stroke, .white.input-wrapper__icon .color1-stroke, .white.time-picker__icon .color1-stroke, .account-settings-toggle svg.white .color1-stroke, .white.contract-type-widget__select-arrow .color1-stroke, .white.side-menu__icon .color1-stroke, .btn-purchase__icon_wrapper .color1-stroke, .info-box-container .white.info-box-longcode-icon .color1-stroke {
+    .contract-drawer svg.white .color1-stroke, .positions-drawer__icon-close svg.white .color1-stroke, .white.input-wrapper__icon .color1-stroke, .white.time-picker__icon .color1-stroke, .account-settings-toggle svg.white .color1-stroke, .white.contract-type-widget__select-arrow .color1-stroke, .btn-purchase__icon_wrapper .color1-stroke, .info-box-container .white.info-box-longcode-icon .color1-stroke {
       stroke: var(--text-prominent); }
-  .contract-drawer svg.border_hover_color, .positions-drawer__icon-close svg.border_hover_color, .border_hover_color.input-wrapper__icon, .border_hover_color.time-picker__icon, .account-settings-toggle svg.border_hover_color, .border_hover_color.contract-type-widget__select-arrow, .border_hover_color.side-menu__icon, .info-box-container .border_hover_color.info-box-longcode-icon {
+  .contract-drawer svg.border_hover_color, .positions-drawer__icon-close svg.border_hover_color, .border_hover_color.input-wrapper__icon, .border_hover_color.time-picker__icon, .account-settings-toggle svg.border_hover_color, .border_hover_color.contract-type-widget__select-arrow, .info-box-container .border_hover_color.info-box-longcode-icon {
     /* postcss-bem-linter: ignore */
     /* postcss-bem-linter: ignore */ }
-    .contract-drawer svg.border_hover_color .color1-fill, .positions-drawer__icon-close svg.border_hover_color .color1-fill, .border_hover_color.input-wrapper__icon .color1-fill, .border_hover_color.time-picker__icon .color1-fill, .account-settings-toggle svg.border_hover_color .color1-fill, .border_hover_color.contract-type-widget__select-arrow .color1-fill, .border_hover_color.side-menu__icon .color1-fill, .info-box-container .border_hover_color.info-box-longcode-icon .color1-fill {
+    .contract-drawer svg.border_hover_color .color1-fill, .positions-drawer__icon-close svg.border_hover_color .color1-fill, .border_hover_color.input-wrapper__icon .color1-fill, .border_hover_color.time-picker__icon .color1-fill, .account-settings-toggle svg.border_hover_color .color1-fill, .border_hover_color.contract-type-widget__select-arrow .color1-fill, .info-box-container .border_hover_color.info-box-longcode-icon .color1-fill {
       fill: var(--text-prominent); }
-    .contract-drawer svg.border_hover_color .color1-stroke, .positions-drawer__icon-close svg.border_hover_color .color1-stroke, .border_hover_color.input-wrapper__icon .color1-stroke, .border_hover_color.time-picker__icon .color1-stroke, .account-settings-toggle svg.border_hover_color .color1-stroke, .border_hover_color.contract-type-widget__select-arrow .color1-stroke, .border_hover_color.side-menu__icon .color1-stroke, .info-box-container .border_hover_color.info-box-longcode-icon .color1-stroke {
+    .contract-drawer svg.border_hover_color .color1-stroke, .positions-drawer__icon-close svg.border_hover_color .color1-stroke, .border_hover_color.input-wrapper__icon .color1-stroke, .border_hover_color.time-picker__icon .color1-stroke, .account-settings-toggle svg.border_hover_color .color1-stroke, .border_hover_color.contract-type-widget__select-arrow .color1-stroke, .info-box-container .border_hover_color.info-box-longcode-icon .color1-stroke {
       stroke: var(--text-prominent); }
-  .contract-drawer svg.secondary, .positions-drawer__icon-close svg.secondary, .secondary.input-wrapper__icon, .secondary.time-picker__icon, .account-settings-toggle svg.secondary, .secondary.contract-type-widget__select-arrow, .secondary.side-menu__icon, .info-box-container .secondary.info-box-longcode-icon {
+  .contract-drawer svg.secondary, .positions-drawer__icon-close svg.secondary, .secondary.input-wrapper__icon, .secondary.time-picker__icon, .account-settings-toggle svg.secondary, .secondary.contract-type-widget__select-arrow, .info-box-container .secondary.info-box-longcode-icon {
     /* postcss-bem-linter: ignore */
     /* postcss-bem-linter: ignore */ }
-    .contract-drawer svg.secondary .color1-fill, .positions-drawer__icon-close svg.secondary .color1-fill, .secondary.input-wrapper__icon .color1-fill, .secondary.time-picker__icon .color1-fill, .account-settings-toggle svg.secondary .color1-fill, .secondary.contract-type-widget__select-arrow .color1-fill, .secondary.side-menu__icon .color1-fill, .info-box-container .secondary.info-box-longcode-icon .color1-fill {
+    .contract-drawer svg.secondary .color1-fill, .positions-drawer__icon-close svg.secondary .color1-fill, .secondary.input-wrapper__icon .color1-fill, .secondary.time-picker__icon .color1-fill, .account-settings-toggle svg.secondary .color1-fill, .secondary.contract-type-widget__select-arrow .color1-fill, .info-box-container .secondary.info-box-longcode-icon .color1-fill {
       fill: var(--text-less-prominent); }
-    .contract-drawer svg.secondary .color1-stroke, .positions-drawer__icon-close svg.secondary .color1-stroke, .secondary.input-wrapper__icon .color1-stroke, .secondary.time-picker__icon .color1-stroke, .account-settings-toggle svg.secondary .color1-stroke, .secondary.contract-type-widget__select-arrow .color1-stroke, .secondary.side-menu__icon .color1-stroke, .info-box-container .secondary.info-box-longcode-icon .color1-stroke {
+    .contract-drawer svg.secondary .color1-stroke, .positions-drawer__icon-close svg.secondary .color1-stroke, .secondary.input-wrapper__icon .color1-stroke, .secondary.time-picker__icon .color1-stroke, .account-settings-toggle svg.secondary .color1-stroke, .secondary.contract-type-widget__select-arrow .color1-stroke, .info-box-container .secondary.info-box-longcode-icon .color1-stroke {
       stroke: var(--text-less-prominent); }
 
 /**
@@ -5366,45 +5366,6 @@ table {
     text-transform: none;
     text-transform: initial;
     color: var(--text-prominent); }
-
-/** @define side-menu */
-.side-menu {
-  overflow: hidden; }
-  .side-menu__heading {
-    padding: 20px 16px; }
-  .side-menu__main-header-layout {
-    height: 100%;
-    min-width: 270px; }
-  .side-menu__sub-header-layout {
-    padding-top: 56px;
-    height: 100%;
-    border-left: 2px solid var(--general-main-1); }
-  .side-menu__title {
-    font-size: var(--text-size-s);
-    font-weight: bold;
-    margin: 0 0.8rem;
-    color: var(--text-prominent); }
-  .side-menu__header--active {
-    background-color: var(--general-main-1);
-    /* postcss-bem-linter: ignore */ }
-    .side-menu__header--active:hover {
-      background-color: var(--general-main-1) !important; }
-    .side-menu__header--active div {
-      font-weight: bold; }
-  .side-menu__header--disabled {
-    opacity: 0.32;
-    pointer-events: none; }
-  .side-menu__icon {
-    transform: rotate(360deg);
-    margin-left: auto;
-    font-weight: bold; }
-
-/* postcss-bem-linter: ignore */
-.dc-vertical-tab__tab .dc-vertical-tab__header {
-  /* postcss-bem-linter: ignore */ }
-  .dc-vertical-tab__tab .dc-vertical-tab__header--disabled {
-    opacity: 0.32;
-    pointer-events: none; }
 
 /** @define number-selector */
 .number-selector {
