@@ -4137,139 +4137,165 @@ table {
 .remaining-time {
   display: inline; }
 
-/** @define positions-drawer-modal; weak */
-.positions-drawer-modal {
+/** @define positions-modal-card; weak */
+.positions-modal-card {
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   text-decoration: none;
   position: relative;
   color: var(--text-general); }
-  .positions-drawer-modal__wrapper {
+  .positions-modal-card__result--enter, .positions-modal-card__result--exit {
+    opacity: 0; }
+  .positions-modal-card__result--enter-done {
+    opacity: 1; }
+  .positions-modal-card__caption {
+    font-size: 1.6em;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.25s ease;
+    cursor: pointer;
+    width: 100%; }
+    .positions-modal-card__caption--won {
+      color: var(--text-profit-success); }
+    .positions-modal-card__caption--lost {
+      color: var(--text-loss-danger); }
+    .positions-modal-card__caption-wrapper {
+      cursor: pointer;
+      width: 100%;
+      grid-row: 1 / -1;
+      align-self: center;
+      justify-self: center;
+      text-decoration: none; }
+  .positions-modal-card__icon {
+    margin-left: 4px; }
+  .positions-modal-card__wrapper {
     padding: 0.8em;
     margin: 0 1em 1em;
     border-radius: 4px;
     transition: transform 0.25s ease, opacity 0.25s linear;
     position: relative;
     background: var(--general-main-1); }
-  .positions-drawer-modal__grid {
+  .positions-modal-card__grid {
     display: grid; }
-    .positions-drawer-modal__grid-header {
+    .positions-modal-card__grid-header {
       border-bottom: 1px solid var(--general-section-1);
       grid-template-columns: 1fr 1fr 1fr;
       padding-bottom: 1rem; }
-    .positions-drawer-modal__grid-body {
+    .positions-modal-card__grid-body {
       grid-template-columns: 2fr 1fr;
       grid-template-rows: auto auto;
       display: grid; }
-    .positions-drawer-modal__grid-underlying-trade {
+    .positions-modal-card__grid-underlying-trade {
       grid-template-columns: 1fr 1fr 1fr; }
-    .positions-drawer-modal__grid-profit-payout {
+    .positions-modal-card__grid-profit-payout {
       grid-template-columns: 1fr 1fr;
       display: grid;
       grid-row: 1 / 2;
       grid-column: 1 / 2;
       padding: 8px 0;
       border-radius: 4px; }
-    .positions-drawer-modal__grid-price-payout {
+    .positions-modal-card__grid-price-payout {
       display: grid;
       grid-row: 2 / 3;
       grid-column: 1 / 2;
       grid-template-columns: 1fr 1fr; }
-  .positions-drawer-modal__progress {
+  .positions-modal-card__progress {
     justify-self: end;
     align-self: center;
     grid-row: 1 / 3;
     grid-column: 2 / 3; }
-  .positions-drawer-modal__sell-button {
+  .positions-modal-card__sell-button {
     justify-self: end;
     align-self: center; }
-  .positions-drawer-modal__purchase-label, .positions-drawer-modal__payout-label {
+  .positions-modal-card__purchase-label, .positions-modal-card__payout-label {
     text-transform: none;
     font-size: 1rem;
     font-weight: normal;
     white-space: nowrap;
     max-width: 90px;
     color: var(--text-general); }
-  .positions-drawer-modal__purchase-value, .positions-drawer-modal__payout-value {
+  .positions-modal-card__purchase-value, .positions-modal-card__payout-value {
     font-size: 1.2em;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     font-weight: bold;
     padding: 4px 0 8px; }
-  .positions-drawer-modal__purchase-price, .positions-drawer-modal__payout-price {
+  .positions-modal-card__purchase-price, .positions-modal-card__payout-price {
     display: flex;
     flex-direction: column; }
-  .positions-drawer-modal__type {
+  .positions-modal-card__type {
     font-size: 1.2em;
     display: flex;
     justify-content: flex-start;
     font-weight: bold;
     /* postcss-bem-linter: ignore */ }
-    .positions-drawer-modal__type .category-type .color1-fill {
+    .positions-modal-card__type .category-type .color1-fill {
       fill: var(--brand-red-coral); }
-    .positions-drawer-modal__type .category-type .color2-fill {
+    .positions-modal-card__type .category-type .color2-fill {
       fill: var(--brand-secondary); }
-  .positions-drawer-modal__symbol {
+  .positions-modal-card__symbol {
     margin-left: 0.5rem;
     font-size: 1em;
     line-height: 1.5; }
-  .positions-drawer-modal__indicative {
+  .positions-modal-card__indicative {
     font-size: 1.2em;
     font-weight: bold;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     color: var(--text-general); }
-    .positions-drawer-modal__indicative-label {
+    .positions-modal-card__indicative-label {
       font-size: 1em;
       font-weight: normal;
       margin-bottom: 4px;
       white-space: nowrap;
       max-width: 90px;
       color: var(--text-general); }
-    .positions-drawer-modal__indicative--movement {
+    .positions-modal-card__indicative--movement {
       margin-left: 2px;
       width: 16px;
       height: 16px; }
-      .positions-drawer-modal__indicative--movement-complete, .positions-drawer-modal__indicative--movement-complete:after {
+      .positions-modal-card__indicative--movement-complete, .positions-modal-card__indicative--movement-complete:after {
         display: none; }
-      .positions-drawer-modal__indicative--movement:after {
+      .positions-modal-card__indicative--movement:after {
         content: '';
         width: 16px; }
-  .positions-drawer-modal__remaining-time {
+  .positions-modal-card__remaining-time {
     font-size: 1.2em;
     color: var(--text-general); }
-  .positions-drawer-modal__timer {
+  .positions-modal-card__timer {
     margin: 0.2rem auto; }
-  .positions-drawer-modal__profit-loss {
+  .positions-modal-card__profit-loss {
     font-size: 1.2em;
     text-align: center;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     font-weight: bold; }
-    .positions-drawer-modal__profit-loss-label {
+    .positions-modal-card__profit-loss-label {
       font-size: 1em;
       margin-bottom: 4px;
       font-weight: normal;
       white-space: nowrap;
       max-width: 90px;
       color: var(--text-general); }
-    .positions-drawer-modal__profit-loss--is-crypto {
+    .positions-modal-card__profit-loss--is-crypto {
       margin-left: -6px; }
-    .positions-drawer-modal__profit-loss--negative {
+    .positions-modal-card__profit-loss--negative {
       color: var(--text-loss-danger); }
-      .positions-drawer-modal__profit-loss--negative:before {
+      .positions-modal-card__profit-loss--negative:before {
         content: '-';
         color: inherit; }
-    .positions-drawer-modal__profit-loss--positive {
+    .positions-modal-card__profit-loss--positive {
       color: var(--text-profit-success); }
-      .positions-drawer-modal__profit-loss--positive:before {
+      .positions-modal-card__profit-loss--positive:before {
         content: '+';
         color: inherit; }
-  .positions-drawer-modal__underlying-name {
+  .positions-modal-card__underlying-name {
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -6877,4 +6903,14 @@ table {
     left: 0;
     width: calc(100vw - 1.6rem);
     transform: translate(0.8rem, 0); } }
+
+/** @define popup-root */
+@media (min-width: 320px) and (max-width: 767px) {
+  .popup-root {
+    width: 100vw;
+    height: 100vh;
+    /* postcss-bem-linter: ignore */ }
+    .popup-root .dc-toast-error {
+      z-index: 9999;
+      top: 2em; } }
 
