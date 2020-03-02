@@ -1327,6 +1327,7 @@ html,
   .data-list__footer {
     width: 100%;
     background: var(--general-main-1);
+    border-top: 2px solid var(--border-disabled);
     display: flex;
     align-items: center;
     position: absolute;
@@ -1688,7 +1689,7 @@ html,
   .composite-calendar-modal__actions {
     display: flex;
     padding: 16px;
-    border-top: 2px solid var(--general-section-1); }
+    border-top: 2px solid var(--border-disabled); }
     .composite-calendar-modal__actions > * {
       flex: 1;
       margin: 8px; }
@@ -1698,7 +1699,7 @@ html,
     padding: 16px 16px 24px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    border-bottom: 2px solid var(--general-section-1); }
+    border-bottom: 2px solid var(--border-disabled); }
   .composite-calendar-modal__radio {
     display: flex;
     align-items: center;
@@ -1711,7 +1712,7 @@ html,
     .composite-calendar-modal__radio-input {
       display: none; }
     .composite-calendar-modal__radio-circle {
-      border: 2px solid var(--border-normal);
+      border: 2px solid var(--text-general);
       border-radius: 50%;
       box-shadow: 0 0 1px 0 var(--shadow-menu);
       width: 16px;
@@ -1722,7 +1723,7 @@ html,
       .composite-calendar-modal__radio-circle--selected {
         border-width: 4px;
         border-color: var(--brand-red-coral);
-        background: var(--text-prominent); }
+        background: #ffffff; }
     .composite-calendar-modal__radio-label {
       color: var(--text-prominent); }
     .composite-calendar-modal__radio--selected {
@@ -2065,10 +2066,22 @@ html,
       color: #ffad3a; }
       .profit-table .duration-type__ticks__background {
         background: #ffad3a; }
-    .profit-table .duration-type__minutes, .profit-table .duration-type__seconds, .profit-table .duration-type__hours, .profit-table .duration-type__days {
+    .profit-table .duration-type__seconds {
+      color: #4bb4b3; }
+      .profit-table .duration-type__seconds__background {
+        background: #4bb4b3; }
+    .profit-table .duration-type__minutes {
       color: #0dc2e7; }
-      .profit-table .duration-type__minutes__background, .profit-table .duration-type__seconds__background, .profit-table .duration-type__hours__background, .profit-table .duration-type__days__background {
+      .profit-table .duration-type__minutes__background {
         background: #0dc2e7; }
+    .profit-table .duration-type__hours {
+      color: #1c5ae3; }
+      .profit-table .duration-type__hours__background {
+        background: #1c5ae3; }
+    .profit-table .duration-type__days {
+      color: #722fe4; }
+      .profit-table .duration-type__days__background {
+        background: #722fe4; }
 
 /** @define open-positions; weak */
 .open-positions {
@@ -3373,14 +3386,14 @@ table {
   padding: 0 0.8rem;
   display: flex;
   flex-direction: column;
-  height: 214px;
+  height: 202px;
   position: relative; }
   .mobile-wrapper__content-loader {
     position: absolute;
     height: 100%;
     width: 100%;
     left: 0;
-    bottom: 0.4rem; }
+    bottom: -0.8rem; }
     .mobile-wrapper__content-loader svg {
       height: 100%;
       width: 100%; }
