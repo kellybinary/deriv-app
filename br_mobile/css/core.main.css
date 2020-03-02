@@ -10419,7 +10419,6 @@ table {
       position: relative;
       margin-top: 40px; }
       .app-contents .ciq-menu {
-        position: absolute;
         top: 0;
         margin: 0.8rem;
         z-index: 2; }

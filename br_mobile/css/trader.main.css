@@ -3284,6 +3284,25 @@ table {
   .app-contents--show-positions-drawer:not(.app-contents--is-mobile) .trade-container .chart-container__loader .barspinner {
     transform: translate3d(130px, 0, 0) !important; }
 
+.app-contents--is-mobile .top-widgets-portal {
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  z-index: 1; }
+  .app-contents--is-mobile .top-widgets-portal .recent-trade-info {
+    font-weight: bold;
+    min-width: 8rem;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    margin-left: 0.8rem;
+    color: var(--text-general); }
+
+.app-contents--is-mobile .cq-chart-title > .cq-menu-btn {
+  padding: 0.4rem; }
+
 /** @define trade-container; weak */
 .trade-container {
   position: relative;
@@ -3386,14 +3405,14 @@ table {
   padding: 0 0.8rem;
   display: flex;
   flex-direction: column;
-  height: 202px;
+  height: 214px;
   position: relative; }
   .mobile-wrapper__content-loader {
     position: absolute;
     height: 100%;
     width: 100%;
     left: 0;
-    bottom: -0.8rem; }
+    bottom: 0.4rem; }
     .mobile-wrapper__content-loader svg {
       height: 100%;
       width: 100%; }
