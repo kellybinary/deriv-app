@@ -3271,6 +3271,8 @@ table {
 /** @define app-contents; weak */
 .app-contents--show-positions-drawer:not(.app-contents--is-mobile) .trade-container .chart-container {
   width: 100%; }
+  .app-contents--show-positions-drawer:not(.app-contents--is-mobile) .trade-container .chart-container .ciq-navigation-widget {
+    transform: translate3d(248px, 0, 0); }
   .app-contents--show-positions-drawer:not(.app-contents--is-mobile) .trade-container .chart-container .cq-top-ui-widgets {
     transform: translate3d(248px, 0, 0); }
   .app-contents--show-positions-drawer:not(.app-contents--is-mobile) .trade-container .chart-container .cq-chart-controls {
@@ -3372,10 +3374,12 @@ table {
         .trade-container__replay .replay-chart__container .smartcharts .ciq-chart .ciq-asset-information {
           top: 75px; }
         .trade-container__replay .replay-chart__container .smartcharts .ciq-chart .stx_jump_today.home > svg {
-          top: 6px;
+          top: 10px;
           left: 8px;
           padding: 0;
           position: absolute; }
+        .trade-container__replay .replay-chart__container .smartcharts .ciq-chart .ciq-navigation-widget {
+          transition: transform 0.25s ease; }
         .trade-container__replay .replay-chart__container .smartcharts .ciq-chart .cq-bottom-ui-widgets {
           bottom: 30px !important; }
           .trade-container__replay .replay-chart__container .smartcharts .ciq-chart .cq-bottom-ui-widgets .digits {
@@ -3463,10 +3467,10 @@ table {
       .chart-container .cq-context div.ciq-chart div.cq-last-digits {
         bottom: 15px;
         left: calc(45% - 150px); }
-      .chart-container .cq-context div.ciq-chart div.cq-chart-controls {
+      .chart-container .cq-context div.ciq-chart .info-box div.cq-chart-controls {
         box-shadow: none; }
       .chart-container .cq-context div.ciq-chart div.stx_jump_today.home > svg {
-        top: 6px;
+        top: 10px;
         left: 8px;
         padding: 0;
         position: absolute; }
@@ -3486,6 +3490,8 @@ table {
     left: 9em; }
     .chart-container .cq-chart-control-left .cq-top-ui-widgets .info-box {
       transform: translate3d(0, 0, 0); }
+  .chart-container .cq-chart-control-left .ciq-navigation-widget {
+    transform: translate3d(0, 0, 0); }
   .chart-container .ciq-chart .cq-top-ui-widgets,
   .chart-container .ciq-chart .info-box {
     transition: transform 0.25s ease; }
@@ -3521,6 +3527,8 @@ table {
               display: none; } }
   .chart-container .ciq-chart .cq-chart-controls {
     transition: max-width 0.25s ease, transform 0.25s ease; }
+  .chart-container .ciq-chart .ciq-navigation-widget {
+    transform: translate3d(0, 0, 0); }
   .chart-container .chartContainer {
     background: transparent;
     min-height: 100%; }
@@ -3566,6 +3574,11 @@ table {
   transform: translate3d(calc(100% + 1.6em), 0, 0);
   opacity: 0;
   pointer-events: none; }
+
+/** @define smartcharts; weak */
+@media (min-width: 320px) and (max-width: 767px) {
+  .smartcharts-dark .cq-dialog-portal .cq-dialog, .smartcharts-light .cq-dialog-portal .cq-dialog {
+    max-width: calc(100% - 36px); } }
 
 /** @define multistep; weak */
 .multistep__header {
