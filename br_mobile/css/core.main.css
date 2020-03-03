@@ -10365,15 +10365,16 @@ table {
     -ms-scroll-chaining: none;
         overscroll-behavior: none;
     z-index: 2; }
-    .deriv-app .dc-toast-error {
-      top: 4.8rem;
-      z-index: 3;
-      width: -webkit-fit-content;
-      width: -moz-fit-content;
-      width: fit-content;
-      margin: auto; }
   .modal-root {
-    height: 100% !important; } }
+    height: 100% !important; }
+  .deriv-app .dc-toast-error,
+  .modal-root .dc-toast-error {
+    top: 4.8rem;
+    z-index: 3;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: auto; } }
 
 /* enable temporary landscape blocker UI in landscape */
 @media only screen and (min-width: 320px) and (max-width: 1023px) and (orientation: landscape) {
