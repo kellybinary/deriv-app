@@ -844,6 +844,10 @@
     max-height: calc(100vh - 48px - 36px);
     max-width: 90vw; } }
 
+@media (min-width: 320px) and (max-width: 767px) {
+  .dc-modal__container {
+    width: calc(100vw - 3.2rem) !important; } }
+
 .dc-modal-header {
   display: flex;
   justify-content: space-between;
@@ -1399,6 +1403,8 @@ html,
     cursor: pointer; }
   .link--white {
     color: #ffffff; }
+  .link--right {
+    float: right; }
 
 /** @define icon */
 .icon--centered {
@@ -3899,13 +3905,18 @@ html,
   align-items: center;
   width: 100%; }
 
+@media (min-width: 320px) and (max-width: 767px) {
+  .dc-dialog__footer {
+    flex-wrap: wrap; } }
+
 .dc-dialog__button {
   margin: 0.4em; }
 
 @media screen and (max-width: 560px) {
   .dc-dialog__dialog {
     width: 100vw;
-    height: 100vh; } }
+    height: 100vh;
+    min-width: 100vw; } }
 
 /*------------------------------------*
  *  # Constants
@@ -4988,6 +4999,9 @@ html,
   background: var(--general-section-2);
   transition: all 0.2s ease-out; }
 
+.dc-mobile-dialog__content > div {
+  height: 100%; }
+
 .dc-mobile-dialog__header {
   box-sizing: border-box;
   display: flex;
@@ -5552,6 +5566,8 @@ html,
     cursor: pointer; }
   .link--white {
     color: #ffffff; }
+  .link--right {
+    float: right; }
 
 /** @define icon */
 .icon--centered {
@@ -7028,6 +7044,8 @@ html,
     cursor: pointer; }
   .link--white {
     color: #ffffff; }
+  .link--right {
+    float: right; }
 
 /** @define icon */
 .icon--centered {
@@ -7318,6 +7336,8 @@ html,
     cursor: pointer; }
   .link--white {
     color: #ffffff; }
+  .link--right {
+    float: right; }
 
 /** @define icon */
 .icon--centered {
@@ -7578,6 +7598,8 @@ html,
     cursor: pointer; }
   .link--white {
     color: #ffffff; }
+  .link--right {
+    float: right; }
 
 /** @define icon */
 .icon--centered {
@@ -7838,6 +7860,8 @@ html,
     cursor: pointer; }
   .link--white {
     color: #ffffff; }
+  .link--right {
+    float: right; }
 
 /** @define icon */
 .icon--centered {
@@ -8134,6 +8158,8 @@ html,
     cursor: pointer; }
   .link--white {
     color: #ffffff; }
+  .link--right {
+    float: right; }
 
 /** @define icon */
 .icon--centered {
@@ -8363,6 +8389,8 @@ html,
     cursor: pointer; }
   .link--white {
     color: #ffffff; }
+  .link--right {
+    float: right; }
 
 /** @define icon */
 .icon--centered {
@@ -8790,6 +8818,8 @@ html,
     cursor: pointer; }
   .link--white {
     color: #ffffff; }
+  .link--right {
+    float: right; }
 
 /** @define icon */
 .icon--centered {
@@ -9388,6 +9418,8 @@ html,
     cursor: pointer; }
   .link--white {
     color: #ffffff; }
+  .link--right {
+    float: right; }
 
 /** @define icon */
 .icon--centered {
@@ -9420,11 +9452,9 @@ html,
 .notification-messages {
   z-index: 4;
   position: absolute;
-  right: 0;
-  top: 8px; }
+  right: 0; }
   @media (min-width: 320px) and (max-width: 767px) {
     .notification-messages {
-      z-index: 99;
       left: 1.6rem;
       right: 1.6rem; } }
 
@@ -9764,6 +9794,8 @@ html,
     cursor: pointer; }
   .link--white {
     color: #ffffff; }
+  .link--right {
+    float: right; }
 
 /** @define icon */
 .icon--centered, .datepicker__icon {
@@ -10420,9 +10452,10 @@ table {
   @media (min-width: 320px) and (max-width: 767px) {
     .app-contents {
       margin-bottom: 0;
-      height: calc(100vh - 40px);
+      height: calc(100% - 40px);
       position: relative;
-      margin-top: 40px; }
+      margin-top: 40px;
+      overflow-y: auto; }
       .app-contents .ciq-menu {
         top: 0;
         margin: 0.8rem;

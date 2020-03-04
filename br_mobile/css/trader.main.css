@@ -2030,10 +2030,16 @@ html,
   .profit-table__row {
     /*                     icon   refId buy_time  buy_price sell_time  sell_price profit/loss */
     grid-template-columns: 0.8fr 1.2fr 1fr 0.8fr 1fr 1fr 1fr; }
-  .profit-table .buy_price,
-  .profit-table .sell_price,
-  .profit-table .profit_loss {
-    justify-content: flex-end; }
+  @media (min-width: 1024px) {
+    .profit-table .buy_price,
+    .profit-table .sell_price,
+    .profit-table .profit_loss {
+      justify-content: flex-end; } }
+  @media (min-width: 320px) and (max-width: 767px) {
+    .profit-table .buy_price,
+    .profit-table .sell_price,
+    .profit-table .profit_loss {
+      justify-content: center; } }
   .profit-table .sell_time,
   .profit-table .purchase_time {
     text-align: left; }
@@ -2097,7 +2103,6 @@ html,
       .open-positions__data-list-body, .open-positions__data-list-footer {
         padding: 0 24px; }
       .open-positions__data-list-body {
-        height: 100%;
         height: calc(100% - 95px); }
         .open-positions__data-list-body .dc-progress-bar__container {
           max-width: 120px; }
