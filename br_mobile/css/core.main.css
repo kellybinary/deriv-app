@@ -817,7 +817,7 @@
 @media (min-width: 320px) and (max-width: 767px) {
   .dc-modal__container--is-vertical-bottom {
     left: 1.6rem;
-    width: calc(100vw - 3.2rem) !important; } }
+    width: calc(100vw - 4.8rem) !important; } }
 
 .dc-modal__container--hide {
   display: none; }
@@ -846,7 +846,7 @@
 
 @media (min-width: 320px) and (max-width: 767px) {
   .dc-modal__container {
-    width: calc(100vw - 3.2rem) !important; } }
+    width: calc(100vw - 4.8rem) !important; } }
 
 .dc-modal-header {
   display: flex;
@@ -4674,11 +4674,27 @@ html,
 /**
  * Define Breakpoints here.
  */
+.dc-page-overlay-portal {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 48px;
+  transition: transform 0.25s cubic-bezier(0.25, 0.1, 0.1, 0.25), opacity 0.25s cubic-bezier(0.25, 0.1, 0.1, 0.25);
+  background-color: var(--general-main-2); }
+
 @media (min-width: 320px) and (max-width: 767px) {
-  .dc-page-overlay {
-    display: flex;
-    flex-direction: column;
-    height: 100%; } }
+  .dc-page-overlay-portal {
+    top: 40px; } }
+
+.dc-page-overlay--enter, .dc-page-overlay--exit {
+  transform: translateY(50px);
+  opacity: 0;
+  pointer-events: none; }
+
+.dc-page-overlay--enter-done {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto; }
 
 .dc-page-overlay__header {
   position: -webkit-sticky;
@@ -4722,7 +4738,8 @@ html,
 
 .dc-page-overlay__content {
   padding: 2.4rem 0 0;
-  display: flex; }
+  display: flex;
+  background-color: var(--general-main-1); }
 
 .dc-page-overlay__content-side-note {
   min-width: 256px;
@@ -4741,6 +4758,12 @@ html,
 @media (min-width: 320px) and (max-width: 767px) {
   .dc-page-overlay__header-wrapper, .dc-page-overlay__content {
     width: 100%; } }
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .dc-page-overlay {
+    display: flex;
+    flex-direction: column;
+    height: 100%; } }
 
 /*------------------------------------*
  *  # Constants
