@@ -3414,14 +3414,14 @@ table {
   padding: 0 0.8rem;
   display: flex;
   flex-direction: column;
-  height: 214px;
+  height: 202px;
   position: relative; }
   .mobile-wrapper__content-loader {
     position: absolute;
     height: 100%;
     width: 100%;
     left: 0;
-    bottom: 0.4rem; }
+    bottom: -0.8rem; }
     .mobile-wrapper__content-loader svg {
       height: 100%;
       width: 100%; }
@@ -3534,6 +3534,27 @@ table {
     transition: max-width 0.25s ease, transform 0.25s ease; }
   .chart-container .ciq-chart .ciq-navigation-widget {
     transform: translate3d(0, 0, 0); }
+  @media (min-width: 320px) and (max-width: 767px) {
+    .chart-container .ciq-chart .ciq-toolbar-widget {
+      background: transparent;
+      border-width: 0;
+      bottom: 2.8rem;
+      /* postcss-bem-linter: ignore */ }
+      .chart-container .ciq-chart .ciq-toolbar-widget .ciq-chart-mode {
+        background: var(--general-section-1);
+        padding: 0.4rem 0.2rem;
+        width: 4rem;
+        height: 4rem;
+        display: flex;
+        border-radius: 50%;
+        justify-content: center;
+        align-items: center;
+        margin: 0.8rem; }
+        .chart-container .ciq-chart .ciq-toolbar-widget .ciq-chart-mode__menu__timeperiod {
+          top: 0.8rem;
+          left: 0.8rem; }
+        .chart-container .ciq-chart .ciq-toolbar-widget .ciq-chart-mode__menu > .ic-icon {
+          top: 0.6rem; } }
   .chart-container .chartContainer {
     background: transparent;
     min-height: 100%; }
@@ -3581,9 +3602,38 @@ table {
   pointer-events: none; }
 
 /** @define smartcharts; weak */
+/* postcss-bem-linter: ignore */
 @media (min-width: 320px) and (max-width: 767px) {
-  .smartcharts-dark .cq-dialog-portal .cq-dialog, .smartcharts-light .cq-dialog-portal .cq-dialog {
-    max-width: calc(100% - 36px); } }
+  .smartcharts-dark, .smartcharts-light {
+    /** @define ciq-chart-mode; weak */ }
+    .smartcharts-dark .cq-dialog-portal, .smartcharts-light .cq-dialog-portal {
+      /* postcss-bem-linter: ignore */ }
+      .smartcharts-dark .cq-dialog-portal .cq-dialog, .smartcharts-light .cq-dialog-portal .cq-dialog {
+        max-width: calc(100% - 36px); }
+    .smartcharts-dark .ciq-chart-mode, .smartcharts-light .ciq-chart-mode {
+      /* postcss-bem-linter: ignore */ }
+      .smartcharts-dark .ciq-chart-mode__section__item, .smartcharts-light .ciq-chart-mode__section__item {
+        /* postcss-bem-linter: ignore */ }
+        .smartcharts-dark .ciq-chart-mode__section__item .cq-interval, .smartcharts-light .ciq-chart-mode__section__item .cq-interval {
+          display: grid;
+          padding: 1.6rem;
+          grid-template-columns: 1fr;
+          /* postcss-bem-linter: ignore */
+          /* postcss-bem-linter: ignore */
+          /* postcss-bem-linter: ignore */ }
+          .smartcharts-dark .ciq-chart-mode__section__item .cq-interval__content, .smartcharts-light .ciq-chart-mode__section__item .cq-interval__content {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            padding-top: 16px; }
+          .smartcharts-dark .ciq-chart-mode__section__item .cq-interval__item, .smartcharts-light .ciq-chart-mode__section__item .cq-interval__item {
+            width: 100% !important;
+            margin: 0;
+            /* postcss-bem-linter: ignore */ }
+            .smartcharts-dark .ciq-chart-mode__section__item .cq-interval__item .tooltip, .smartcharts-light .ciq-chart-mode__section__item .cq-interval__item .tooltip {
+              display: none; }
+          .smartcharts-dark .ciq-chart-mode__section__item .cq-interval__info, .smartcharts-light .ciq-chart-mode__section__item .cq-interval__info {
+            margin-top: 0.4rem;
+            padding-left: 0.2rem; } }
 
 /** @define multistep; weak */
 .multistep__header {
@@ -4194,7 +4244,13 @@ table {
   flex-direction: column;
   text-decoration: none;
   position: relative;
-  color: var(--text-general); }
+  color: var(--text-general);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: transparent; }
   .positions-modal-card__result--enter, .positions-modal-card__result--exit {
     opacity: 0; }
   .positions-modal-card__result--enter-done {
@@ -4400,6 +4456,9 @@ table {
     margin-top: 2rem;
     height: calc(100% - 36px);
     text-decoration: none; }
+  @media (min-width: 320px) and (max-width: 767px) {
+    .result__caption {
+      pointer-events: none; } }
 
 .result__close-btn {
   position: absolute;
@@ -5593,7 +5652,22 @@ table {
       .btn-purchase--disabled, .btn-purchase[disabled] {
         opacity: 0.32; }
       .btn-purchase--swoosh {
-        transform: none !important; } }
+        transform: none !important; }
+      .btn-purchase__error {
+        position: absolute;
+        padding: 0.8rem;
+        width: 100%;
+        height: 100%;
+        color: var(--text-colored-background);
+        background-color: var(--status-danger);
+        justify-content: center;
+        align-items: center;
+        line-height: 1.4;
+        z-index: 2;
+        border-radius: 4px;
+        max-height: 70px;
+        overflow: hidden;
+        font-weight: bold; } }
   .btn-purchase__icon_wrapper {
     /* postcss-bem-linter: ignore */
     /* postcss-bem-linter: ignore */ }
@@ -6924,7 +6998,8 @@ table {
     @media (min-width: 320px) and (max-width: 767px) {
       .purchase-container__option {
         padding: 0;
-        padding: initial; } }
+        padding: initial;
+        position: relative; } }
   .purchase-container__loading {
     background: rgba(255, 255, 255, 0.6);
     border-radius: 4px;
