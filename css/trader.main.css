@@ -4555,11 +4555,11 @@ table {
   color: var(--text-prominent);
   /* postcss-bem-linter: ignore */ }
   .contract-audit__wrapper-tabs--active {
-    max-height: calc(calc(100vh - 32.6em) - 96px); }
+    max-height: calc(calc(100vh - 34em) - 96px); }
   .contract-audit__wrapper-tabs--expired {
-    max-height: calc(calc(100vh - 32.6em) - 48px); }
+    max-height: calc(calc(100vh - 34em) - 48px); }
   .contract-audit__wrapper .dc-tabs {
-    height: inherit;
+    height: 100%;
     grid-template-rows: 1fr 20fr; }
 
 .contract-audit__grid {
