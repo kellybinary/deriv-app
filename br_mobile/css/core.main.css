@@ -817,7 +817,7 @@
 @media (min-width: 320px) and (max-width: 767px) {
   .dc-modal__container--is-vertical-bottom {
     left: 1.6rem;
-    width: calc(100vw - 4.8rem) !important; } }
+    width: calc(100vw - 3.2rem) !important; } }
 
 .dc-modal__container--hide {
   display: none; }
@@ -846,7 +846,7 @@
 
 @media (min-width: 320px) and (max-width: 767px) {
   .dc-modal__container {
-    width: calc(100vw - 4.8rem) !important; } }
+    max-width: calc(100vw - 3.2rem) !important; } }
 
 .dc-modal-header {
   display: flex;
