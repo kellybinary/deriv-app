@@ -10459,7 +10459,7 @@ table {
     margin: auto; } }
 
 /* enable temporary landscape blocker UI in landscape */
-@media only screen and (min-width: 320px) and (max-width: 1023px) and (orientation: landscape) {
+@media only screen and (orientation: landscape) and (min-width: 320px) and (max-width: 1023px) {
   /** @define landscape-blocker; weak */
   .landscape-blocker {
     position: fixed;
@@ -10482,7 +10482,7 @@ table {
     .landscape-blocker__message {
       padding: 1.6rem 11rem;
       line-height: 1.4; } }
-  @media only screen and (min-width: 320px) and (max-width: 1023px) and (orientation: landscape) and (pointer: coarse) {
+  @media only screen and (orientation: landscape) and (min-width: 320px) and (max-width: 1023px) and (pointer: coarse) {
     .landscape-blocker {
       display: flex !important; } }
 
