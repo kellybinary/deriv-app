@@ -10459,7 +10459,7 @@ table {
     margin: auto; } }
 
 /* enable temporary landscape blocker UI in landscape */
-@media (min-width: 320px) and (max-width: 1023px) and (orientation: landscape) {
+@media only screen and (min-width: 320px) and (max-width: 1023px) and (orientation: landscape) {
   /** @define landscape-blocker; weak */
   .landscape-blocker {
     position: fixed;
@@ -10476,13 +10476,15 @@ table {
     font-size: 1.6rem;
     z-index: 9999;
     font-weight: bold; }
+    .landscape-blocker--keyboard {
+      display: none !important; }
     .landscape-blocker__icon {
       width: 59px;
       height: 64px; }
     .landscape-blocker__message {
       padding: 1.6rem 11rem;
       line-height: 1.4; } }
-  @media (min-width: 320px) and (max-width: 1023px) and (orientation: landscape) and (pointer: coarse) {
+  @media only screen and (min-width: 320px) and (max-width: 1023px) and (orientation: landscape) and (pointer: coarse) {
     .landscape-blocker {
       display: flex !important; } }
 
