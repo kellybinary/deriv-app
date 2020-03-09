@@ -10475,7 +10475,8 @@ table {
     color: var(--text-prominent);
     font-size: 1.6rem;
     z-index: 9999;
-    font-weight: bold; }
+    font-weight: bold;
+    display: none; }
     .landscape-blocker--keyboard {
       display: none !important; }
     .landscape-blocker__icon {
