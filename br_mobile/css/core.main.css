@@ -10477,7 +10477,7 @@ table {
     z-index: 9999;
     font-weight: bold;
     display: none; }
-    .landscape-blocker--keyboard {
+    .landscape-blocker--keyboard-visible {
       display: none !important; }
     .landscape-blocker__icon {
       width: 59px;
