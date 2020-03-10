@@ -5019,6 +5019,10 @@ html,
 .dc-mobile-dialog--enter-done .dc-mobile-dialog__header {
   transform: translateY(0); }
 
+.dc-mobile-dialog__container--has-scroll {
+  overflow-x: hidden;
+  overflow-y: auto; }
+
 .dc-mobile-dialog__content {
   margin-top: 0.4rem;
   box-sizing: border-box;
@@ -5264,6 +5268,7 @@ html,
         top: unset;
         left: unset;
         box-shadow: none;
+        height: 100%;
         width: 100%;
         background: var(--general-section-2); } }
   .notifications-empty {
@@ -5825,7 +5830,11 @@ html,
       color: var(--text-prominent);
       flex: 1; }
     .acc-switcher__list-wrapper {
-      padding: 0.4em 0.8em 0; }
+      padding: 0.4rem 0.8rem 0; }
+    .acc-switcher__list-container {
+      height: auto;
+      overflow-x: hidden;
+      overflow-y: auto; }
   .acc-switcher__accounts {
     border-radius: 4px;
     background: var(--general-main-2);
