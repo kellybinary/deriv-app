@@ -4205,8 +4205,34 @@ html,
 /**
  * Define Breakpoints here.
  */
+.dc-themed-scrollbars__track--horizontal {
+  height: 6px;
+  right: 2px;
+  bottom: 2px;
+  left: 2px;
+  border-radius: 3px; }
+
+.dc-themed-scrollbars__track--vertical {
+  width: 6px;
+  right: 2px;
+  bottom: 2px;
+  top: 2px;
+  border-radius: 3px; }
+
+.dc-themed-scrollbars__thumb--horizontal {
+  border-radius: inherit;
+  background-color: var(--state-active); }
+
+.dc-themed-scrollbars__thumb--vertical {
+  border-radius: inherit;
+  background-color: var(--state-active); }
+
 .dc-table {
-  color: var(--text-general); }
+  color: var(--text-general);
+  background: inherit; }
+
+.dc-table * {
+  background: inherit; }
 
 .dc-table__row {
   display: grid;
@@ -4224,7 +4250,14 @@ html,
   font-size: 1.4rem;
   line-height: 1.43;
   display: flex;
-  align-items: center; }
+  align-items: center;
+  white-space: unset;
+  text-align: left;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  word-wrap: break-word;
+  word-break: break-word;
+  word-wrap: break-word; }
 
 .dc-table__cell {
   border-bottom: 1px solid var(--general-section-1); }
@@ -4233,12 +4266,24 @@ html,
   display: flex;
   justify-content: flex-end; }
 
+.dc-table__cell--fixed {
+  position: -webkit-sticky;
+  position: sticky;
+  left: 0;
+  z-index: 2; }
+
 .dc-table__head {
   font-weight: bold; }
 
 .dc-table__head--right {
   display: flex;
   justify-content: flex-end; }
+
+.dc-table--scroll .dc-table__header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 3; }
 
 /*------------------------------------*
  *  # Constants
