@@ -6954,7 +6954,7 @@ table {
   .dc-mobile-dialog__contracts-modal-list .category-wrapper {
     background-color: var(--general-main-1) !important; }
 
-/** @define trade-container */
+/** @define trade-container; weak */
 .trade-container {
   background: var(--general-main-1);
   /* postcss-bem-linter: ignore */ }
@@ -6965,7 +6965,6 @@ table {
     background-color: var(--general-section-1);
     border-color: var(--general-section-1);
     color: var(--text-general);
-    /* postcss-bem-linter: ignore */
     /* postcss-bem-linter: ignore */ }
     @media (min-width: 320px) and (max-width: 767px) {
       .trade-container__fieldset {
@@ -7006,8 +7005,7 @@ table {
       width: fit-content;
       margin-left: auto; }
     .trade-container__fieldset .dc-datepicker {
-      margin-top: 0.8rem;
-      /* postcss-bem-linter: ignore */ }
+      margin-top: 0.8rem; }
       .trade-container__fieldset .dc-datepicker .dc-input {
         border: 1px solid var(--fill-normal); }
         .trade-container__fieldset .dc-datepicker .dc-input__field {

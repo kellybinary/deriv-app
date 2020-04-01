@@ -7597,7 +7597,7 @@ html,
   padding: 0 0.4rem;
   font-size: 1.4rem;
   transform: none;
-  background-color: var(--fill-normal);
+  background-color: var(--general-section-2);
   color: var(--text-less-prominent); }
 
 .dc-select-native__placeholder--has-value {
@@ -8988,7 +8988,7 @@ html,
   @media (min-width: 320px) and (max-width: 767px) {
     .terms-of-use {
       overflow-x: hidden;
-      margin: 70px 0 0;
+      margin: 40px 0 0;
       padding: 0 2.4rem 2.4rem;
       overflow-y: auto; }
       .terms-of-use .dc-checkbox__box {
