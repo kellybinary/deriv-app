@@ -8229,6 +8229,11 @@ html,
 .dc-calendar__btn--disabled .dc-calendar__icon {
   cursor: default; }
 
+.dc-calendar__btn--is-hidden {
+  opacity: 0;
+  cursor: auto;
+  cursor: initial; }
+
 .dc-calendar__btn--select {
   font-size: 1.4rem;
   color: var(--text-general);
