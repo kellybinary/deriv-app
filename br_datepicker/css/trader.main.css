@@ -878,6 +878,9 @@ html,
     height: 100%;
     padding-top: 24px;
     padding-bottom: 64px; }
+    .account__scrollbars_container-wrapper {
+      overflow-x: hidden;
+      overflow-y: auto; }
     .account__scrollbars_container--grid-layout {
       display: grid;
       grid-gap: 4px; }
@@ -899,6 +902,11 @@ html,
       .account__scrollbars_container {
         padding-left: 16px;
         padding-right: 16px; } }
+    @media (min-width: 320px) and (max-width: 767px) {
+      .account__scrollbars_container {
+        height: unset;
+        padding-top: unset;
+        padding-bottom: unset; } }
   .account-form {
     overflow: hidden;
     height: 100%;
@@ -995,7 +1003,9 @@ html,
             margin-left: 1.6rem; } }
         @media (min-width: 320px) and (max-width: 767px) {
           .account-form__footer-btn {
-            margin: 0 1.6rem; } }
+            margin: 0 1.6rem; }
+            .account-form__footer-btn--has-bottom-margin {
+              margin-bottom: 1.6rem; } }
       @media (min-width: 320px) and (max-width: 767px) {
         .account-form__footer {
           padding: 16px 0px;
@@ -3808,7 +3818,8 @@ table {
   .send-email-template__subtitle {
     font-size: 1.4rem;
     margin-bottom: 1.6rem;
-    color: var(--text-general); }
+    color: var(--text-general);
+    line-height: 20px; }
   .send-email-template__icon {
     margin-top: 5.6rem;
     margin-bottom: 1.6rem; }
@@ -3818,6 +3829,9 @@ table {
     margin: 3.2rem auto 0; }
   .send-email-template__btn {
     margin: 0 auto; }
+  @media (min-width: 320px) and (max-width: 767px) {
+    .send-email-template {
+      margin-bottom: 1.6rem; } }
 
 .contract-drawer {
   width: 240px;

@@ -4157,7 +4157,6 @@
 
 @media (min-width: 320px) and (max-width: 767px) {
   .dc-page-overlay__header-title {
-    color: var(--text-general);
     font-size: 1.6rem; } }
 
 .dc-page-overlay__header-close {
@@ -4165,6 +4164,9 @@
   height: 16px;
   position: absolute;
   right: 0; }
+
+.dc-page-overlay__header-close .dc-icon {
+  --fill-color1: var(--text-prominent); }
 
 @media (min-width: 320px) and (max-width: 767px) {
   .dc-page-overlay__header-close {
@@ -5665,7 +5667,8 @@ html,
 .dc-mobile-dialog__close-btn-icon {
   margin: 1.2rem 0.4rem;
   width: 1.6rem;
-  height: 1.6rem; }
+  height: 1.6rem;
+  --fill-color1: var(--text-prominent) !important; }
 
 /*------------------------------------*
  *  # Constants
