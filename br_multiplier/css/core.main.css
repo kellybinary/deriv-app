@@ -4487,7 +4487,7 @@
   padding: 0 0.4rem;
   margin: 0 0.4rem;
   background-color: var(--text-loss-danger);
-  color: #fff;
+  color: var(--status-colored-background);
   border-radius: 8px; }
 
 .dc-vertical-tab__header--floating, .dc-vertical-tab__header-group--floating {
