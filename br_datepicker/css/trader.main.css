@@ -7160,7 +7160,8 @@ table {
       .trade-container__fieldset .dc-datepicker .dc-input {
         border: 1px solid var(--fill-normal); }
         .trade-container__fieldset .dc-datepicker .dc-input__field {
-          height: 3.2rem; }
+          height: 3.2rem;
+          margin-bottom: 0; }
   .trade-container__input {
     align-self: center;
     -webkit-appearance: none;
