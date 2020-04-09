@@ -1026,6 +1026,8 @@ html,
         margin-bottom: 1.6rem; }
       .account-form__personal-details .dc-checkbox__label {
         font-size: 1.2rem; }
+      .account-form__personal-details .dc-select-native__placeholder {
+        background-color: var(--general-main-1); }
       .account-form__personal-details .date-of-birth-datepicker .datepicker-native__input {
         height: 3.8rem; } }
     .account-form__occupation .dc-native-select__select,
@@ -7158,10 +7160,10 @@ table {
     .trade-container__fieldset .dc-datepicker {
       margin-top: 0.8rem; }
       .trade-container__fieldset .dc-datepicker .dc-input {
-        border: 1px solid var(--fill-normal); }
+        border: 1px solid var(--fill-normal);
+        margin-bottom: 0; }
         .trade-container__fieldset .dc-datepicker .dc-input__field {
-          height: 3.2rem;
-          margin-bottom: 0; }
+          height: 3.2rem; }
   .trade-container__input {
     align-self: center;
     -webkit-appearance: none;
