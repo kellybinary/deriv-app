@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/br_datepicker/precache-manifest.9f714ac60216562131f3b50a67874cfc.js"
+  "/br_datepicker/precache-manifest.0f90b12d707eecf28e2292aab2297064.js"
 );
 
 workbox.core.skipWaiting();
