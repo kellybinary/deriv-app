@@ -8528,7 +8528,7 @@ html,
 .dc-calendar__cell--disabled:hover {
   cursor: default; }
 
-.dc-calendar__cell--disabled:not(.dc-calendar__cell--today), .dc-calendar__cell--other:not(.dc-calendar__cell--today):not(.dc-calendar__cell--active) {
+.dc-calendar__cell--disabled:not(.dc-calendar__cell--today):not(.dc-calendar__cell--between-hover):not(.dc-calendar__cell--between), .dc-calendar__cell--other:not(.dc-calendar__cell--today):not(.dc-calendar__cell--active) {
   color: var(--text-disabled);
   transition: none; }
 
@@ -8537,7 +8537,7 @@ html,
 
 .dc-calendar__cell--today {
   font-weight: 400;
-  border: 1px solid var(--text-general); }
+  border: 1px solid var(--state-active); }
 
 .dc-calendar__cell--today-duration {
   background: var(--state-active); }
