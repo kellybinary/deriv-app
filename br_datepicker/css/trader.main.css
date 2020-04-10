@@ -6156,6 +6156,9 @@
 .input-field .input-wrapper__icon {
   top: 6px; }
 
+.input-field--has-error .dc-input {
+  border: 1px solid #e31c4b !important; }
+
 /** @define purchase-container; weak */
 .purchase-container {
   position: relative; }
