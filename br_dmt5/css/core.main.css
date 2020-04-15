@@ -1713,7 +1713,7 @@
 
 .dc-dropdown__hint {
   color: var(--text-less-prominent);
-  font-size: 1.2rem;
+  font-size: var(--text-size-xxs);
   margin-left: 1.2rem; }
 
 .dc-dropdown--no-margin .dc-dropdown__display {
@@ -1752,7 +1752,7 @@
 
 .dc-dropdown__list {
   left: 0;
-  bottom: -0.8rem;
+  bottom: -0.4rem;
   height: 0;
   width: 100%;
   position: absolute;
@@ -1857,7 +1857,7 @@
 .dc-list {
   position: absolute;
   width: 100%;
-  max-height: 200px;
+  max-height: 404px;
   overflow-y: auto;
   z-index: 2;
   border-radius: 4px;
@@ -1875,11 +1875,11 @@
   text-align: center; }
 
 .dc-list__label {
-  padding: 0.6rem;
+  padding: 1.6rem 0.8rem 0.8rem;
   font-size: 1.4rem;
   font-weight: bold;
-  color: var(--brand-red-coral);
-  height: 3.6rem;
+  color: var(--text-prominent);
+  height: 4rem;
   display: flex;
   align-items: center;
   justify-content: center; }
@@ -1898,19 +1898,32 @@
   line-height: 1.43;
   color: var(--text-general);
   display: flex;
-  width: 100%;
+  width: calc(100% - 1.6rem);
   justify-content: center;
   pointer-events: none;
   vertical-align: middle;
-  padding: 0.6rem 1.6rem; }
+  padding: 1rem 1.6rem;
+  margin: 0 0.8rem; }
+
+.dc-list__item:last-child {
+  margin-bottom: 1.6rem; }
 
 .dc-list__item-text--left {
   justify-content: flex-start;
   padding-left: 1em; }
 
-.dc-list__item:not(.dc-list__item--disabled):hover {
+.dc-list__item:not(.dc-list__item--disabled):not(.dc-list__item--selected):hover {
   background-color: var(--state-hover);
-  color: var(--text-general); }
+  color: var(--text-general);
+  border-radius: 4px;
+  width: calc(100% - 1.6rem);
+  margin-left: 0.8rem;
+  margin-right: 0.8rem; }
+
+.dc-list__item:not(.dc-list__item--disabled):not(.dc-list__item--selected):hover .dc-list__item-text, .dc-list__item:not(.dc-list__item--disabled):not(.dc-list__item--selected):hover .dc-list__item--symbol {
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0; }
 
 .dc-list__item--selected .dc-list__item-text, .dc-list__item--selected .dc-list__item-symbol, .dc-list__item--selected .dc-list__item-tooltip {
   font-size: 1.4rem;
@@ -1921,7 +1934,8 @@
   line-height: 1.5;
   line-height: 1.43;
   color: var(--text-prominent);
-  background: var(--state-active); }
+  background: var(--state-active);
+  border-radius: 4px; }
 
 .dc-list__item--highlighted:not(.dc-list__item--disabled) {
   background-color: var(--state-hover);
@@ -1949,9 +1963,9 @@
 
 .dc-list__separator {
   display: flex;
-  width: calc(100% - 3.2rem);
-  border-bottom: 1px solid var(--border-normal);
-  margin: 1.6rem; }
+  width: 100%;
+  border-bottom: 4px solid var(--general-section-2);
+  margin: 1.6rem 0 0; }
 
 @media not all and (min-resolution: 0.001dpcm) {
   @supports (-webkit-appearance: none) {
@@ -4394,7 +4408,8 @@
   text-align: center;
   font-size: var(--text-size-m);
   color: var(--text-prominent);
-  font-weight: bold; }
+  font-weight: bold;
+  line-height: 1.5; }
 
 @media (min-width: 320px) and (max-width: 767px) {
   .dc-page-overlay__header-title {
@@ -4600,7 +4615,7 @@
   width: 100%; }
 
 .dc-vertical-tab--full-screen.dc-vertical-tab--floating {
-  min-height: calc( 100vh - 48px - 36px - 41px - 2.4rem); }
+  min-height: calc( 100vh - 48px - 36px - 53px - 2.4rem); }
 
 .dc-vertical-tab:not(.dc-vertical-tab--full-screen):not(.dc-vertical-tab--floating) .dc-vertical-tab__content {
   padding: 2.4rem; }
@@ -6890,11 +6905,9 @@ html,
       margin-left: 8px;
       cursor: pointer; }
   .acc-switcher__balance {
-    color: var(--status-success);
+    color: var(--text-prominent);
     margin-left: auto;
     font-weight: normal; }
-    .acc-switcher__balance--virtual {
-      color: var(--text-prominent); }
   .acc-switcher__separator {
     height: 4px;
     background-color: var(--general-section-2); }
@@ -13160,14 +13173,6 @@ table {
 /** @define cashier; weak */
 .cashier {
   /** @define cashier-error */ }
-  @media (min-width: 320px) and (max-width: 767px) {
-    .cashier-page-wrapper {
-      /* postcss-bem-linter: ignore */ }
-      .cashier-page-wrapper .dc-page-overlay__header {
-        position: fixed;
-        top: 4rem;
-        width: 100%;
-        height: 4rem; } }
   .cashier__counter {
     position: absolute;
     top: 0.4rem;
@@ -13175,6 +13180,13 @@ table {
   .cashier__content {
     width: 100%;
     background: var(--status-default); }
+    .cashier__content-header {
+      text-align: center;
+      margin-bottom: 3.2rem; }
+      @media (min-width: 320px) and (max-width: 767px) {
+        .cashier__content-header {
+          padding-top: 1.6rem;
+          margin-bottom: 0; } }
   .cashier__wrapper {
     text-align: center; }
     .cashier__wrapper, .cashier__wrapper--align-left {
@@ -13224,20 +13236,17 @@ table {
     font-size: 1.6rem;
     line-height: 1.5;
     font-weight: bold;
-    margin-bottom: 1.6rem;
-    margin-top: 1.6rem;
     color: var(--text-prominent); }
+    .cashier__header:not(.cashier__content-header) {
+      margin-bottom: 1.6rem;
+      margin-top: 1.6rem; }
     @media (min-width: 320px) and (max-width: 767px) {
       .cashier__header {
         font-size: 1.4rem; } }
   .cashier__form-submit {
     display: flex;
     justify-content: flex-end;
-    width: 100%;
-    margin-left: -2.4rem;
-    bottom: 0;
-    height: 8rem;
-    overflow: hidden; }
+    width: 100%; }
   .cashier__form-error {
     flex: 1;
     margin: 2rem 5.6rem 4.4rem 0;
@@ -13253,8 +13262,19 @@ table {
       z-index: 0; }
     .cashier__form-error-small-icon {
       margin: 2rem 1.6rem 4.4rem 2.4rem; }
+    .cashier__form-error-wrapper {
+      display: flex;
+      margin-right: auto; }
+      .cashier__form-error-wrapper .cashier__form-error,
+      .cashier__form-error-wrapper .cashier__form-error-small-icon {
+        margin-top: 5.8rem;
+        margin-bottom: 0; }
+      .cashier__form-error-wrapper .cashier__form-error-small-icon {
+        margin-left: 0.8rem; }
+      .cashier__form-error-wrapper .cashier__form-error-icon {
+        bottom: 21rem; }
   .cashier__form-submit-button {
-    margin: 1.6rem 2.4rem 2.4rem; }
+    margin: 3.2rem 0 2.4rem 2.4rem; }
   @media (min-width: 320px) and (max-width: 767px) {
     .cashier__form-submit {
       margin: 0;
@@ -13278,14 +13298,14 @@ table {
         margin-right: 0.8rem; } }
   .cashier__input {
     display: inline-block !important;
-    margin-bottom: 0; }
+    margin-bottom: 0 !important; }
     .cashier__input--short {
       width: 29rem; }
     .cashier__input--long {
       width: 100%; }
     @media (min-width: 320px) and (max-width: 767px) {
       .cashier__input {
-        margin-bottom: 3.2rem; } }
+        margin-bottom: 3.2rem !important; } }
   .cashier__drop-down {
     display: inline-block;
     min-width: 20.3rem;
@@ -13312,27 +13332,35 @@ table {
         line-height: 1.43;
         display: flex;
         align-items: center; }
+      .cashier__drop-down-display .cashier__drop-down-display-brackets:before {
+        content: '('; }
+      .cashier__drop-down-display .cashier__drop-down-display-brackets:after {
+        content: ')'; }
+      @media (min-width: 320px) and (max-width: 767px) {
+        .cashier__drop-down-display {
+          min-height: auto;
+          min-width: auto; } }
     .cashier__drop-down-items, .cashier__drop-down-label {
       justify-content: left; }
     .cashier__drop-down-label {
-      margin-left: 1.6rem; }
+      margin: 0 1.6rem; }
   .cashier__transferred-amount {
     color: var(--text-profit-success);
     font-size: 3.2rem;
-    line-height: 0.75;
-    margin-bottom: 1.6rem; }
+    font-weight: bold;
+    line-height: 1.25;
+    margin-top: 2.4rem;
+    margin-bottom: 2.8rem; }
   .cashier__transferred-details {
     margin-left: 8px;
+    margin-right: 8px;
     vertical-align: super;
     font-size: 1.4rem;
     text-align: left;
     line-height: 1.43;
     max-width: 20rem;
     display: flex;
-    flex-direction: column;
-    margin-right: 0.8rem; }
-    .cashier__transferred-details-from {
-      align-items: flex-end; }
+    flex-direction: column; }
     .cashier__transferred-details-wrapper {
       display: flex;
       justify-content: center;
@@ -13359,6 +13387,10 @@ table {
     margin-right: auto; }
     .cashier__text--bold {
       font-weight: bold; }
+    .cashier__text--right {
+      text-align: right; }
+    .cashier__text--faint {
+      color: var(--text-less-prominent); }
     @media (min-width: 320px) and (max-width: 767px) {
       .cashier__text {
         max-width: 100%;
@@ -13375,7 +13407,7 @@ table {
     margin: 0 auto 3.2rem; }
   .cashier__done-button {
     width: 15.6rem;
-    margin-left: -1.6rem; }
+    margin-left: 0.8rem; }
   .cashier__no-balance-icon {
     margin-bottom: 1.6rem; }
   .cashier__no-balance-button {
@@ -13425,6 +13457,16 @@ table {
         width: calc(100% - 3.2rem); } }
   .cashier-error__footer {
     font-size: 1.2rem; }
+
+/** @define cashier-page-wrapper */
+@media (min-width: 320px) and (max-width: 767px) {
+  .cashier-page-wrapper {
+    /* postcss-bem-linter: ignore */ }
+    .cashier-page-wrapper .dc-page-overlay__header {
+      position: fixed;
+      top: 4rem;
+      width: 100%;
+      height: 4rem; } }
 
 /** @define withdraw */
 .withdraw__header {
@@ -13576,7 +13618,7 @@ table {
 .payment-agent__drop-down {
   margin-left: 8px;
   width: auto;
-  margin-bottom: 0; }
+  margin-bottom: 0 !important; }
 
 .payment-agent__filter {
   min-width: 22.8rem;
@@ -13763,34 +13805,39 @@ table {
 /** @define account-transfer; weak */
 .account-transfer__notes {
   color: var(--text-general);
-  margin-top: calc(3.2rem + 1.7rem);
-  font-size: 1.2rem;
+  padding: 1.6rem 0;
+  font-size: var(--text-size-xs);
   line-height: 1.5; }
   @media (min-width: 320px) and (max-width: 767px) {
     .account-transfer__notes {
-      margin: 0;
-      padding: 2.4rem 0 1.6rem; } }
+      font-size: var(--text-size-xxs); } }
 
 .account-transfer__bullet {
   background-color: var(--text-general);
   border-radius: 100%;
-  margin-right: 1.3rem;
-  width: 0.6rem;
-  height: 0.6rem;
+  margin-right: 0.8rem;
+  width: 0.4rem;
+  height: 0.4rem;
   flex: none;
-  margin-top: 0.6rem; }
+  margin-top: 0.8rem; }
   .account-transfer__bullet-wrapper {
     display: flex;
-    margin-bottom: 0.4rem; }
+    margin-bottom: 0.8rem; }
 
 .account-transfer__drop-down {
-  min-width: calc(calc(100% - calc(16px + 1.6rem)) / 2);
+  min-width: calc(calc(100% - calc(16px + 3.2rem)) / 2);
   width: auto;
-  margin-bottom: 3.4rem; }
+  margin-bottom: 1.7rem; }
   @media (min-width: 320px) and (max-width: 767px) {
     .account-transfer__drop-down {
       width: 100%;
       margin-bottom: 2.4rem; } }
+
+.account-transfer__input {
+  margin-bottom: -0.8rem !important; }
+  @media (min-width: 320px) and (max-width: 767px) {
+    .account-transfer__input {
+      margin-bottom: 2.6rem !important; } }
 
 .account-transfer__currency, .account-transfer__balance {
   line-height: 1.43; }
@@ -13800,42 +13847,28 @@ table {
   .account-transfer__currency-icon {
     align-self: center; }
 
-.account-transfer__receipt-icon {
-  margin: 5.6rem 0 1.6rem; }
-  @media (min-width: 320px) and (max-width: 767px) {
-    .account-transfer__receipt-icon {
-      margin: 1.6rem 0; } }
+.account-transfer__balance {
+  margin-left: auto; }
 
 .account-transfer__transfer-icon {
   vertical-align: baseline;
   vertical-align: initial;
-  margin: 1rem 0.8rem 0; }
+  margin: 1rem 1.6rem 0; }
 
 .account-transfer__transfer-details-from, .account-transfer__transfer-details-to {
   display: flex;
   align-items: center; }
 
-.account-transfer__transfer-info {
-  font-size: 1.2rem;
-  margin-bottom: 1.8rem; }
-  .account-transfer__transfer-info .dc-btn {
-    padding: 0px;
-    height: 1.5rem; }
-  .account-transfer__transfer-info .dc-btn__text {
-    line-height: 1.2rem; }
-
 .account-transfer__transfer-from {
-  margin-bottom: 1.8rem;
+  margin-bottom: 3.5rem;
   margin-top: 2.5rem; }
 
 .account-transfer__transfer-to {
-  margin-bottom: 3.2rem; }
+  margin-bottom: 1.7rem; }
 
-.account-transfer__actions {
-  display: flex;
-  margin-top: 2.4rem;
-  justify-content: center; }
-  .account-transfer__actions-statement {
+.account-transfer__button {
+  margin: 4rem auto 0 0.8rem; }
+  .account-transfer__button-statement {
     margin-right: 0.8rem; }
 
 .account-transfer__native-select {
