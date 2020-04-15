@@ -13279,7 +13279,8 @@ table {
     .cashier__form-submit {
       margin: 0;
       flex-flow: column;
-      height: unset; }
+      height: unset;
+      margin-bottom: 1.6rem; }
       .cashier__form-submit--align-end {
         align-items: flex-end; }
         .cashier__form-submit--align-end .cashier__form-submit-button {
@@ -13401,7 +13402,7 @@ table {
     min-width: 24rem; }
   .cashier__success {
     text-align: center;
-    background-color: var(--general-section-1);
+    background-color: var(--general-main-1);
     padding: 2.4rem;
     width: 50.4rem;
     margin: 0 auto 3.2rem; }
@@ -13527,6 +13528,9 @@ table {
     font-weight: bold;
     text-decoration: none;
     cursor: pointer; }
+  @media (min-width: 320px) and (max-width: 767px) {
+    .withdraw__email-resend {
+      margin-top: 1.6rem; } }
 
 /** @define payment-agent; weak */
 .payment-agent__instructions {
@@ -13535,10 +13539,14 @@ table {
   .payment-agent__instructions-section {
     border: 1px solid var(--border-normal);
     flex: 1;
-    padding: 1.6rem; }
+    padding: 1.6rem;
+    border-radius: 4px; }
     .payment-agent__instructions-section .payment-agent__header {
       margin-bottom: 8px;
       text-align: center; }
+      @media (min-width: 320px) and (max-width: 767px) {
+        .payment-agent__instructions-section .payment-agent__header {
+          margin-top: 0; } }
     @media (min-width: 1024px) {
       .payment-agent__instructions-section:not(:first-child) {
         margin-left: 24px;
@@ -13556,12 +13564,14 @@ table {
           justify-content: center;
           align-items: center; }
           .payment-agent__instructions-section:last-child h2 {
-            margin-bottom: unset; }
+            margin: 0; }
           .payment-agent__instructions-section:last-child .dc-btn {
             margin: 0 0 0 auto;
             padding: 0.3rem 0.8rem;
             height: 3rem;
-            /* iPhone SE screen height fixes due to UI space restrictions */ } }
+            /* iPhone SE screen height fixes due to UI space restrictions */ }
+            .payment-agent__instructions-section:last-child .dc-btn__text {
+              font-size: 1.2rem; } }
       @media only screen and (min-width: 320px) and (max-width: 767px) and (max-height: 480px) {
         .payment-agent__instructions-section:last-child .dc-btn {
           height: 4.8rem; }
@@ -13605,14 +13615,13 @@ table {
     position: relative;
     z-index: 1; }
   .payment-agent__list-selector {
-    margin: 0 1.6rem 0.8rem;
+    margin: 0.8rem 1.6rem 3.2rem;
     /* postcss-bem-linter: ignore */
     /* postcss-bem-linter: ignore */ }
     .payment-agent__list-selector .dc-input {
-      max-width: 20rem; }
+      max-width: 18rem;
+      margin-left: auto; }
     .payment-agent__list-selector .dc-select-native__placeholder {
-      top: 0.9rem;
-      left: 1.2rem;
       background-color: var(--general-main-1); } }
 
 .payment-agent__drop-down {
@@ -13629,10 +13638,23 @@ table {
 
 .payment-agent__accordion-content-line {
   margin-bottom: 8px; }
+  .payment-agent__accordion-content-line:first-child .payment-agent__contact {
+    color: var(--text-prominent); }
+  .payment-agent__accordion-content-line:last-child {
+    margin-bottom: 0; }
+  @media (min-width: 320px) and (max-width: 767px) {
+    .payment-agent__accordion-content-line {
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis; }
+      .payment-agent__accordion-content-line:not(:first-child) {
+        color: var(--brand-red-coral); } }
 
 .payment-agent__accordion-content-icon {
   vertical-align: middle;
-  margin-right: 12px; }
+  margin-right: 12px;
+  /* postcss-bem-linter: ignore */
+  --fill-color1: var(--text-general); }
 
 .payment-agent__disclaimer {
   background-color: var(--general-section-1);
@@ -13674,7 +13696,8 @@ table {
 
 .payment-agent__contact {
   text-decoration: none;
-  color: var(--brand-red-coral); }
+  color: var(--brand-red-coral);
+  font-weight: bold; }
   @media (min-width: 320px) and (max-width: 767px) {
     .payment-agent__contact {
       padding-left: 0; } }
@@ -13750,7 +13773,7 @@ table {
     .payment-agent__receipt .cashier__success {
       width: 100%;
       margin: 0 auto 3.2rem;
-      background-color: var(--general-section-2); }
+      background-color: var(--general-main-1); }
     .payment-agent__receipt .payment-agent__explanation {
       padding-left: 0; }
     .payment-agent__receipt .payment-agent__transferred-contact-wrapper {
@@ -13799,7 +13822,6 @@ table {
       max-width: 18rem;
       margin-left: auto; }
     .payment-agent__withdrawal .dc-select-native__placeholder {
-      top: 0.9rem;
       background-color: var(--general-main-1); } }
 
 /** @define account-transfer; weak */
@@ -13880,11 +13902,83 @@ div.payment-agent-transfer__header {
   margin-bottom: 2.8rem; }
 
 div.payment-agent-transfer__input {
-  width: 29.6rem;
-  display: inline-flex;
   margin-bottom: 3.1rem; }
+  div.payment-agent-transfer__input-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1.6rem; }
+
+div.payment-agent-transfer__wrapper .cashier__transferred-details-wrapper .account-transfer__transfer-details-from {
+  flex-direction: row-reverse; }
+  div.payment-agent-transfer__wrapper .cashier__transferred-details-wrapper .account-transfer__transfer-details-from > .cashier__transferred-details {
+    text-align: right; }
+
+div.payment-agent-transfer__wrapper .cashier__transferred-details-wrapper .dc-icon {
+  width: 3.2rem;
+  height: 3.2rem; }
+
+div.payment-agent-transfer__wrapper .cashier__form-submit {
+  flex-flow: row;
+  justify-content: center; }
+  div.payment-agent-transfer__wrapper .cashier__form-submit-button {
+    margin: 0;
+    width: 100%;
+    max-width: 18rem; }
+    div.payment-agent-transfer__wrapper .cashier__form-submit-button:first-child {
+      margin-right: 0.4rem; }
+    div.payment-agent-transfer__wrapper .cashier__form-submit-button:last-child {
+      margin-left: 0.4rem; }
+
+div.payment-agent-transfer__wrapper .cashier__transferred-icon {
+  width: 1.6rem !important;
+  height: 1.6rem !important; }
+
+div.payment-agent-transfer__wrapper .cashier__success {
+  margin-bottom: 0.8rem; }
+
+@media (min-width: 320px) and (max-width: 767px) {
+  div.payment-agent-transfer__wrapper {
+    padding-top: 1.6rem; }
+    div.payment-agent-transfer__wrapper .cashier__header {
+      margin-top: 0.4rem; }
+    div.payment-agent-transfer__wrapper .cashier__form-submit-button {
+      max-width: 100%; }
+    div.payment-agent-transfer__wrapper .cashier__success {
+      width: 100%;
+      background-color: var(--general-main-1);
+      padding: 0.4rem 0.4rem 0.8rem;
+      margin-bottom: 1.6rem; }
+    div.payment-agent-transfer__wrapper .cashier__transferred-details {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      max-width: 100%;
+      padding: 0;
+      margin: 0.8rem 0 0; }
+      div.payment-agent-transfer__wrapper .cashier__transferred-details-wrapper .cashier__text--bold {
+        color: var(--text-prominent); }
+      div.payment-agent-transfer__wrapper .cashier__transferred-details-wrapper .account-transfer__transfer-details-from {
+        flex-direction: column;
+        padding-right: 1.6rem; }
+      div.payment-agent-transfer__wrapper .cashier__transferred-details-wrapper .account-transfer__transfer-details-to {
+        flex-direction: column;
+        padding-left: 1.6rem; }
+        div.payment-agent-transfer__wrapper .cashier__transferred-details-wrapper .account-transfer__transfer-details-to > .cashier__transferred-details {
+          align-items: flex-start; }
+    div.payment-agent-transfer__wrapper .cashier__transferred-icon {
+      margin: 0; }
+  div.payment-agent-transfer__container {
+    width: calc(100% - 3.2rem);
+    margin: 0 1.6rem;
+    padding-top: 2.4rem; }
+    div.payment-agent-transfer__container .dc-input__field[type='textarea'] {
+      height: 11.9rem; }
+  div.payment-agent-transfer__input-container {
+    grid-template-columns: 1fr; }
   div.payment-agent-transfer__input:not(:first-child) {
-    margin-left: 2.4rem; }
+    margin-left: unset;
+    margin-bottom: 5.3rem; } }
 
 /* stylelint-enable plugin/selector-bem-pattern */
 
