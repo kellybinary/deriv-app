@@ -2559,7 +2559,9 @@
   overflow: hidden;
   max-width: calc(100% - 4rem);
   text-overflow: ellipsis;
-  display: flex; }
+  display: flex;
+  height: 100%;
+  align-items: center; }
 
 .dc-select-native__placeholder {
   position: absolute;
