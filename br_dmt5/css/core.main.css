@@ -1857,7 +1857,7 @@
 .dc-list {
   position: absolute;
   width: 100%;
-  max-height: 404px;
+  max-height: 200px;
   overflow-y: auto;
   z-index: 2;
   border-radius: 4px;
@@ -1873,6 +1873,24 @@
   overflow: hidden;
   white-space: nowrap;
   text-align: center; }
+
+.dc-list--has-label {
+  padding-bottom: 1.6rem;
+  max-height: 404px; }
+
+.dc-list--has-label .dc-list__item-text {
+  width: calc(100% - 1.6rem);
+  padding: 1rem 1.6rem;
+  margin: 0 0.8rem; }
+
+.dc-list--has-label .dc-list__item:hover {
+  border-radius: 4px;
+  width: calc(100% - 1.6rem);
+  margin: 0 0.8rem; }
+
+.dc-list--has-label .dc-list__item:hover .dc-list__item-text {
+  width: 100%;
+  margin: 0; }
 
 .dc-list__label {
   padding: 1.6rem 0.8rem 0.8rem;
@@ -1898,15 +1916,11 @@
   line-height: 1.43;
   color: var(--text-general);
   display: flex;
-  width: calc(100% - 1.6rem);
+  width: 100%;
   justify-content: center;
   pointer-events: none;
   vertical-align: middle;
-  padding: 1rem 1.6rem;
-  margin: 0 0.8rem; }
-
-.dc-list__item:last-child {
-  margin-bottom: 1.6rem; }
+  padding: 0.6rem 1.6rem; }
 
 .dc-list__item-text--left {
   justify-content: flex-start;
@@ -1914,16 +1928,7 @@
 
 .dc-list__item:not(.dc-list__item--disabled):not(.dc-list__item--selected):hover {
   background-color: var(--state-hover);
-  color: var(--text-general);
-  border-radius: 4px;
-  width: calc(100% - 1.6rem);
-  margin-left: 0.8rem;
-  margin-right: 0.8rem; }
-
-.dc-list__item:not(.dc-list__item--disabled):not(.dc-list__item--selected):hover .dc-list__item-text, .dc-list__item:not(.dc-list__item--disabled):not(.dc-list__item--selected):hover .dc-list__item--symbol {
-  width: 100%;
-  margin-left: 0;
-  margin-right: 0; }
+  color: var(--text-general); }
 
 .dc-list__item--selected .dc-list__item-text, .dc-list__item--selected .dc-list__item-symbol, .dc-list__item--selected .dc-list__item-tooltip {
   font-size: 1.4rem;
