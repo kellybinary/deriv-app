@@ -354,11 +354,16 @@ export default class TradeStore extends BaseStore {
             throw new Error(`Invalid Argument: ${name}`);
         }
 
+        const should_forget_first = this.is_multiplier
+            ? // forget previous proposal only deal cancellation checkbox is check & when changing dc duration
+              !(!this.has_cancellation && name === 'cancellation_duration')
+            : true;
+
         await this.processNewValuesAsync(
             { [name]: value },
             true,
             name === 'contract_type' ? { contract_type: this.contract_type } : {}, // refer to [Multiplier validation rules] below
-            true
+            should_forget_first
         ); // wait for store to be updated
         this.validateAllProperties(); // then run validation before sending proposal
     }
