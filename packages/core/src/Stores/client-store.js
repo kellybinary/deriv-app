@@ -2,15 +2,16 @@ import moment from 'moment';
 import { action, computed, observable, runInAction, when, reaction, toJS } from 'mobx';
 import CurrencyUtils from '@deriv/shared/utils/currency';
 import ObjectUtils from '@deriv/shared/utils/object';
+import { getUrlSmartTrader } from '@deriv/shared/utils/storage';
 import { requestLogout, WS } from 'Services';
 import ClientBase from '_common/base/client_base';
 import BinarySocket from '_common/base/socket_base';
 import * as SocketCache from '_common/base/socket_cache';
 import { localize } from '@deriv/translations';
 import { toMoment } from '@deriv/shared/utils/date';
+import { isEmptyObject } from '@deriv/shared/src/utils/object/object';
 import { LocalStore, State } from '_common/storage';
 import BinarySocketGeneral from 'Services/socket-general';
-import { getAllowedLocalStorageOrigin } from 'Utils/Events/storage';
 import { handleClientNotifications } from './Helpers/client-notifications';
 import BaseStore from './base-store';
 import { getClientAccountType } from './Helpers/client';
@@ -118,12 +119,6 @@ export default class ClientStore extends BaseStore {
         const has_no_transaction = this.statement.count === 0 && this.statement.transactions.length === 0;
         const has_account_criteria = has_no_transaction && has_no_mt5;
         return !this.is_virtual && has_account_criteria && this.current_currency_type === 'fiat';
-    }
-
-    @computed
-    get can_change_currency() {
-        const has_available_crypto_currencies = this.available_crypto_currencies.length > 0;
-        return this.can_change_fiat_currency || (!this.is_virtual && has_available_crypto_currencies);
     }
 
     @computed
@@ -639,6 +634,9 @@ export default class ClientStore extends BaseStore {
                 // So it will send an authorize with the accepted token, to be handled by socket-general
                 await BinarySocket.authorize(client.token);
             }
+            runInAction(() => {
+                this.is_populating_account_list = false;
+            });
         }
 
         /**
@@ -673,9 +671,7 @@ export default class ClientStore extends BaseStore {
 
         this.responsePayoutCurrencies(await WS.authorized.payoutCurrencies());
         if (this.is_logged_in) {
-            // mt5 will get called on response of authorize so we should just wait for the response here
-            // we can't use .storage here because if mt5 response takes longer to return we will send the request twice
-            BinarySocket.wait('mt5_login_list').then(this.responseMt5LoginList);
+            WS.storage.mt5LoginList().then(this.responseMt5LoginList);
             WS.authorized.storage.landingCompany(this.residence).then(this.responseLandingCompany);
             this.responseStatement(
                 await BinarySocket.send({
@@ -1033,7 +1029,6 @@ export default class ClientStore extends BaseStore {
             // is_populating_account_list is used for socket general to know not to filter the first-time logins
             this.is_populating_account_list = true;
             const authorize_response = await BinarySocket.authorize(is_client_logging_in);
-            this.is_populating_account_list = false;
 
             if (login_new_user) {
                 // overwrite obj_params if login is for new virtual account
@@ -1239,7 +1234,7 @@ export default class ClientStore extends BaseStore {
     syncWithSmartTrader(active_loginid, client_accounts) {
         const iframe_window = document.getElementById('localstorage-sync');
         if (iframe_window) {
-            const origin = getAllowedLocalStorageOrigin();
+            const origin = getUrlSmartTrader();
             if (origin) {
                 // Keep client.accounts in sync (in case user wasn't logged in).
                 iframe_window.contentWindow.postMessage(
@@ -1262,6 +1257,7 @@ export default class ClientStore extends BaseStore {
 
     @computed
     get is_high_risk() {
+        if (isEmptyObject(this.account_status)) return false;
         return this.account_status.risk_classification === 'high';
     }
 

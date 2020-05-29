@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { withRouter } from 'react-router';
 import { Button, Icon } from '@deriv/components';
+import routes from '@deriv/shared/utils/routes';
 import { localize, Localize } from '@deriv/translations';
-import routes from 'Constants/routes';
 import { connect } from 'Stores/connect';
 
 class AccountTransferReceipt extends React.Component {
@@ -36,9 +36,7 @@ class AccountTransferReceipt extends React.Component {
                 <div className='cashier__transferred-details-wrapper'>
                     <span className='account-transfer__transfer-details-from'>
                         <div className='cashier__transferred-details'>
-                            <div className='cashier__text--bold cashier__text--right'>{`${
-                                selected_from.is_mt ? `${localize('DMT5')} ` : ''
-                            }${selected_from.text}`}</div>
+                            <div className='cashier__text--bold cashier__text--right'>{selected_from.text}</div>
                             <div className='cashier__text--faint'>
                                 {selected_from.value?.replace(/^(MT[DR]?)/i, '')}
                             </div>
@@ -63,9 +61,7 @@ class AccountTransferReceipt extends React.Component {
                             size={32}
                         />
                         <div className='cashier__transferred-details'>
-                            <div className='cashier__text--bold'>{`${selected_to.is_mt ? `${localize('DMT5')} ` : ''}${
-                                selected_to.text
-                            }`}</div>
+                            <div className='cashier__text--bold'>{selected_to.text}</div>
                             <div className='cashier__text--faint'>{selected_to.value?.replace(/^(MT[DR]?)/i, '')}</div>
                         </div>
                     </span>

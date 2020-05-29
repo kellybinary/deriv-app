@@ -1,20 +1,19 @@
 import { DesktopWrapper, Icon, MobileWrapper, Tabs } from '@deriv/components';
 import React from 'react';
 import { withRouter } from 'react-router';
+import routes from '@deriv/shared/utils/routes';
 import { Localize, localize } from '@deriv/translations';
-import routes from 'Constants/routes';
 import { connect } from 'Stores/connect';
 import LoadingMT5RealAccountDisplay from './loading-mt5-real-account-display.jsx';
 import MissingRealAccount from './missing-real-account.jsx';
-import MT5AccountOpeningRealAdvancedModal from './mt5-account-opening-real-advanced-modal.jsx';
+import MT5AccountOpeningRealFinancialStpModal from './mt5-account-opening-real-financial-stp-modal.jsx';
 import CompareAccountsModal from './mt5-compare-accounts-modal.jsx';
 import MT5DashboardContainer from './mt5-dashboard-container.jsx';
 import MT5PasswordManagerModal from './mt5-password-manager-modal.jsx';
 import MT5PasswordModal from './mt5-password-modal.jsx';
 import MT5ServerErrorDialog from './mt5-server-error-dialog.jsx';
 import Mt5TopUpDemoModal from './mt5-top-up-demo-modal.jsx';
-import MT5WelcomeMessage from './mt5-welcome-message.jsx';
-import Mt5AdvancedPendingDialog from '../Components/mt5-advanced-pending-dialog.jsx';
+import Mt5FinancialStpPendingDialog from '../Components/mt5-financial-stp-pending-dialog.jsx';
 import { MT5DemoAccountDisplay } from '../Components/mt5-demo-account-display.jsx';
 import { MT5RealAccountDisplay } from '../Components/mt5-real-account-display.jsx';
 import 'Sass/app/modules/mt5/mt5-dashboard.scss';
@@ -40,6 +39,7 @@ class MT5Dashboard extends React.Component {
 
     componentDidUpdate(prev_props) {
         this.updateActiveIndex();
+        this.props.checkShouldOpenAccount();
         if (prev_props.is_mt5_allowed !== this.props.is_mt5_allowed && !this.props.is_mt5_allowed) {
             this.history.push(routes.trade);
         }
@@ -62,13 +62,14 @@ class MT5Dashboard extends React.Component {
         }
     };
 
-    togglePasswordManagerModal = (login, title) => {
+    togglePasswordManagerModal = (login, title, category) => {
         this.setState(prev_state => ({
             active_index: prev_state.active_index,
             password_manager: {
                 is_visible: !prev_state.password_manager.is_visible,
                 selected_login: typeof login === 'string' ? login : '',
                 selected_account: typeof title === 'string' ? title : '',
+                selected_type: typeof category === 'string' ? category : '',
             },
         }));
     };
@@ -93,15 +94,20 @@ class MT5Dashboard extends React.Component {
             <div className='mt5-dashboard__container'>
                 <NotificationMessages />
                 <div className='mt5-dashboard'>
-                    <MT5WelcomeMessage hasMt5Account={has_mt5_account} />
+                    <div className='mt5-dashboard__welcome-message'>
+                        <h1 className='mt5-dashboard__welcome-message--heading'>
+                            <Localize i18n_default_text='Welcome to your MetaTrader 5 (DMT5 account dashboard)' />
+                        </h1>
+                    </div>
                     <div className='mt5-dashboard__accounts-display'>
                         <MT5PasswordManagerModal
                             is_visible={this.state.password_manager.is_visible}
                             selected_login={this.state.password_manager.selected_login}
                             selected_account={this.state.password_manager.selected_account}
+                            selected_type={this.state.password_manager.selected_type}
                             toggleModal={this.togglePasswordManagerModal}
                         />
-                        <Tabs active_index={this.state.active_index} top>
+                        <Tabs active_index={this.state.active_index} top center>
                             <div label={localize('Real account')}>
                                 {is_loading && <LoadingMT5RealAccountDisplay />}
                                 {!is_loading && (
@@ -137,6 +143,15 @@ class MT5Dashboard extends React.Component {
                             </div>
                         </Tabs>
                         <CompareAccountsModal />
+                        <div className='mt5-dashboard__maintenance'>
+                            <Icon icon='IcAlertWarning' className='mt5-dashboard__maintenance-icon' />
+                            <div className='mt5-dashboard__maintenance-text'>
+                                <Localize
+                                    i18n_default_text='Server maintenance starting 03:00 GMT every Sunday. This process may take up to 2 hours to complete. <0 />Service may be disrupted during this time.'
+                                    components={[<br key={0} />]}
+                                />
+                            </div>
+                        </div>
                     </div>
 
                     <DesktopWrapper>
@@ -145,7 +160,7 @@ class MT5Dashboard extends React.Component {
                     <MobileWrapper>
                         <div className='mt5-dashboard__download-center'>
                             <h1 className='mt5-dashboard__download-center--heading'>
-                                <Localize i18n_default_text='Run MT5 from your browser or download the DMT5 app for your devices' />
+                                <Localize i18n_default_text='Run MT5 from your browser or download the MT5 app for your devices' />
                             </h1>
                             <div className='mt5-dashboard__download-center-options--mobile'>
                                 <div className='mt5-dashboard__download-center-options--mobile-devices'>
@@ -174,8 +189,8 @@ class MT5Dashboard extends React.Component {
                     <Mt5TopUpDemoModal />
                     <MT5PasswordModal />
                     <MT5ServerErrorDialog />
-                    <MT5AccountOpeningRealAdvancedModal />
-                    <Mt5AdvancedPendingDialog />
+                    <MT5AccountOpeningRealFinancialStpModal />
+                    <Mt5FinancialStpPendingDialog />
                 </div>
             </div>
         );
@@ -185,6 +200,7 @@ class MT5Dashboard extends React.Component {
 export default withRouter(
     connect(({ client, modules, ui }) => ({
         beginRealSignupForMt5: modules.mt5.beginRealSignupForMt5,
+        checkShouldOpenAccount: modules.mt5.checkShouldOpenAccount,
         createMT5Account: modules.mt5.createMT5Account,
         current_list: modules.mt5.current_list,
         is_logged_in: client.is_logged_in,

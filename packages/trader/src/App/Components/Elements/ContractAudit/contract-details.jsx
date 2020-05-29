@@ -102,6 +102,7 @@ const ContractDetails = ({ contract_end_time, contract_info, duration, duration_
             should_show: true,
         },
         {
+            container_id: 'dt_reset_barrier_label',
             props: {
                 icon: 'IcContractBarrierSolid',
                 label: localize('Reset barrier'),
@@ -129,6 +130,7 @@ const ContractDetails = ({ contract_end_time, contract_info, duration, duration_
             should_show: !is_digit,
         },
         {
+            container_id: 'dt_reset_time_label',
             props: {
                 icon: 'IcContractResetTimeCircle',
                 label: localize('Reset time'),
